@@ -8,6 +8,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 const routes: Routes = [
 {path: 'fibonacci', component: FibonacciComponent},
 {path: 'home', component: DashboardComponent},
+{path: '', component: DashboardComponent},
 {path: 'reversed-int', component: ReverseIntComponent}
 ];
 
