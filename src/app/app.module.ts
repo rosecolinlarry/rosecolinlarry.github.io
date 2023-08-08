@@ -9,6 +9,8 @@ import { FibonacciComponent } from './fibonacci/fibonacci.component';
 import { TerminalComponent } from './terminal/terminal.component';
 import { FooterComponent } from './footer/footer.component';
 import { SharedModule } from './shared/shared.module';
+import { ReverseIntComponent } from './reverse-int/reverse-int.component';
+import { TopnavComponent } from './topnav/topnav.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { SharedModule } from './shared/shared.module';
     DashboardComponent,
     FibonacciComponent,
     TerminalComponent,
-    FooterComponent
+    FooterComponent,
+    ReverseIntComponent,
+    TopnavComponent
   ],
   imports: [
     BrowserModule,
@@ -26,6 +30,7 @@ import { SharedModule } from './shared/shared.module';
     SharedModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [AppRoutingModule]
 })
 export class AppModule { }

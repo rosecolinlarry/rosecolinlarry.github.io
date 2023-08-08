@@ -8,6 +8,6 @@ import { MaterialModule } from '../material.module';
   declarations: [
   ],
   imports: [CommonModule, MaterialModule],
-  exports: []
+  exports: [CommonModule, MaterialModule]
 })
 export class SharedModule {}
