@@ -3,31 +3,35 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MenuComponent } from './menu/menu.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { FibonacciComponent } from './fibonacci/fibonacci.component';
 import { TerminalComponent } from './terminal/terminal.component';
 import { FooterComponent } from './footer/footer.component';
-import { SharedModule } from './shared/shared.module';
 import { ReverseIntComponent } from './reverse-int/reverse-int.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { MenuComponent } from './menu/menu.component';
 import { TopnavComponent } from './topnav/topnav.component';
+import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent,
-    DashboardComponent,
     FibonacciComponent,
     TerminalComponent,
     FooterComponent,
     ReverseIntComponent,
+    DashboardComponent,
+    MenuComponent,
     TopnavComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    SharedModule
+    MatIconModule,
+    MatToolbarModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent],

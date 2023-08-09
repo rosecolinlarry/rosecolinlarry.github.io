@@ -6,5 +6,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./terminal.component.css']
 })
 export class TerminalComponent {
-  @Input('code') code = '';
+  @Input() code = '';
 }
