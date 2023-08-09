@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-topnav',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./topnav.component.scss']
 })
 export class TopnavComponent {
-
+  @Input() title = ""
 }

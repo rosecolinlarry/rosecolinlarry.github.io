@@ -1,5 +1,18 @@
+@use '@angular/material' as mat;
+@use 'sass:map';
+@import "../../styles.scss";
+
+
+$color-config: mat.get-color-config($dark-theme);
+// get the chosen palette : primary, accent, warn
+$accent-palette: map.get($color-config, 'accent');
+
 .spacer {
   flex: 1 1 auto;
+}
+
+img {
+  height: 40px;
 }
 
 .toolbar {
@@ -10,35 +23,15 @@
   height: 60px;
   display: flex;
   align-items: center;
-  color: white;
-  font-weight: 600;
-}
-
-.toolbar img {
-  margin: 0 16px;
+  color: mat.get-color-from-palette($accent-palette, 100);
+  background-color: darkslategrey;
 }
 
 .toolbar .title {
-  margin: 0 50px;
+  margin: 0 30px;
+  font-weight: 500;
 }
-
 
 .toolbar .a {
   margin: 0 50px;
-}
-
-
-.toolbar #twitter-logo {
-  height: 40px;
-  margin: 0 8px;
-}
-
-.toolbar #youtube-logo {
-  height: 40px;
-  margin: 0 16px;
-}
-
-.toolbar #twitter-logo:hover,
-.toolbar #youtube-logo:hover {
-  opacity: 0.8;
 }
