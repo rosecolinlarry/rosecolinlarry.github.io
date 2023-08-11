@@ -9,10 +9,10 @@ import { FooterComponent } from './footer/footer.component';
 import { ReverseIntComponent } from './reverse-int/reverse-int.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MenuComponent } from './menu/menu.component';
-import { TopnavComponent } from './topnav/topnav.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
+import { TopnavModule } from './topnav/topnav.module';
 
 @NgModule({
   declarations: [
@@ -22,8 +22,7 @@ import { MatButtonModule } from '@angular/material/button';
     FooterComponent,
     ReverseIntComponent,
     DashboardComponent,
-    MenuComponent,
-    TopnavComponent
+    MenuComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +30,8 @@ import { MatButtonModule } from '@angular/material/button';
     BrowserAnimationsModule,
     MatIconModule,
     MatToolbarModule,
-    MatButtonModule
+    MatButtonModule,
+    TopnavModule
   ],
   providers: [],
   bootstrap: [AppComponent],
