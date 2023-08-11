@@ -1,7 +1,7 @@
-import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Component } from '@angular/core';
 import { FibonacciService } from '../fibonacci.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { Observable, startWith, tap } from 'rxjs';
+import { tap } from 'rxjs';
 
 @Component({
   selector: 'app-fibonacci',

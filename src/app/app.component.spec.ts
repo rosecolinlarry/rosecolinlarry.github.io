@@ -27,6 +27,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('app-topnav > mat-toolbar > span')?.textContent).toEqual('Redemption Arc');
+    expect(compiled.querySelector('app-topnav > mat-toolbar > mat-toolbar-row > span')?.textContent).toEqual('Redemption Arc');
   });
 });
