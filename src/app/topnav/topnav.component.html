@@ -1,6 +1,11 @@
 <mat-toolbar class="toolbar" role="banner">
-  <img src="../assets/redemption-64x64.png" alt="Redemption Logo"/>
-  <span class="title" routerLink="/home">{{title}}</span>
+  <mat-toolbar-row>
+    <img
+      src="../assets/redemption-64x64.png"
+      routerLink="/home"
+      alt="Redemption Logo"
+    />
+    <span class="title">{{ title }}</span>
     <div class="spacer"></div>
     <button mat-button routerLink="/fibonacci" aria-label="Button">
       Fibonacci
@@ -8,7 +13,13 @@
     <button mat-button routerLink="/reversed-int" aria-label="Button">
       Reversed Integer
     </button>
-    <button mat-icon-button class="example-icon" routerLink="/home" aria-label="Example icon-button with menu icon">
+    <button
+      mat-icon-button
+      class="example-icon"
+      routerLink="/home"
+      aria-label="Home button"
+    >
       <mat-icon>home</mat-icon>
     </button>
+  </mat-toolbar-row>
 </mat-toolbar>

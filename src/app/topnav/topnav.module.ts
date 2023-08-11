@@ -4,6 +4,7 @@ import { TopnavComponent } from './topnav.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { RouterLink } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -12,6 +13,7 @@ import { MatButtonModule } from '@angular/material/button';
   imports: [
     CommonModule,
     MatToolbarModule,
+    RouterLink,
     MatIconModule,
     MatButtonModule
   ],
