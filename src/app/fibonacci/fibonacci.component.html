@@ -3,16 +3,16 @@
 <section>
   <h2>
     Generate
-      <mat-button-toggle-group [formControl]="modeControl">
-        <mat-button-toggle value="mode.sequence">a sequence</mat-button-toggle>
-        <mat-button-toggle value="mode.number">one number</mat-button-toggle>
-      </mat-button-toggle-group>
+    <mat-button-toggle-group [formControl]="modeControl">
+      <mat-button-toggle value="mode.sequence">a sequence</mat-button-toggle>
+      <mat-button-toggle value="mode.number">one number</mat-button-toggle>
+    </mat-button-toggle-group>
   </h2>
 </section>
 
-<div *ngIf="modeControl.value === 'mode.number'; else sequenceMode">
-  <app-fibonacci-number-generator></app-fibonacci-number-generator>
-</div>
-<ng-template #sequenceMode>
-  <app-fibonacci-sequence-generator></app-fibonacci-sequence-generator>
-</ng-template>
+<app-fibonacci-number-generator
+  *ngIf="modeControl.value === 'mode.number'"
+></app-fibonacci-number-generator>
+<app-fibonacci-sequence-generator
+  *ngIf="modeControl.value === 'mode.sequence'"
+></app-fibonacci-sequence-generator>

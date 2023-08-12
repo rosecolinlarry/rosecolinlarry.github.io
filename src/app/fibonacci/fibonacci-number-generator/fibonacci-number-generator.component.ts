@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FibonacciService } from '../../fibonacci.service';
+import { RecursiveService } from '../../recursive.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { tap } from 'rxjs';
+import { FastDoublingService } from 'src/app/fast-doubling.service';
 
 @Component({
   selector: 'app-fibonacci-number-generator',
@@ -18,7 +19,7 @@ export class FibonacciNumberGeneratorComponent implements OnInit {
   // Last index used to get the fibonacci number. Updates on submit and reset
   calculatedIndex = 0;
 
-  constructor(private fibonacciService: FibonacciService) {
+  constructor(private fibonacciService: FastDoublingService) {
   }
   ngOnInit(): void {
     this.showNumber = false;

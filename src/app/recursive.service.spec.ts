@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { FibonacciService } from './fibonacci.service';
+import { RecursiveService } from './recursive.service';
 
-describe('FibonacciService', () => {
-  let service: FibonacciService;
+describe('RecursiveService', () => {
+  let service: RecursiveService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(FibonacciService);
+    service = TestBed.inject(RecursiveService);
   });
 
   it('should be created', () => {

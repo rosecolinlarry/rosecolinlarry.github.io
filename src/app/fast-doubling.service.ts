@@ -3,25 +3,15 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class FibonacciService {
-  // Calculate the fibonacci number for a given index
+export class FastDoublingService {
+  // Find the Nth Fibonacci number using Fast Doubling Method. Very fast.
   calculateFibonacci(index: number): number {
-    if (index == 0) { return 0; }
-    if (index > 0) {
-      if (index == 1 || index == 2) { return 1; }
-      return this.calculateFibonacci(index - 1) + this.calculateFibonacci(index - 2);
-    }
-
-    if (index < 0) {
-      return this.calculateFibonacci(index + 2) - this.calculateFibonacci(index + 1);
-    }
-
-    return 0;
+    return this.fastDoubling(index);
   }
 
   // Generates the fibonacci sequence from a minimum index to a maximum
   // Examples:
-  // min: -9, max: 4 => [34,-21,13,-8,5,-3,2,-1,1,0,1,1,2,3]
+  // min: 0, max: 4 => [0,1,1,2,3]
   calculateFibonacciSequence(min: number, max: number): number[] {
 
     if (max < min) throw new Error(`Value for min (${min}) must be greater than or equal to max (${max})`)
@@ -52,5 +42,32 @@ export class FibonacciService {
     }
 
     return array;
+  }
+
+  // Function calculate the N-th fibonacci
+  // number using fast doubling method.
+  // Attempt to allow for negative numbers
+  fastDoubling(n: number): number {
+    let a = 0;
+    let b = 1;
+    for (let i = 31; i >= 0; i--) {
+      const d = a * (b * 2 - a);
+      const e = a * a + b * b;
+      a = d;
+      b = e;
+      if (((Math.abs(n) >> i) & 1) != 0) {
+        const c = a + b;
+        a = b;
+        b = c;
+      }
+    }
+
+      // -n is even then F_{-n} = -F_{n}
+    if(n < 0 && n%2 == 0) {
+      return -a;
+    }
+
+    // -n is odd then F_{-n} = F_n, the same for n
+    return a;
   }
 }

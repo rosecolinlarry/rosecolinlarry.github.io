@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-import { FibonacciService } from '../../fibonacci.service';
+import { RecursiveService } from '../../recursive.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { tap } from 'rxjs';
 import { MatTableDataSource } from '@angular/material/table';
+import { FastDoublingService } from 'src/app/fast-doubling.service';
 
 
 @Component({
@@ -25,7 +26,7 @@ export class FibonacciSequenceGeneratorComponent {
   });
 
 
-  constructor(private fibonacciService: FibonacciService) {
+  constructor(private fibonacciService: FastDoublingService) {
     this.form.valueChanges
       .pipe(tap(val => {
         this.min = val.min ?? this.min;
