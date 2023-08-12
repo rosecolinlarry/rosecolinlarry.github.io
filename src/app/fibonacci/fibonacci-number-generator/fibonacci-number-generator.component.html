@@ -1,0 +1,21 @@
+<p>
+  Calculates the Fibonacci number at the given index (can be negative).
+</p>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <mat-form-field id="indexFormField">
+    <mat-label>Index</mat-label>
+    <input
+      matInput
+      placeholder="0"
+      type="number"
+      formControlName="index"
+      id="indexInput"
+    />
+  </mat-form-field>
+
+  <button mat-raised-button color="accent" type="submit" id="submitButton">Submit</button>
+  <button mat-raised-button color="primary" type="button" id="resetButton" (click)="reset()"> Reset</button>
+</form>
+
+<h1 *ngIf="showNumber">{{fibonacciNumber}}</h1>

@@ -1,47 +1,18 @@
-<p>
-  Calculates the Fibonacci numbers from two indices (can be negative). If the
-  maximum value entered is less than the minimum value, submitting will flip the
-  values.
-</p>
+<h1>Fibonacci Number Generator</h1>
 
-<form [formGroup]="form" (ngSubmit)="onSubmit()">
-  <mat-form-field>
-    <mat-label>Min</mat-label>
-    <input matInput placeholder="0" type="number" formControlName="min" />
-  </mat-form-field>
+<section>
+  <h2>
+    Generate
+      <mat-button-toggle-group [formControl]="modeControl">
+        <mat-button-toggle value="sequence">a sequence</mat-button-toggle>
+        <mat-button-toggle value="number">one number</mat-button-toggle>
+      </mat-button-toggle-group>
+  </h2>
+</section>
 
-  <mat-form-field>
-    <mat-label>Max</mat-label>
-    <input matInput placeholder="3" type="number" formControlName="max" />
-  </mat-form-field>
-
-  <button mat-raised-button type="submit">Submit</button>
-</form>
-
-<mat-card *ngIf="fibonacciSequence.length > 0">
-  <mat-card-header>
-    <mat-card-title>Sequence Table</mat-card-title>
-    <mat-card-subtitle
-      >Fibonacci numbers generated for every integer between {{ min }} and
-      {{ max }} inclusive.</mat-card-subtitle>
-  </mat-card-header>
-  <mat-card-content>
-    <table mat-table [dataSource]="fibonacciTable">
-      <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
-      <tr mat-row *matRowDef="let rowData; columns: columnsToDisplay"></tr>
-      <ng-container matColumnDef="index">
-        <th mat-header-cell *matHeaderCellDef>Index</th>
-        <td mat-cell *matCellDef="let num">{{ num.index }}</td>
-      </ng-container>
-      <ng-container matColumnDef="fibonacciNumber">
-        <th mat-header-cell *matHeaderCellDef>Fibonacci Number</th>
-        <td mat-cell *matCellDef="let num">{{ num.val }}</td>
-      </ng-container>
-    </table>
-  </mat-card-content>
-</mat-card>
-
-<!-- <p *ngIf="fibonacciNumber">
-  Fibonacci Number at Index of {{ form.get("max")?.value }} is
-  {{ fibonacciNumber }}
-</p> -->
+<div *ngIf="modeControl.value === 'number'; else sequenceMode">
+  <app-fibonacci-number-generator></app-fibonacci-number-generator>
+</div>
+<ng-template #sequenceMode>
+  <app-fibonacci-sequence-generator></app-fibonacci-sequence-generator>
+</ng-template>

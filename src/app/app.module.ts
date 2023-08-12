@@ -12,17 +12,12 @@ import { MenuComponent } from './menu/menu.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
-import { MatInputModule } from '@angular/material/input';
 import { TopnavModule } from './topnav/topnav.module';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatCardModule } from '@angular/material/card';
-import { MatTableModule } from '@angular/material/table';
+import { FibonacciModule } from './fibonacci/fibonacci.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FibonacciComponent,
     TerminalComponent,
     FooterComponent,
     ReverseIntComponent,
@@ -36,13 +31,8 @@ import { MatTableModule } from '@angular/material/table';
     MatIconModule,
     MatToolbarModule,
     MatButtonModule,
-    MatInputModule,
-    ReactiveFormsModule,
-    FormsModule,
     TopnavModule,
-    MatFormFieldModule,
-    MatCardModule,
-    MatTableModule
+    FibonacciModule
   ],
   providers: [],
   bootstrap: [AppComponent],
