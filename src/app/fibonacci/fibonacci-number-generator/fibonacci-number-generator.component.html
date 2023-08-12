@@ -1,6 +1,4 @@
-<p>
-  Calculates the Fibonacci number at the given index (can be negative).
-</p>
+<p>Calculates the Fibonacci number at the given index (can be negative).</p>
 
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
   <mat-form-field id="indexFormField">
@@ -14,8 +12,32 @@
     />
   </mat-form-field>
 
-  <button mat-raised-button color="accent" type="submit" id="submitButton">Submit</button>
-  <button mat-raised-button color="primary" type="button" id="resetButton" (click)="reset()"> Reset</button>
+  <button mat-raised-button color="accent" type="submit" id="submitButton">
+    Submit
+  </button>
+  <button
+    mat-raised-button
+    color="primary"
+    type="button"
+    id="resetButton"
+    (click)="reset()"
+  >
+    Reset
+  </button>
 </form>
 
-<h1 *ngIf="showNumber">{{fibonacciNumber}}</h1>
+<mat-card>
+  <h1 *ngIf="">{{ fibonacciNumber }}</h1>
+</mat-card>
+
+<mat-card *ngIf="showNumber">
+  <mat-card-header>
+    <mat-card-title>Result</mat-card-title>
+    <mat-card-subtitle>
+      Fibonacci number at index {{ calculatedIndex }}.
+    </mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <h1>{{ fibonacciNumber }}</h1>
+  </mat-card-content>
+</mat-card>

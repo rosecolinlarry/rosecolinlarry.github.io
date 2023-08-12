@@ -1,5 +1,5 @@
 <p>
-  Calculates the Fibonacci numbers from two indices (can be negative). If the
+  Calculates the Fibonacci numbers from two indices (can be negative).If the
   maximum value entered is less than the minimum value, submitting will flip the
   values.
 </p>
@@ -35,8 +35,8 @@
   <mat-card-header>
     <mat-card-title>Sequence Table</mat-card-title>
     <mat-card-subtitle
-      >Fibonacci numbers generated for every integer between {{ min }} and
-      {{ max }} inclusive.</mat-card-subtitle
+      >Fibonacci numbers generated for every integer between {{ dataSource.data[0].index }} and
+      {{ dataSource.data[dataSource.data.length-1].index}} inclusive.</mat-card-subtitle
     >
   </mat-card-header>
   <mat-card-content>

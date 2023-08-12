@@ -74,6 +74,11 @@ export class FibonacciSequenceGeneratorComponent {
     const newData: IDataRow[] = [];
     this.dataSource.data = newData;
   }
+
+  getDataValueByIndex(i : number) : number {
+    this.dataSource.data.length;
+    return i;
+  }
 }
 
 interface IDataRow {
