@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { RecursiveService } from '../../recursive.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { tap } from 'rxjs';
 import { MatTableDataSource } from '@angular/material/table';
@@ -13,7 +12,7 @@ import { FastDoublingService } from 'src/app/fast-doubling.service';
 })
 export class FibonacciSequenceGeneratorComponent {
 
-  columnsToDisplay = ["index", "fibonacciNumber"]
+  displayedColumns = ["index", "fibonacciNumber"]
   fibonacciSequence: number[] = [];
   fibonacciTable: IDataRow[] = [];
   showTable = false;
@@ -71,12 +70,12 @@ export class FibonacciSequenceGeneratorComponent {
 
   reset() {
     this.showTable = false;
-    this.form.reset({min: 0, max: 1});
+    this.form.reset({ min: 0, max: 1 });
     const newData: IDataRow[] = [];
     this.dataSource.data = newData;
   }
 
-  getDataValueByIndex(i : number) : number {
+  getDataValueByIndex(i: number): number {
     this.dataSource.data.length;
     return i;
   }

@@ -1,7 +1,5 @@
-import { NgIf } from '@angular/common';
 import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
-import { FormControl, NgControl, NgControlStatus } from '@angular/forms';
-
+import { FormControl } from '@angular/forms';
 @Component({
   selector: 'app-fibonacci',
   templateUrl: './fibonacci.component.html',
@@ -10,7 +8,6 @@ import { FormControl, NgControl, NgControlStatus } from '@angular/forms';
 
 export class FibonacciComponent implements OnInit, OnChanges {
   @Input() modeControl = new FormControl()
-
   ngOnInit(): void {
     this.modeControl.setValue(mode.number);
   }

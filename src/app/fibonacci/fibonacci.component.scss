@@ -1,5 +1,21 @@
 @import '../../styles.scss';
 
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.child {
+  display: flex;
+}
+
+.child div {
+  flex-grow: 1;
+  width: 0
+}
+
 button {
   padding: 16px, 0px;
   margin-bottom: 20px;
@@ -11,3 +27,4 @@ form {
   align-items: stretch;
   width: 100%
 }
+

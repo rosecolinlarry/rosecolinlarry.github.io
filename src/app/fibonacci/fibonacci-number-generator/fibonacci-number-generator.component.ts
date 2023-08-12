@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RecursiveService } from '../../recursive.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { tap } from 'rxjs';
 import { FastDoublingService } from 'src/app/fast-doubling.service';
 
 @Component({

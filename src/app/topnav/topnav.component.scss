@@ -16,12 +16,16 @@ img {
 }
 
 .toolbar {
+  z-index: 1000;
   position: absolute;
+  min-width: min-content;
   top: 0;
   left: 0;
   right: 0;
   height: 60px;
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
   align-items: center;
   color: mat.get-color-from-palette($accent-palette, 100);
   background-color: darkslategrey;
@@ -34,4 +38,8 @@ img {
 
 .toolbar .a {
   margin: 0 50px;
+}
+
+.topNavButton {
+  min-width: fit-content;
 }

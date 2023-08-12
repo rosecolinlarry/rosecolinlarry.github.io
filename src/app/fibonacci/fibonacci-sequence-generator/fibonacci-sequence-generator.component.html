@@ -31,7 +31,7 @@
   <button mat-raised-button color="primary" type="button" id="resetButton" (click)="reset()"> Reset</button>
 </form>
 
-<mat-card *ngIf="showTable">
+<mat-card *ngIf="showTable" class="container mat-elevation-z8">
   <mat-card-header>
     <mat-card-title>Sequence Table</mat-card-title>
     <mat-card-subtitle
@@ -41,8 +41,10 @@
   </mat-card-header>
   <mat-card-content>
     <table mat-table [dataSource]="dataSource" id="fibonacciTable">
-      <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
-      <tr mat-row *matRowDef="let rowData; columns: columnsToDisplay"></tr>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+      <tr mat-row *matRowDef="let rowData; columns: displayedColumns"></tr>
+
       <ng-container matColumnDef="index">
         <th mat-header-cell *matHeaderCellDef>Index</th>
         <td mat-cell *matCellDef="let num">{{ num.index }}</td>
