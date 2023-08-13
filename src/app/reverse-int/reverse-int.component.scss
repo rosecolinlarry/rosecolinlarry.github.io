@@ -14,6 +14,10 @@ mat-label {
   color: mat.get-color-from-palette($accent-palette, 100);
 }
 
+.field-with-hints {
+  padding-bottom: 5px;
+}
+
 .wrapper {
   display: flex;
   flex-wrap: wrap;

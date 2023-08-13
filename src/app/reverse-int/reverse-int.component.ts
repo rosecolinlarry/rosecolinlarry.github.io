@@ -11,8 +11,9 @@ export class ReverseIntComponent {
 
   originalInt: number | undefined;
   reversedInt: number | undefined;
-
-
+  // uint32 min and max
+  maxInt = 7463847412
+  minInt = -8463847412
   showNumber: boolean | undefined;
   inputControl = new FormControl(0, [Validators.required])
 
@@ -21,11 +22,6 @@ export class ReverseIntComponent {
   })
 
   constructor(private reversedIntService: ReverseIntService) {
-
-    // uint32 min and max
-    const maxInt = Math.pow(2, 31) - 1;
-    const minInt = -Math.pow(2, 31);
-    this.form.get('inputControl')?.addValidators([Validators.min(minInt), Validators.max(maxInt)])
   }
 
   reset() {

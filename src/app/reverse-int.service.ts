@@ -15,6 +15,10 @@ export class ReverseIntService {
       reversedXStr += xStr.charAt(i);
     }
     const reversedX = Number.parseInt(reversedXStr) ?? 0;
+    const maxInt = Math.pow(2, 31) - 1;
+    const minInt = -Math.pow(2, 31);
+
+    if (reversedX > maxInt || reversedX < minInt) return 0;
     return reversedX;
   }
 }
