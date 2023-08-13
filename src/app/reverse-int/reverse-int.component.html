@@ -12,12 +12,30 @@
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
   <mat-form-field class="field-with-hints">
     <mat-label>Enter an Integer</mat-label>
-    <input formControlName="inputControl" [(ngModel)]="originalInt" matInput placeholder="1234" type="number" id="integerInput" required/>
-    <ng-container *ngIf="inputControl.invalid && (inputControl.dirty || inputControl.touched)">
-      <mat-error class="mat-error" *ngIf="inputControl.errors?.['required'] && inputControl.value?.toString()?.length === 0">Input is required</mat-error>
-    </ng-container>
-    <mat-hint align="end" class="mat-error" *ngIf="(originalInt ?? 0) > maxInt">The reversed integer will exceed the max value</mat-hint>
-    <mat-hint align="end" class="mat-error" *ngIf="(originalInt ?? 0) < minInt">The reversed integer will be below the min value</mat-hint>
+    <input
+      formControlName="inputControl"
+      [(ngModel)]="originalInt"
+      matInput
+      placeholder="1234"
+      type="number"
+      id="integerInput"
+      required
+      [pattern]="pattern"
+    />
+    <mat-error
+      class="mat-error"
+      *ngIf="inputControl.invalid && (inputControl.dirty || inputControl.touched) && inputControl.errors?.['required']"
+      >Input is required</mat-error
+    >
+    <mat-error class="mat-error" *ngIf="inputControl.errors?.['pattern']"
+      >Invalid pattern. Integers only.</mat-error
+    >
+    <mat-hint align="end" class="mat-error" *ngIf="(originalInt ?? 0) > maxInt"
+      >The reversed integer will exceed the max value</mat-hint
+    >
+    <mat-hint align="end" class="mat-error" *ngIf="(originalInt ?? 0) < minInt"
+      >The reversed integer will be below the min value</mat-hint
+    >
   </mat-form-field>
 
   <button mat-raised-button color="accent" type="submit" id="submitButton">

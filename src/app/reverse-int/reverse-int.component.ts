@@ -9,13 +9,14 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class ReverseIntComponent {
 
+  pattern = '^-?[0-9]\\d*?$';
   originalInt: number | undefined;
   reversedInt: number | undefined;
-  // uint32 min and max
+  // uint32 min and max reversed
   maxInt = 7463847412
   minInt = -8463847412
   showNumber: boolean | undefined;
-  inputControl = new FormControl(0, [Validators.required])
+  inputControl = new FormControl(0, [Validators.required, Validators.pattern(this.pattern)])
 
   form = new FormGroup({
     inputControl: this.inputControl
@@ -27,6 +28,7 @@ export class ReverseIntComponent {
   reset() {
     this.showNumber = false;
     this.form.reset();
+    this.form.controls.inputControl.setErrors(null);
     this.reversedInt = 0;
   }
 
