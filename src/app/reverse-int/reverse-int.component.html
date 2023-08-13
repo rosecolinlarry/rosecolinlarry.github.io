@@ -1,30 +1,46 @@
-<div class="px-5 pt-4"><div class="flex"></div><div class="xFUwe" data-track-load="description_content"><p>Given a signed 32-bit integer <code>x</code>, return <code>x</code><em> with its digits reversed</em>. If reversing <code>x</code> causes the value to go outside the signed 32-bit integer range <code>[-2<sup>31</sup>, 2<sup>31</sup> - 1]</code>, then return <code>0</code>.</p>
+<h1>Reverse My Integer</h1>
 
-  <p><strong>Assume the environment does not allow you to store 64-bit integers (signed or unsigned).</strong></p>
+<div class="wrapper">
+  <p>
+    Given a signed 32-bit integer <code>x</code>, returns <code>x</code
+    ><em> with its digits reversed</em>. If reversing <code>x</code> causes the
+    value to go outside the signed 32-bit integer range
+    <code>[-2<sup>31</sup>, 2<sup>31</sup> - 1]</code>, then returns
+    <code>0</code>.
+  </p>
+</div>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <mat-form-field>
+    <mat-label>Enter an Integer</mat-label>
+    <input formControlName="inputControl" [(ngModel)]="originalInt" matInput placeholder="1234" type="number" id="integerInput" required/>
+    <ng-container *ngIf="inputControl.invalid && (inputControl.dirty || inputControl.touched)">
+      <mat-error class="mat-error" *ngIf="inputControl.errors?.['required'] && inputControl.value?.toString()?.length === 0">Input is required</mat-error>
+      <mat-error class="mat-error" *ngIf="inputControl.errors?.['max']">Input exceeds maximum value</mat-error>
+      <mat-error class="mat-error" *ngIf="inputControl.errors?.['min']">Input is below minimum value</mat-error>
+    </ng-container>
+  </mat-form-field>
 
-  <p>&nbsp;</p>
-  <p><strong class="example">Example 1:</strong></p>
-
-  <pre><strong>Input:</strong> x = 123
-  <strong>Output:</strong> 321
-  </pre>
-
-  <p><strong class="example">Example 2:</strong></p>
-
-  <pre><strong>Input:</strong> x = -123
-  <strong>Output:</strong> -321
-  </pre>
-
-  <p><strong class="example">Example 3:</strong></p>
-
-  <pre><strong>Input:</strong> x = 120
-  <strong>Output:</strong> 21
-  </pre>
-
-  <p>&nbsp;</p>
-  <p><strong>Constraints:</strong></p>
-
-  <ul>
-    <li><code>-2<sup>31</sup> &lt;= x &lt;= 2<sup>31</sup> - 1</code></li>
-  </ul>
-  </div></div>
+  <button mat-raised-button color="accent" type="submit" id="submitButton">
+    Submit
+  </button>
+  <button
+    mat-raised-button
+    color="primary"
+    type="button"
+    id="resetButton"
+    (click)="reset()"
+  >
+    Reset
+  </button>
+</form>
+<div>
+  <mat-card *ngIf="showNumber">
+    <mat-card-header>
+      <mat-card-title>Result</mat-card-title>
+      <mat-card-subtitle> Your integer in reverse order. </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <h1>{{ reversedInt }}</h1>
+    </mat-card-content>
+  </mat-card>
+</div>
