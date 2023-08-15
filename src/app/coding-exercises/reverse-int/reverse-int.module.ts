@@ -7,8 +7,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
-
-
+import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
   declarations: [ReverseIntComponent],
@@ -20,7 +19,9 @@ import { MatCardModule } from '@angular/material/card';
     MatButtonModule,
     ReactiveFormsModule,
     FormsModule,
-    MatCardModule
-  ]
+    MatCardModule,
+    SharedModule
+  ],
+  exports: [ReverseIntComponent]
 })
 export class ReverseIntModule { }

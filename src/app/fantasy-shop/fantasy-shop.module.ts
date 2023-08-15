@@ -22,7 +22,9 @@ import { SharedModule } from '../shared/shared.module';
     SharedModule
   ],
   exports: [
-    FantasyShopComponent
+    FantasyShopComponent,
+    DepartmentComponent,
+    ShelfComponent
   ]
 })
 export class FantasyShopModule { }
