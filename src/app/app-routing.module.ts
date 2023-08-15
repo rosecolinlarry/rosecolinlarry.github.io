@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FibonacciComponent } from './fibonacci/fibonacci.component';
-import { ReverseIntComponent } from './reverse-int/reverse-int.component';
+import { FibonacciComponent } from './coding-exercises/fibonacci/fibonacci.component';
+import { ReverseIntComponent } from './coding-exercises/reverse-int/reverse-int.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [

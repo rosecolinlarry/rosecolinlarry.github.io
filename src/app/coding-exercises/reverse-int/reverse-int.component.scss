@@ -1,6 +1,6 @@
 @use '@angular/material' as mat;
 @use 'sass:map';
-@import '../../styles.scss';
+@import '../../../styles.scss';
 
 $color-config: mat.get-color-config($dark-theme);
 // get the chosen palette : primary, accent, warn

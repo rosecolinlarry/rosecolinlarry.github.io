@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { FastDoublingService } from 'src/app/fast-doubling.service';
+import { FastDoublingService } from '../services/fast-doubling.service';
 
 @Component({
   selector: 'app-fibonacci-number-generator',

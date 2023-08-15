@@ -9,9 +9,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { TopnavModule } from './topnav/topnav.module';
-import { FibonacciModule } from './fibonacci/fibonacci.module';
+import { FibonacciModule } from './coding-exercises/fibonacci/fibonacci.module';
 import { DashboardModule } from './dashboard/dashboard.module';
-import { ReverseIntModule } from './reverse-int/reverse-int.module';
+import { ReverseIntModule } from './coding-exercises/reverse-int/reverse-int.module';
 
 @NgModule({
   declarations: [

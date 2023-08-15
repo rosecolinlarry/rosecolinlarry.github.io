@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { tap } from 'rxjs';
 import { MatTableDataSource } from '@angular/material/table';
-import { FastDoublingService } from 'src/app/fast-doubling.service';
+import { FastDoublingService } from '../services/fast-doubling.service';
 
 
 @Component({
