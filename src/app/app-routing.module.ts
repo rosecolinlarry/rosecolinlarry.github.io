@@ -2,13 +2,13 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FibonacciComponent } from './coding-exercises/fibonacci/fibonacci.component';
 import { ReverseIntComponent } from './coding-exercises/reverse-int/reverse-int.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { DashboardComponent } from './coding-exercises/dashboard/dashboard.component';
 
 const routes: Routes = [
-  { path: 'fibonacci', component: FibonacciComponent },
-  { path: 'home', component: DashboardComponent },
-  { path: '', component: DashboardComponent },
-  { path: 'reversed-int', component: ReverseIntComponent }
+  { path: 'coding-exercises/fibonacci', component: FibonacciComponent },
+  { path: 'coding-exercises/home', component: DashboardComponent },
+  { path: 'coding-exercises/', component: DashboardComponent },
+  { path: 'coding-exercises/reversed-int', component: ReverseIntComponent }
 ];
 
 @NgModule({

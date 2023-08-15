@@ -6,5 +6,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./topnav.component.scss']
 })
 export class TopnavComponent {
-  @Input() title = ""
+  @Input() title = "Redemption Arc";
 }

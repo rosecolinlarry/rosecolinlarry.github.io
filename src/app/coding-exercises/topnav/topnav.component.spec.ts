@@ -3,6 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { TopnavComponent } from './topnav.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
+import { CodingExercisesModule } from '../coding-exercises.module';
 
 describe('TopnavComponent', () => {
   let component: TopnavComponent;
@@ -11,7 +12,7 @@ describe('TopnavComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [TopnavComponent],
-      imports: [MatToolbarModule, MatIconModule]
+      imports: [CodingExercisesModule, MatToolbarModule, MatIconModule]
     });
     fixture = TestBed.createComponent(TopnavComponent);
     component = fixture.componentInstance;
