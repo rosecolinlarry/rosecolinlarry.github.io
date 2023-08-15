@@ -3,7 +3,6 @@ import { RouterTestingModule } from "@angular/router/testing";
 import { CodingExercisesComponent } from './coding-exercises.component';
 import { RouterModule } from '@angular/router';
 import { CodingExercisesModule } from './coding-exercises.module';
-import { TopnavComponent } from './topnav/topnav.component';
 
 describe('CodingExercisesComponent', () => {
   let component: CodingExercisesComponent;
@@ -12,7 +11,7 @@ describe('CodingExercisesComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [RouterModule, RouterTestingModule, CodingExercisesModule],
-      declarations: [CodingExercisesComponent, TopnavComponent]
+      declarations: [CodingExercisesComponent]
     });
     fixture = TestBed.createComponent(CodingExercisesComponent);
     component = fixture.componentInstance;

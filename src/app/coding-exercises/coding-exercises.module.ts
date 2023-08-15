@@ -1,26 +1,22 @@
 import { NgModule } from '@angular/core';
 import { CodingExercisesComponent } from './coding-exercises.component';
-import { DashboardModule } from './dashboard/dashboard.module';
-import { TopnavModule } from './topnav/topnav.module';
+import { RouterModule } from '@angular/router';
+import { SharedModule } from '../shared/shared.module';
 import { FibonacciModule } from './fibonacci/fibonacci.module';
 import { ReverseIntModule } from './reverse-int/reverse-int.module';
-import { RouterModule } from '@angular/router';
-import { FooterComponent } from './footer/footer.component';
-
 
 @NgModule({
   declarations: [
-    CodingExercisesComponent,
-    FooterComponent
+    CodingExercisesComponent
   ],
   imports: [
     RouterModule,
-    TopnavModule,
     FibonacciModule,
-    DashboardModule,
-    ReverseIntModule
+    ReverseIntModule,
+    SharedModule
   ],
   exports: [
-    CodingExercisesComponent]
+    CodingExercisesComponent
+  ]
 })
 export class CodingExercisesModule { }

@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TerminalComponent } from './terminal.component';
+import { MagicItemComponent } from './magic-item.component';
 
-describe('TerminalComponent', () => {
-  let component: TerminalComponent;
-  let fixture: ComponentFixture<TerminalComponent>;
+describe('MagicItemComponent', () => {
+  let component: MagicItemComponent;
+  let fixture: ComponentFixture<MagicItemComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [TerminalComponent]
+      declarations: [MagicItemComponent]
     });
-    fixture = TestBed.createComponent(TerminalComponent);
+    fixture = TestBed.createComponent(MagicItemComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
