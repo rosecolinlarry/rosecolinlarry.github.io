@@ -10,6 +10,6 @@ export class MainLayoutComponent {
   title = "Redemption Arc";
   linkData: LinkData[] = [
     { url: '/coding-exercises/home', name: 'Coding Exercises' },
-    { url: '/fantasy-shop', name: 'Fantasy Shop' }
+    { url: '/fantasy-shop/store-front', name: 'Fantasy Shop' }
   ]
 }

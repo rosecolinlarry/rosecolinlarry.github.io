@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { EventType, NavigationEnd, Router, RouterEvent } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
 import { filter, tap } from 'rxjs'
 
 @Component({

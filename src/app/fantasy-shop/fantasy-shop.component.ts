@@ -9,4 +9,10 @@ import { LinkData } from '../shared/Interfaces/link-data';
 export class FantasyShopComponent {
   title = "Fantasy Shop";
   linkData: LinkData[] = [];
+
+  constructor() {
+    this.linkData = [
+      { url: 'store-front', name: 'Store Front' },
+    ]
+  }
 }

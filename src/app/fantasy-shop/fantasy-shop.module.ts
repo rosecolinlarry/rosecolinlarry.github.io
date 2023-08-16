@@ -7,6 +7,7 @@ import { FantasyShopComponent } from './fantasy-shop.component';
 import { MagicItemModule } from './magic-item/magic-item.module';
 import { StorefrontModule } from './storefront/storefront.module';
 import { SharedModule } from '../shared/shared.module';
+import { FantasyShopRoutingModule } from './fantasy-shop-routing.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { SharedModule } from '../shared/shared.module';
     RouterModule,
     MagicItemModule,
     StorefrontModule,
-    SharedModule
+    SharedModule,
+    FantasyShopRoutingModule
   ],
   exports: [
     FantasyShopComponent,
