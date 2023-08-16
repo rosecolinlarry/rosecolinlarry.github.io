@@ -1,12 +1,10 @@
-<div class="footer">
-  <mat-toolbar color="primary">
-    <p>Site code lives in <a href="https://github.com/rosecolinlarry/rosecolinlarry.github.io/">this GitHub Repo</a></p>
-    <div class="flex-stretch"></div>
-    <mat-icon class="mr-8">brightness_5</mat-icon>
-    <mat-slide-toggle
-      [formControl]="toggleControl"
-      class="mr-8"
-    ></mat-slide-toggle>
-    <mat-icon>bedtime</mat-icon>
-  </mat-toolbar>
-</div>
+<mat-toolbar class="footer" color="primary">
+    <a href="https://github.com/rosecolinlarry/rosecolinlarry.github.io/">Source Code (GitHub Repo)</a>
+  <div class="flex-stretch"></div>
+  <mat-icon class="mr-2">brightness_5</mat-icon>
+  <mat-slide-toggle
+    [formControl]="toggleControl"
+    class="mr-2"
+  ></mat-slide-toggle>
+  <mat-icon>bedtime</mat-icon>
+</mat-toolbar>
