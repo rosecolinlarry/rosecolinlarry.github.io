@@ -30,10 +30,12 @@ export class ReverseIntComponent {
     this.form.reset();
     this.form.controls.inputControl.setErrors(null);
     this.reversedInt = 0;
+    this.originalInt = 0;
   }
 
   onSubmit() {
     if (!this.form.valid) return;
+    this.originalInt = this.form.get('inputControl')?.value ?? 0;
     this.reversedInt = this.reversedIntService.reverse(this.originalInt ?? 0);
     this.showNumber = true;
   }

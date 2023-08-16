@@ -5,6 +5,7 @@ import { FantasyShopComponent } from './fantasy-shop/fantasy-shop.component';
 import { MainLayoutComponent } from './shared/main-layout/main-layout.component';
 
 const routes: Routes = [
+  {path: 'home', component: MainLayoutComponent},
   {
     path: '', component: MainLayoutComponent,
     children: [
