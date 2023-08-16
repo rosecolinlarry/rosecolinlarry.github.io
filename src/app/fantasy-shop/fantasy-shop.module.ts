@@ -21,7 +21,8 @@ import { FantasyShopRoutingModule } from './fantasy-shop-routing.module';
     MagicItemModule,
     StorefrontModule,
     SharedModule,
-    FantasyShopRoutingModule
+    FantasyShopRoutingModule,
+    MagicItemModule
   ],
   exports: [
     FantasyShopComponent,

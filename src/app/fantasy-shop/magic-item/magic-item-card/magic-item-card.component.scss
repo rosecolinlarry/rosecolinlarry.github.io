@@ -1,0 +1,22 @@
+.icon-display {
+transform: scale(3);
+}
+
+.star-button {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.item-card {
+  width: 500px;
+  padding: 5px;
+  margin: 10px;
+}
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
