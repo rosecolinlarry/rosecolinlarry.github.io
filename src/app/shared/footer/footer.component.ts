@@ -11,23 +11,28 @@ import { tap } from 'rxjs';
 })
 export class FooterComponent implements OnInit {
   @HostBinding('class') className = '';
-  toggleControl = new FormControl(false);
+  lightModeToggleControl = new FormControl(false);
   constructor(private dialog: MatDialog, private overlay: OverlayContainer) { }
 
   ngOnInit(): void {
-    const body = document.getElementsByTagName('body')[0];
-    this.toggleControl.valueChanges
+    const darkClassName = 'darkMode';
+    const lightClassName = 'lightMode';
+
+    this.lightModeToggleControl.valueChanges
       .pipe(
-        tap((darkMode) => {
-          const darkClassName = 'darkMode';
-          this.className = darkMode ? darkClassName : '';
-          if (darkMode) {
-            this.overlay.getContainerElement().classList.add(darkClassName);
-            body.classList.add(darkClassName);
+        tap((lightMode) => {
+          if (lightMode) {
+            document.getElementsByClassName(lightClassName)
+            document.body.classList.add(lightClassName);
+            document.body.classList.remove(darkClassName);
+            this.overlay.getContainerElement().classList.add(lightClassName);
+            this.overlay.getContainerElement().classList.remove(darkClassName);
           }
           else {
-            this.overlay.getContainerElement().classList.remove(darkClassName);
-            body.classList.remove(darkClassName);
+            document.body.classList.add(darkClassName);
+            document.body.classList.remove(lightClassName);
+            this.overlay.getContainerElement().classList.add(darkClassName);
+            this.overlay.getContainerElement().classList.remove(lightClassName);
           }
         })
       )

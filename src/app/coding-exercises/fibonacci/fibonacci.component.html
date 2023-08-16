@@ -7,15 +7,10 @@
       <mat-button-toggle value="mode.number">one number</mat-button-toggle>
     </mat-button-toggle-group>
   </h2>
-
-  <div class="child">
-    <div>
-      <app-fibonacci-number-generator
-        *ngIf="modeControl.value === 'mode.number'"
-      ></app-fibonacci-number-generator>
-      <app-fibonacci-sequence-generator
-        *ngIf="modeControl.value === 'mode.sequence'"
-      ></app-fibonacci-sequence-generator>
-    </div>
-  </div>
+  <app-fibonacci-number-generator
+    *ngIf="modeControl.value === 'mode.number'"
+  ></app-fibonacci-number-generator>
+  <app-fibonacci-sequence-generator
+    *ngIf="modeControl.value === 'mode.sequence'"
+  ></app-fibonacci-sequence-generator>
 </div>

@@ -2,20 +2,7 @@
 @use '@angular/material' as mat;
 @include mat.core();
 
-$primary: mat.define-palette(mat.$deep-purple-palette, 500, 100, 900);
-$accent: mat.define-palette(mat.$amber-palette, A200, A100, A400);
-$warn: mat.define-palette(mat.$red-palette);
-
-$default-theme: mat.define-light-theme((
-  color: (
-    primary: $primary,
-    accent: $accent,
-    warn: $warn,
-  )
-));
-
-@include mat.all-component-themes($default-theme);
-
+// Define dark mode
 $dark-primary: mat.define-palette(mat.$pink-palette, 500, 100, 900);
 $dark-accent: mat.define-palette(mat.$blue-grey-palette, A200, A100, A400);
 $dark-warn: mat.define-palette(mat.$red-palette);
@@ -28,8 +15,29 @@ $dark-theme: mat.define-dark-theme((
   )
 ));
 
+
 .darkMode {
   @include mat.all-component-colors($dark-theme);
+}
+
+// Default to dark theme
+@include mat.all-component-themes($dark-theme);
+
+// Define light mode
+$light-primary: mat.define-palette(mat.$deep-purple-palette, 500, 100, 900);
+$light-accent: mat.define-palette(mat.$amber-palette, A200, A100, A400);
+$light-warn: mat.define-palette(mat.$red-palette);
+
+$light-theme: mat.define-light-theme((
+  color: (
+    primary: $light-primary,
+    accent: $light-accent,
+    warn: $light-warn,
+  )
+));
+
+.lightMode {
+  @include mat.all-component-colors($light-theme);
 }
 
 html,
@@ -46,4 +54,44 @@ p {
 
 .mr-8 {
   margin-right: 8px;
+}
+.sidenav-content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: min-content;
+  margin-top: 100px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.field-with-hints {
+  padding-bottom: 5px;
+}
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 350px;
+}
+
+.child {
+  display: flex;
+}
+
+.child div {
+  flex-grow: 1;
+  width: 0;
+}
+
+button {
+  padding: 16px, 0px;
+  margin-bottom: 20px;
+}
+
+form {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
 }
