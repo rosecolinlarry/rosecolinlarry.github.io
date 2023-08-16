@@ -5,20 +5,20 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
 import { CommonModule } from '@angular/common';
-import { FibonacciComponent } from './coding-exercises/fibonacci/fibonacci.component';
-import { ReverseIntComponent } from './coding-exercises/reverse-int/reverse-int.component';
+import { CodingExercisesModule } from './coding-exercises/coding-exercises.module';
+import { FantasyShopModule } from './fantasy-shop/fantasy-shop.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    FibonacciComponent,
-    ReverseIntComponent
+    AppComponent
   ],
   imports: [
     CommonModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    CodingExercisesModule,
+    FantasyShopModule,
     SharedModule
   ],
   providers: [],

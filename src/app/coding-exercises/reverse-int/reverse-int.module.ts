@@ -9,19 +9,20 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
 import { SharedModule } from 'src/app/shared/shared.module';
 
+
+
 @NgModule({
   declarations: [ReverseIntComponent],
   imports: [
     CommonModule,
+    SharedModule,
     MatInputModule,
     MatFormFieldModule,
     MatIconModule,
     MatButtonModule,
     ReactiveFormsModule,
     FormsModule,
-    MatCardModule,
-    SharedModule
-  ],
-  exports: [ReverseIntComponent]
+    MatCardModule
+  ]
 })
 export class ReverseIntModule { }

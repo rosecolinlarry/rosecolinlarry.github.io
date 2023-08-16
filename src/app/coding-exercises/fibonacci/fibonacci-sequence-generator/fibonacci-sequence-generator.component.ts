@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { tap } from 'rxjs';
 import { MatTableDataSource } from '@angular/material/table';
@@ -10,7 +10,7 @@ import { FastDoublingService } from '../services/fast-doubling.service';
   templateUrl: './fibonacci-sequence-generator.component.html',
   styleUrls: ['./fibonacci-sequence-generator.component.scss']
 })
-export class FibonacciSequenceGeneratorComponent {
+export class FibonacciSequenceGeneratorComponent implements OnInit {
 
   displayedColumns = ["index", "fibonacciNumber"]
   fibonacciSequence: number[] = [];
@@ -26,6 +26,8 @@ export class FibonacciSequenceGeneratorComponent {
 
 
   constructor(private fibonacciService: FastDoublingService) {
+  }
+  ngOnInit(): void {
     this.form.valueChanges
       .pipe(tap(val => {
         this.min = val.min ?? this.min;

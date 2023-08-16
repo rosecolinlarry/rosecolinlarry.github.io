@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FibonacciComponent } from './fibonacci.component';
-import { FibonacciModule } from './fibonacci.module';
+import { FibonacciComponent } from  './fibonacci.component'
+import { FibonacciModule } from './fibonacci.module'
 
 describe('FibonacciComponent', () => {
   let component: FibonacciComponent;

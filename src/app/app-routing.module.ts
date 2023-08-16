@@ -9,12 +9,10 @@ import { DashboardComponent } from './shared/dashboard/dashboard.component';
 const routes: Routes = [
   { path: 'coding-exercises/fibonacci', component: FibonacciComponent },
   { path: 'coding-exercises/home', component: DashboardComponent },
-  { path: 'coding-exercises/', component: DashboardComponent },
   { path: 'coding-exercises/reversed-int', component: ReverseIntComponent },
-  { path: 'fantasy-shop/', component: StorefrontComponent},
-  { path: '', component: AppComponent},
-  { path: '/', component: AppComponent},
-  { path: 'home/', component: AppComponent},
+  { path: 'fantasy-shop', component: StorefrontComponent},
+  { path: '', component: DashboardComponent},
+  { path: 'home', component: DashboardComponent},
 ];
 
 @NgModule({
