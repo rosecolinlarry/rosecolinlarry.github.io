@@ -20,26 +20,26 @@ ul li {
   cursor: pointer;
 }
 
-ul li:nth-child(odd) {
+.odd {
   background: linear-gradient(to right, orange, tomato);
   text-align: left;
   padding-left: 10%;
   transform: perspective(500px) rotateY(45deg);
 }
 
-ul li:nth-child(even) {
+.even {
   background: linear-gradient(to left, orange, tomato);
   text-align: right;
   padding-right: 10%;
   transform: perspective(500px) rotateY(-45deg);
 }
 
-ul li:nth-child(odd):hover {
+.odd:hover {
   transform: perspective(200px) rotateY(45deg);
   padding-left: 5%;
 }
 
-ul li:nth-child(even):hover {
+.even:hover {
   transform: perspective(200px) rotateY(-45deg);
   padding-right: 5%;
 }
