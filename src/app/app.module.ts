@@ -3,36 +3,25 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { TerminalComponent } from './terminal/terminal.component';
-import { FooterComponent } from './footer/footer.component';
-import { MatIconModule } from '@angular/material/icon';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
-import { TopnavModule } from './topnav/topnav.module';
-import { FibonacciModule } from './fibonacci/fibonacci.module';
-import { DashboardModule } from './dashboard/dashboard.module';
-import { ReverseIntModule } from './reverse-int/reverse-int.module';
+import { SharedModule } from './shared/shared.module';
+import { CommonModule } from '@angular/common';
+import { CodingExercisesModule } from './coding-exercises/coding-exercises.module';
+import { FantasyShopModule } from './fantasy-shop/fantasy-shop.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    TerminalComponent,
-    FooterComponent,
+    AppComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatIconModule,
-    MatToolbarModule,
-    MatButtonModule,
-    TopnavModule,
-    FibonacciModule,
-    DashboardModule,
-    ReverseIntModule
+    CodingExercisesModule,
+    FantasyShopModule,
+    SharedModule,
   ],
   providers: [],
-  bootstrap: [AppComponent],
-  exports: [AppRoutingModule]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

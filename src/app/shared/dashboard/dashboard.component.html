@@ -1,0 +1,9 @@
+<ul *ngFor="let link of linkData; odd as isOdd; even as isEven;" >
+  <!-- <li routerLink="/coding-exercises/fibonacci">Fibonacci</li>
+  <li routerLink="/coding-exercises/reversed-int">Reverse Integer</li>
+  <li routerLink="/fantasy-shop">Fantasy Shop</li> -->
+  <li
+    [routerLink]="[link.url]"
+    routerLinkActive="router-link-active"
+    [ngClass]="{'odd': isOdd, 'even': isEven}" >{{link.name}}</li>
+</ul>

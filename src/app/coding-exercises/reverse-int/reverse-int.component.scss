@@ -1,0 +1,56 @@
+@use '@angular/material' as mat;
+@use 'sass:map';
+@import '../../../styles.scss';
+
+$color-config: mat.get-color-config($dark-theme);
+// get the chosen palette : primary, accent, warn
+$accent-palette: map.get($color-config, 'accent');
+
+.mat-error {
+  color: mat.get-color-from-palette($accent-palette, 100);
+}
+
+mat-label {
+  color: mat.get-color-from-palette($accent-palette, 100);
+}
+
+.field-with-hints {
+  padding-bottom: 5px;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  max-width: 350px;
+}
+
+.child {
+  display: flex;
+}
+
+.child div {
+  flex-grow: 1;
+  width: 0
+}
+
+button {
+  padding: 16px, 0px;
+  margin-bottom: 20px;
+}
+
+form {
+  display:  inline-flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%
+}
+
+
+mat-card-title {
+  color: mat.get-color-from-palette($accent-palette, 900);
+}
+
+mat-card-content {
+  color: mat.get-color-from-palette($accent-palette, 900);
+}
