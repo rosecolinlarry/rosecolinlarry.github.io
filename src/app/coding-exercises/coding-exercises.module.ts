@@ -5,10 +5,13 @@ import { SharedModule } from '../shared/shared.module';
 import { ReverseIntModule } from './reverse-int/reverse-int.module';
 import { CommonModule } from '@angular/common';
 import { FibonacciModule } from './fibonacci/fibonacci.module';
+import { CodingExercisesRoutingModule } from './coding-exercises-routing.module';
+import { CodingExercisesDashboardComponent } from './coding-exercises-dashboard/coding-exercises-dashboard.component';
 
 @NgModule({
   declarations: [
-    CodingExercisesComponent
+    CodingExercisesComponent,
+    CodingExercisesDashboardComponent
   ],
   imports: [
     CommonModule,
@@ -16,9 +19,11 @@ import { FibonacciModule } from './fibonacci/fibonacci.module';
     RouterModule,
     FibonacciModule,
     ReverseIntModule,
+    CodingExercisesRoutingModule
   ],
   exports: [
-    CodingExercisesComponent
+    CodingExercisesComponent,
+    CodingExercisesDashboardComponent
   ]
 })
 export class CodingExercisesModule { }

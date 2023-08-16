@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class CodingExercisesComponent {
   title = 'Coding Exercises';
+  linkData = [
+    {url:'fibonacci', name: 'Fibonacci'},
+    {url:'reversed-int', name: 'Reversed Integer'},
+  ]
 }

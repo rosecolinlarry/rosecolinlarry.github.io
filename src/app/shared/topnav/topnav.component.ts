@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { LinkData } from '../Interfaces/link-data';
 
 @Component({
   selector: 'app-topnav',
@@ -7,4 +8,5 @@ import { Component, Input } from '@angular/core';
 })
 export class TopnavComponent {
   @Input() title = "Redemption Arc";
+  @Input() linkData: LinkData[] = [];
 }

@@ -2,24 +2,20 @@
   <mat-toolbar-row>
     <img
       src="../assets/redemption-64x64.png"
-      routerLink="/home"
+      routerLink="/"
       alt="Redemption Logo"
     />
     <span class="title">{{ title }}</span>
     <div class="spacer"></div>
-    <button class="topNavButton" mat-button routerLink="/coding-exercises/fibonacci" aria-label="Button">
-      Fibonacci
-    </button>
-    <button class="topNavButton" mat-button routerLink="/coding-exercises/reversed-int" aria-label="Button">
-      Reversed Integer
-    </button>
-    <button class="topNavButton" mat-button routerLink="/fantasy-shop" aria-label="Button">
-      Fantasy Shop
-    </button>
+    <ng-container *ngFor="let link of linkData">
+      <button class="topNavButton" mat-button [routerLink]="link.url">
+        {{ link.name }}
+      </button>
+    </ng-container>
     <button
       mat-icon-button
       class="example-icon"
-      routerLink="/home"
+      routerLink="/"
       aria-label="Home button"
     >
       <mat-icon>home</mat-icon>

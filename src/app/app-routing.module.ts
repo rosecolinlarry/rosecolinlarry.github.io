@@ -1,19 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FibonacciComponent } from './coding-exercises/fibonacci/fibonacci.component';
-import { ReverseIntComponent } from './coding-exercises/reverse-int/reverse-int.component';
-import { StorefrontComponent } from './fantasy-shop/storefront/storefront.component';
-import { AppComponent } from './app.component';
-import { DashboardComponent } from './shared/dashboard/dashboard.component';
+import { CodingExercisesComponent } from './coding-exercises/coding-exercises.component';
+import { FantasyShopComponent } from './fantasy-shop/fantasy-shop.component';
+import { MainLayoutComponent } from './shared/main-layout/main-layout.component';
 
 const routes: Routes = [
-  { path: 'coding-exercises/fibonacci', component: FibonacciComponent },
-  { path: 'coding-exercises/home', component: DashboardComponent },
-  { path: 'coding-exercises/reversed-int', component: ReverseIntComponent },
-  { path: 'fantasy-shop', component: StorefrontComponent},
-  { path: '', component: DashboardComponent},
-  { path: 'home', component: DashboardComponent},
-];
+  {
+    path: '', component: MainLayoutComponent,
+    children: [
+      { path: 'coding-exercises', component: CodingExercisesComponent },
+      { path: 'fantasy-shop', component: FantasyShopComponent }]
+  }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
