@@ -7,7 +7,6 @@ import { SharedModule } from './shared/shared.module';
 import { CommonModule } from '@angular/common';
 import { CodingExercisesModule } from './coding-exercises/coding-exercises.module';
 import { FantasyShopModule } from './fantasy-shop/fantasy-shop.module';
-import { CodingExercisesComponent } from './coding-exercises/coding-exercises.component';
 
 @NgModule({
   declarations: [

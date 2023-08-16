@@ -6,6 +6,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { CodingExercisesModule } from 'src/app/coding-exercises/coding-exercises.module';
 import { MatButtonModule } from '@angular/material/button';
 import { SharedModule } from '../shared.module';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterLink, RouterModule } from '@angular/router';
 
 describe('TopnavComponent', () => {
   let component: TopnavComponent;
@@ -14,7 +16,9 @@ describe('TopnavComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [TopnavComponent],
-      imports: [CodingExercisesModule, MatToolbarModule, MatIconModule, MatButtonModule, SharedModule]
+      imports: [CodingExercisesModule, MatToolbarModule, MatIconModule,
+         MatButtonModule, SharedModule, HttpClientModule,
+          RouterLink, RouterModule, RouterModule.forRoot([])]
     });
     fixture = TestBed.createComponent(TopnavComponent);
     component = fixture.componentInstance;

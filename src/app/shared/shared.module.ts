@@ -14,7 +14,6 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MainLayoutComponent } from './main-layout/main-layout.component';
 import { MatDialogModule } from '@angular/material/dialog';
-import { CodingExercisesModule } from '../coding-exercises/coding-exercises.module';
 @NgModule({
   declarations: [
     DashboardComponent,

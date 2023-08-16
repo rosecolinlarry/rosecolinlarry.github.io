@@ -8,14 +8,14 @@ import { Ideal } from "./ideal";
 import { Multiple } from "./multiple";
 import { Reference } from "./reference";
 import { ScorePrerequisite } from "./score-prerequisite";
-import { String } from "./string";
+import { String as StringType } from "./string";
 
 export interface Option {
   reference: Reference | undefined;
   action: Action | undefined;
   multiple: Multiple | undefined;
   choice : Choice | undefined;
-  string : String | undefined;
+  string : StringType | undefined;
   ideal : Ideal | undefined;
   counted_reference: CountedReference | undefined;
   score_prerequisite: ScorePrerequisite | undefined;

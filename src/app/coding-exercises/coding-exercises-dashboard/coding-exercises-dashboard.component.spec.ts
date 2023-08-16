@@ -1,5 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { CodingExercisesDashboardComponent } from './coding-exercises-dashboard.component';
+import { SharedModule } from 'src/app/shared/shared.module';
+import { RouterModule } from '@angular/router';
 
 
 describe('CodingExercisesDashboardComponent', () => {
@@ -8,7 +10,8 @@ describe('CodingExercisesDashboardComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [CodingExercisesDashboardComponent]
+      declarations: [CodingExercisesDashboardComponent],
+      imports: [SharedModule, RouterModule, RouterModule.forRoot([])]
     });
     fixture = TestBed.createComponent(CodingExercisesDashboardComponent);
     component = fixture.componentInstance;

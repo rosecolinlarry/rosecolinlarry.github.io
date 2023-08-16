@@ -29,7 +29,9 @@ export class MagicItemService {
 
   // Handle any thrown errors
   handleError<T>(operation = 'operation', result?: T) {
-    return (error: any): Observable<T> => {
+    return (error: unknown): Observable<T> => {
+      console.log(operation);
+      console.log(error);
       return of(result as T);
     }
   }
