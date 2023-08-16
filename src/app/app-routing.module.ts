@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CodingExercisesComponent } from './coding-exercises/coding-exercises.component';
-import { FantasyShopComponent } from './fantasy-shop/fantasy-shop.component';
 import { MainLayoutComponent } from './shared/main-layout/main-layout.component';
 import { StorefrontComponent } from './fantasy-shop/storefront/storefront.component';
 

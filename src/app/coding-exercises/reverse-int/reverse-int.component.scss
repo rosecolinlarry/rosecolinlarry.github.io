@@ -46,3 +46,11 @@ form {
   width: 100%
 }
 
+
+mat-card-title {
+  color: mat.get-color-from-palette($accent-palette, 900);
+}
+
+mat-card-content {
+  color: mat.get-color-from-palette($accent-palette, 900);
+}
