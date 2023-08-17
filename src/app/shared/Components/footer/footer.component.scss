@@ -1,0 +1,27 @@
+@import "../../../../styles.scss";
+
+.footer {
+  width: 100%;
+  display: flex;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  font-size: small;
+  max-height: 30px
+}
+
+.footer a {
+  color: white
+}
+
+.flex-stretch {
+  flex: 1 0 auto;
+}
+
+.content {
+  height: inherit;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
