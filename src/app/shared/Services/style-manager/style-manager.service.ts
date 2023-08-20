@@ -10,7 +10,7 @@ export class StyleManagerService {
   }
 
   // Remove stylesheet w/ specified key
-  removeStyle(key: string, href: string) {
+  removeStyle(key: string) {
     const existingLinkElement = this.getExistingLinkElementByKey(key);
     if (existingLinkElement) {
       document.head.removeChild(existingLinkElement);

@@ -67,7 +67,6 @@ export class MagicItemComponent implements OnInit {
     this.magicItems = []; // Clear list
     this.getAll();
 
-    const random = this.randomIntFromInterval(0,10);
     const indices = this.getIndices().slice(0, 15);
 
     console.log(indices)
@@ -77,7 +76,6 @@ export class MagicItemComponent implements OnInit {
 
     this.loading$.next(false);
   }
-
 
   randomIntFromInterval(min: number, max: number) { // min and max included
     return Math.floor(Math.random() * (max - min + 1) + min)
