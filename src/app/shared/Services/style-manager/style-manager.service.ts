@@ -4,7 +4,6 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class StyleManagerService {
-
   // Set stylesheet w/ specified key
   setStyle(key: string, href: string) {
     this.getLinkElementForKey(key).setAttribute("href", href);
@@ -13,7 +12,7 @@ export class StyleManagerService {
   // Remove stylesheet w/ specified key
   removeStyle(key: string, href: string) {
     const existingLinkElement = this.getExistingLinkElementByKey(key);
-    if(existingLinkElement) {
+    if (existingLinkElement) {
       document.head.removeChild(existingLinkElement);
     }
   }

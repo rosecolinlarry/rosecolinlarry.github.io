@@ -1,7 +1,4 @@
-import { OverlayContainer } from '@angular/cdk/overlay';
-import { Component, HostBinding, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
-import { MatDialog } from '@angular/material/dialog';
+import { Component, OnInit } from '@angular/core';
 import { ThemePickerService } from '../../Services/theme-picker/theme-picker.service';
 import { ThemeOption } from '../../Interfaces/theme-option.model';
 import { Observable } from 'rxjs';
@@ -17,7 +14,7 @@ export class FooterComponent implements OnInit {
   constructor(private themePickerService: ThemePickerService) { }
 
   ngOnInit(): void {
-    this.themePickerService.setTheme("deeppurple-amber");
+    this.themePickerService.setTheme(this.themePickerService.getTheme());
   }
   themeChangeHandler(theme: string) {
     this.themePickerService.setTheme(theme);

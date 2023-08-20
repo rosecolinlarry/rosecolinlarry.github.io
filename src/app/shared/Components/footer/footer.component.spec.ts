@@ -5,7 +5,7 @@ import { SharedModule } from '../../shared.module';
 import { MatDialogModule } from '@angular/material/dialog';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { RouterLink, RouterModule } from '@angular/router';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('FooterComponent', () => {
   let component: FooterComponent;
