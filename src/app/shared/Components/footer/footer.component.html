@@ -1,0 +1,13 @@
+<mat-toolbar class="footer" color="primary">
+  <mat-toolbar-row>
+    <app-theme-menu
+      [options]="options$ | async"
+      (themeChange)="themeChangeHandler($event)"
+    >
+    </app-theme-menu>
+    <span class="spacer"></span>
+    <a href="https://github.com/rosecolinlarry/rosecolinlarry.github.io/"
+      >Source Code (GitHub Repo)</a
+    >
+  </mat-toolbar-row>
+</mat-toolbar>

@@ -1,0 +1,34 @@
+@import "../../styles.scss";
+@import "../app.component.scss";
+
+.field-with-hints {
+  padding-bottom: 5px;
+}
+
+.child {
+  display: flex;
+}
+
+.child div {
+  flex-grow: 1;
+  width: 0;
+}
+
+button {
+  padding: 16px, 0px;
+  margin-bottom: 20px;
+}
+
+form {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 500px;
+}
