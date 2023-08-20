@@ -1,28 +1,5 @@
-h1 {
-  align-content: center;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.icon-display {
-transform: scale(3);
-}
-
-.star-button {
-  margin-bottom: 20px;
-  display: flex;
-  justify-content: center;
-}
-
 .item-card {
   width: 500px;
   padding: 5px;
   margin: 10px;
-}
-
-.card-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
 }

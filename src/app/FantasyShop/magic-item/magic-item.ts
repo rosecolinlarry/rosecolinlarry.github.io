@@ -1,7 +1,7 @@
 import { RarityEnum } from "../../Shared/Enums/rarity";
 import { ApiReference } from "../../Shared/Interfaces/FantasyShop/api-reference";
 
-export interface MagicItem {
+export class MagicItem {
   index: string; // Resource index for shorthand searching.
   name: string; // Name of the referenced resource.
   url: string; // URL of the referenced resource.
@@ -12,6 +12,16 @@ export interface MagicItem {
   };
   variants: ApiReference[];
   variant: boolean;   // Whether this is a variant or not
+  constructor() {
+    this.index = "";
+    this.name = "";
+    this.url = "";
+    this.desc = [];
+    this.equipment_category = { index: "", name: "", url: "" };
+    this.rarity = { name: RarityEnum.Common };
+    this.variants = [];
+    this.variant = false;
+  }
 }
 
 
