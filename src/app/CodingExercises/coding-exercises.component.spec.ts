@@ -4,6 +4,7 @@ import { CodingExercisesComponent } from './coding-exercises.component';
 import { RouterModule } from '@angular/router';
 import { CodingExercisesModule } from './coding-exercises.module';
 import { SharedModule } from '../Shared/shared.module';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('CodingExercisesComponent', () => {
   let component: CodingExercisesComponent;
@@ -11,7 +12,7 @@ describe('CodingExercisesComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [RouterModule, RouterTestingModule, CodingExercisesModule, SharedModule],
+      imports: [RouterModule, RouterTestingModule, CodingExercisesModule, SharedModule, HttpClientModule],
       declarations: [CodingExercisesComponent]
     });
     fixture = TestBed.createComponent(CodingExercisesComponent);

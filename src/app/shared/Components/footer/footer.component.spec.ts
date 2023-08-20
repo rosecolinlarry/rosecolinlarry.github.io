@@ -5,6 +5,7 @@ import { SharedModule } from '../../shared.module';
 import { MatDialogModule } from '@angular/material/dialog';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { RouterLink, RouterModule } from '@angular/router';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 describe('FooterComponent', () => {
   let component: FooterComponent;
@@ -13,7 +14,7 @@ describe('FooterComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [FooterComponent],
-      imports: [SharedModule, MatDialogModule, OverlayModule, RouterLink, RouterModule, RouterModule.forRoot([])]
+      imports: [SharedModule, MatDialogModule, OverlayModule, HttpClientModule, RouterLink, RouterModule, RouterModule.forRoot([])]
     });
     fixture = TestBed.createComponent(FooterComponent);
     component = fixture.componentInstance;

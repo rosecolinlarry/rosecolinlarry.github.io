@@ -1,6 +1,7 @@
 @import "../../../../styles.scss";
 
 .footer {
+  z-index: 1000;
   width: 100%;
   display: flex;
   position: fixed;
@@ -12,10 +13,6 @@
 
 .footer a {
   color: white
-}
-
-.flex-stretch {
-  flex: 1 0 auto;
 }
 
 .content {

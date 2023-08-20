@@ -1,28 +1,5 @@
-@use "sass:map";
-@use "@angular/material" as mat;
 @import "../../styles.scss";
 @import "../app.component.scss";
-
-@mixin color($theme) {
-  // Get the color config from the theme.
-  $color-config: mat.get-color-config($theme);
-
-  // get the chosen palette : primary, accent, warn
-  $accent-palette: map.get($color-config, "accent");
-  $mat-card-color: mat.get-color-from-palette($accent-palette, 900);
-
-  mat-card {
-    color: $mat-card-color;
-  }
-
-  mat-card-title {
-    color: $mat-card-color;
-  }
-
-  mat-card-content {
-    color: $mat-card-color;
-  }
-}
 
 .field-with-hints {
   padding-bottom: 5px;
@@ -53,5 +30,5 @@ form {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  width: 350px;
+  width: 500px;
 }
