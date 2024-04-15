@@ -1,0 +1,26 @@
+h1 {
+  align-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.icon-display {
+  transform: scale(3);
+}
+
+.star-button {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+app-magic-item-card {
+  display: flex;
+}

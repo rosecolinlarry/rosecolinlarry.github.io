@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { StyleManagerService } from '../style-manager/style-manager.service';
 import { Observable } from 'rxjs';
 import { ThemeOption } from '../../interfaces/theme-option.model';
+import { StyleManagerService } from '../style-manager/style-manager.service';
 
 @Injectable({
   providedIn: 'root'
