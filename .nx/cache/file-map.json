@@ -63,11 +63,39 @@
       },
       {
         "file": ".nx/cache/d/daemon.log",
-        "hash": "3611774935896926021"
+        "hash": "8440144994608211771"
       },
       {
         "file": ".nx/cache/d/server-process.json",
-        "hash": "12287118483308639467"
+        "hash": "11530005374275675348"
+      },
+      {
+        "file": ".nx/cache/file-map.json~8d3a2a42",
+        "hash": "15428077444358401630"
+      },
+      {
+        "file": ".nx/cache/lockfile.hash",
+        "hash": "1723024189018750628"
+      },
+      {
+        "file": ".nx/cache/nx-console-project-graph/project-graph.html",
+        "hash": "17036869540637447991"
+      },
+      {
+        "file": ".nx/cache/parsed-lock-file.json",
+        "hash": "16129837720784152063"
+      },
+      {
+        "file": ".nx/cache/run.json",
+        "hash": "16582085914522623350"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/12564662997205816754",
+        "hash": "15823264830460820143"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/4905295793520506849",
+        "hash": "11969564117950555388"
       },
       {
         "file": ".vscode/extensions.json",
@@ -421,24 +449,6 @@
         ]
       },
       {
-        "file": "src/app/dashboard/dashboard.component.html",
-        "hash": "6257837386879790692"
-      },
-      {
-        "file": "src/app/dashboard/dashboard.component.spec.ts",
-        "hash": "12006160430666482117",
-        "deps": [
-          "npm:@angular/core"
-        ]
-      },
-      {
-        "file": "src/app/dashboard/dashboard.component.ts",
-        "hash": "5050575184659344282",
-        "deps": [
-          "npm:@angular/core"
-        ]
-      },
-      {
         "file": "src/app/fantasy-shop/department/department.component.html",
         "hash": "17431189970561083093"
       },
@@ -673,7 +683,7 @@
       },
       {
         "file": "src/app/shared/components/darkmode-button/darkmode-button.component.html",
-        "hash": "4652262372196892030"
+        "hash": "11505545097540342637"
       },
       {
         "file": "src/app/shared/components/darkmode-button/darkmode-button.component.scss",
@@ -681,14 +691,14 @@
       },
       {
         "file": "src/app/shared/components/darkmode-button/darkmode-button.component.spec.ts",
-        "hash": "7144824587897869252",
+        "hash": "15372264034073047386",
         "deps": [
           "npm:@angular/core"
         ]
       },
       {
         "file": "src/app/shared/components/darkmode-button/darkmode-button.component.ts",
-        "hash": "2038436573832314647",
+        "hash": "4798601442866329105",
         "deps": [
           "npm:@angular/core",
           "npm:rxjs"
@@ -822,6 +832,28 @@
       {
         "file": "src/app/shared/constants.ts",
         "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/shared/dashboard/dashboard.component.html",
+        "hash": "6257837386879790692"
+      },
+      {
+        "file": "src/app/shared/dashboard/dashboard.component.scss",
+        "hash": "7811080625401724732"
+      },
+      {
+        "file": "src/app/shared/dashboard/dashboard.component.spec.ts",
+        "hash": "9593449239257153853",
+        "deps": [
+          "npm:@angular/core"
+        ]
+      },
+      {
+        "file": "src/app/shared/dashboard/dashboard.component.ts",
+        "hash": "12335382746916806482",
+        "deps": [
+          "npm:@angular/core"
+        ]
       },
       {
         "file": "src/app/shared/interfaces/fantasy-shop/ability-bonus.ts",
@@ -1006,51 +1038,148 @@
         "hash": "8550436539328535120"
       },
       {
-        "file": ".nx/cache/lockfile.hash",
-        "hash": "1723024189018750628"
+        "file": ".nx/cache/terminalOutputs/7172094001720786136",
+        "hash": "14478046102241666637"
       },
       {
-        "file": ".nx/cache/parsed-lock-file.json",
-        "hash": "8115451266344546866"
+        "file": "docs/404.html",
+        "hash": "12945161095383214093"
       },
       {
-        "file": ".nx/cache/terminalOutputs/12564662997205816754",
-        "hash": "18309167928718904465"
+        "file": "docs/assets/redemption-512x512.png",
+        "hash": "18374973710451516527"
       },
       {
-        "file": ".nx/cache/nx-console-project-graph/project-graph.html",
-        "hash": "17036869540637447991"
+        "file": "docs/assets/redemption-128x128.png",
+        "hash": "16415422340029202496"
       },
       {
-        "file": ".nx/cache/run.json",
-        "hash": "7888759984439209279"
+        "file": "docs/polyfills.24fa83026ed2ab9c.js",
+        "hash": "11932240537199431534"
       },
       {
-        "file": ".nx/cache/terminalOutputs/4905295793520506849",
-        "hash": "11969564117950555388"
+        "file": "docs/assets/prebuilt-themes/indigo-pink.css",
+        "hash": "6915642372727936167"
       },
       {
-        "file": "src/app/dashboard/dashboard.component.scss",
-        "hash": "17731118263145258434"
+        "file": "docs/main.9dffef0834afcc77.js",
+        "hash": "15293206995965000779"
       },
       {
-        "file": ".nx/cache/file-map.json~8d3a2a42",
-        "hash": "5669272312987817499"
+        "file": "docs/runtime.4c9e0cc02dde3c26.js",
+        "hash": "10913195558496926535"
       },
       {
-        "file": "src/app/shared/dashboard/dashboard.component.ts",
-        "hash": "12335382746916806482",
-        "deps": [
-          "npm:@angular/core"
-        ]
+        "file": "docs/assets/prebuilt-themes/purple-green.css",
+        "hash": "151979109619712501"
       },
       {
-        "file": "src/app/shared/dashboard/dashboard.component.scss",
-        "hash": "7811080625401724732"
+        "file": "docs/assets/redemption-64x64.png",
+        "hash": "17166603746412824949"
       },
       {
-        "file": ".nx/cache/nx-console-project-graph/static/environment.js",
-        "hash": "8669723172124810778"
+        "file": "docs/assets/options.json",
+        "hash": "18352207268901115380"
+      },
+      {
+        "file": "docs/styles.4e4904f86561714d.css",
+        "hash": "8084961038976241176"
+      },
+      {
+        "file": "docs/3rdpartylicenses.txt",
+        "hash": "3354620293435508824"
+      },
+      {
+        "file": "docs/assets/prebuilt-themes/deeppurple-amber.css",
+        "hash": "7485363516018310644"
+      },
+      {
+        "file": "docs/favicon.ico",
+        "hash": "16621735605861210942"
+      },
+      {
+        "file": "docs/assets/prebuilt-themes/pink-bluegrey.css",
+        "hash": "14798010974471255463"
+      },
+      {
+        "file": ".nx/cache/7172094001720786136/outputs/docs/favicon.ico",
+        "hash": "16621735605861210942"
+      },
+      {
+        "file": ".nx/cache/7172094001720786136.commit",
+        "hash": "4664556114322093609"
+      },
+      {
+        "file": ".nx/cache/7172094001720786136/outputs/docs/styles.4e4904f86561714d.css",
+        "hash": "8084961038976241176"
+      },
+      {
+        "file": "docs/index.html",
+        "hash": "11878235489712285251"
+      },
+      {
+        "file": ".nx/cache/7172094001720786136/outputs/docs/assets/prebuilt-themes/pink-bluegrey.css",
+        "hash": "14798010974471255463"
+      },
+      {
+        "file": ".nx/cache/7172094001720786136/outputs/docs/main.9dffef0834afcc77.js",
+        "hash": "15293206995965000779"
+      },
+      {
+        "file": ".nx/cache/7172094001720786136/outputs/docs/runtime.4c9e0cc02dde3c26.js",
+        "hash": "10913195558496926535"
+      },
+      {
+        "file": ".nx/cache/7172094001720786136/outputs/docs/assets/options.json",
+        "hash": "18352207268901115380"
+      },
+      {
+        "file": ".nx/cache/7172094001720786136/outputs/docs/assets/prebuilt-themes/indigo-pink.css",
+        "hash": "6915642372727936167"
+      },
+      {
+        "file": ".nx/cache/7172094001720786136/outputs/docs/assets/redemption-64x64.png",
+        "hash": "17166603746412824949"
+      },
+      {
+        "file": ".nx/cache/7172094001720786136/outputs/docs/assets/prebuilt-themes/deeppurple-amber.css",
+        "hash": "7485363516018310644"
+      },
+      {
+        "file": ".nx/cache/7172094001720786136/terminalOutput",
+        "hash": "14478046102241666637"
+      },
+      {
+        "file": ".nx/cache/7172094001720786136/outputs/docs/404.html",
+        "hash": "12945161095383214093"
+      },
+      {
+        "file": ".nx/cache/7172094001720786136/outputs/docs/3rdpartylicenses.txt",
+        "hash": "3354620293435508824"
+      },
+      {
+        "file": ".nx/cache/7172094001720786136/outputs/docs/assets/redemption-128x128.png",
+        "hash": "16415422340029202496"
+      },
+      {
+        "file": ".nx/cache/7172094001720786136/outputs/docs/assets/redemption-512x512.png",
+        "hash": "18374973710451516527"
+      },
+      {
+        "file": ".nx/cache/7172094001720786136/code",
+        "hash": "1838281907459330133"
+      },
+      {
+        "file": ".nx/cache/7172094001720786136/outputs/docs/index.html",
+        "hash": "11878235489712285251"
+      },
+      {
+        "file": ".nx/cache/7172094001720786136/outputs/docs/assets/prebuilt-themes/purple-green.css",
+        "hash": "151979109619712501"
+      },
+      {
+        "file": ".nx/cache/7172094001720786136/outputs/docs/polyfills.24fa83026ed2ab9c.js",
+        "hash": "11932240537199431534"
       }
     ]
   }
