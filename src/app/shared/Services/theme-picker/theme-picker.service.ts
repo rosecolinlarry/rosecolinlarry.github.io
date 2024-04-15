@@ -24,7 +24,6 @@ export class ThemePickerService {
   }
 
   setTheme(theme: string) {
-    console.log(`setTheme(${theme})`)
     localStorage.setItem(this.LOCAL_STORAGE_KEY, theme);
     this.styleManager.setStyle(
       "theme",

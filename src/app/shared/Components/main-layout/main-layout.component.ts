@@ -1,13 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { LinkData } from '../../interfaces/link-data.model';
 
 @Component({
   selector: 'app-main-layout',
   templateUrl: './main-layout.component.html',
   styleUrls: ['./main-layout.component.scss']
 })
-export class MainLayoutComponent implements OnInit {
-  ngOnInit(): void {
-    console.log("main layout component");
-  }
-  title = "Portfolio";
+export class MainLayoutComponent {
+  title = "Redemption Arc";
+  linkData: LinkData[] = [
+    { url: '/coding-exercises/home', name: 'Coding Exercises' },
+    { url: '/fantasy-shop/store-front', name: 'Fantasy Shop (WIP)' }
+  ]
 }

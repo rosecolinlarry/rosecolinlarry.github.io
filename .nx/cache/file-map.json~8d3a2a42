@@ -63,7 +63,7 @@
       },
       {
         "file": ".nx/cache/d/daemon.log",
-        "hash": "3611774935896926021"
+        "hash": "7647671962872036235"
       },
       {
         "file": ".nx/cache/d/server-process.json",
@@ -155,7 +155,7 @@
       },
       {
         "file": "src/app/app-routing.module.ts",
-        "hash": "17036064348793466280",
+        "hash": "3494292917438675437",
         "deps": [
           "npm:@angular/core",
           "npm:@angular/router"
@@ -186,7 +186,7 @@
       },
       {
         "file": "src/app/app.module.ts",
-        "hash": "10934921772546606488",
+        "hash": "738949386589368121",
         "deps": [
           "npm:@angular/core",
           "npm:@angular/platform-browser",
@@ -433,7 +433,7 @@
       },
       {
         "file": "src/app/dashboard/dashboard.component.ts",
-        "hash": "5050575184659344282",
+        "hash": "16671252334649328049",
         "deps": [
           "npm:@angular/core"
         ]
@@ -711,7 +711,7 @@
       },
       {
         "file": "src/app/shared/components/darkmode-switch/darkmode-switch.component.ts",
-        "hash": "1771310035201519407",
+        "hash": "12503069262455998355",
         "deps": [
           "npm:@angular/core",
           "npm:rxjs",
@@ -776,7 +776,7 @@
       },
       {
         "file": "src/app/shared/components/main-layout/main-layout.component.scss",
-        "hash": "18114271540348355837"
+        "hash": "3244421341483603138"
       },
       {
         "file": "src/app/shared/components/main-layout/main-layout.component.spec.ts",
@@ -920,7 +920,7 @@
       },
       {
         "file": "src/app/shared/services/theme-picker/theme-picker.service.ts",
-        "hash": "1924674577613949179",
+        "hash": "4181295208441980880",
         "deps": [
           "npm:@angular/common",
           "npm:@angular/core",
@@ -929,7 +929,7 @@
       },
       {
         "file": "src/app/shared/shared.module.ts",
-        "hash": "10551715242113614495",
+        "hash": "1161886545206858328",
         "deps": [
           "npm:@angular/core",
           "npm:@angular/material",
@@ -1027,30 +1027,11 @@
       },
       {
         "file": ".nx/cache/terminalOutputs/4905295793520506849",
-        "hash": "11969564117950555388"
+        "hash": "11582349489296739156"
       },
       {
         "file": "src/app/dashboard/dashboard.component.scss",
-        "hash": "17731118263145258434"
-      },
-      {
-        "file": ".nx/cache/file-map.json~8d3a2a42",
-        "hash": "5669272312987817499"
-      },
-      {
-        "file": "src/app/shared/dashboard/dashboard.component.ts",
-        "hash": "12335382746916806482",
-        "deps": [
-          "npm:@angular/core"
-        ]
-      },
-      {
-        "file": "src/app/shared/dashboard/dashboard.component.scss",
-        "hash": "7811080625401724732"
-      },
-      {
-        "file": ".nx/cache/nx-console-project-graph/static/environment.js",
-        "hash": "8669723172124810778"
+        "hash": "17709679403390945894"
       }
     ]
   }

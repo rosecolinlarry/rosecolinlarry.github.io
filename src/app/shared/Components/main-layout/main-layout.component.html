@@ -1,6 +1,6 @@
-<app-topnav [title]="title"></app-topnav>
+<app-topnav [title]="title" [linkData]="linkData"></app-topnav>
 <div class="sidenav-content">
-  <app-dashboard></app-dashboard>
+  <app-dashboard [linkData]="linkData"></app-dashboard>
   <router-outlet></router-outlet>
 </div>
 <app-footer></app-footer>

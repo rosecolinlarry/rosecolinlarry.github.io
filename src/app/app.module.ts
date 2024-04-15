@@ -6,10 +6,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { CodingExercisesModule } from './coding-exercises/coding-exercises.module';
+import { FantasyShopModule } from './fantasy-shop/fantasy-shop.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     CommonModule,
@@ -17,6 +19,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule,
+    CodingExercisesModule,
+    FantasyShopModule,
     HttpClientModule
   ],
   providers: [],

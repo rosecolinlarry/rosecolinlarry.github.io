@@ -16,10 +16,10 @@ import { MainLayoutComponent } from './components/main-layout/main-layout.compon
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatMenuModule } from '@angular/material/menu';
 import { ThemeMenuComponent } from './components/footer/theme-menu/theme-menu.component';
-import { DashboardComponent } from '../dashboard/dashboard.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { DarkmodeSwitchComponent } from './components/darkmode-switch/darkmode-switch.component';
 import { DarkmodeButtonComponent } from './components/darkmode-button/darkmode-button.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
     declarations: [
@@ -27,14 +27,17 @@ import { DarkmodeButtonComponent } from './components/darkmode-button/darkmode-b
         TopnavComponent,
         MainLayoutComponent,
         ThemeMenuComponent,
-        DashboardComponent,
         DarkmodeSwitchComponent,
-        DarkmodeButtonComponent
+        DarkmodeButtonComponent,
+        DashboardComponent
     ],
     exports: [
         FooterComponent,
         TopnavComponent,
-        FooterComponent,
+        MainLayoutComponent,
+        ThemeMenuComponent,
+        DarkmodeSwitchComponent,
+        DarkmodeButtonComponent,
         DashboardComponent
     ],
     imports: [

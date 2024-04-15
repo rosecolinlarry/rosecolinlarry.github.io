@@ -19,14 +19,10 @@ export class DarkmodeSwitchComponent implements OnInit {
   
   ngOnInit(): void {
     this.themePickerService.setTheme(this.themePickerService.getTheme());
-    console.log(this.isDarkMode);
-    console.log("app-darkmode-switch");
   }
 
   onThemeChanged(e: MatSlideToggleChange) {
     const newTheme = e.checked ? this.themePickerService.darkTheme : this.themePickerService.lightTheme;
     this.themePickerService.setTheme(newTheme);
-    console.log(newTheme);
-    console.log(this.isDarkMode);
   }
 }
