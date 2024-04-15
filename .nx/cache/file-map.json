@@ -63,7 +63,7 @@
       },
       {
         "file": ".nx/cache/d/daemon.log",
-        "hash": "3611774935896926021"
+        "hash": "619806869374374620"
       },
       {
         "file": ".nx/cache/d/server-process.json",
@@ -1023,7 +1023,7 @@
       },
       {
         "file": ".nx/cache/run.json",
-        "hash": "7888759984439209279"
+        "hash": "5125515500185025304"
       },
       {
         "file": ".nx/cache/terminalOutputs/4905295793520506849",
@@ -1049,8 +1049,148 @@
         "hash": "7811080625401724732"
       },
       {
-        "file": ".nx/cache/nx-console-project-graph/static/environment.js",
-        "hash": "8669723172124810778"
+        "file": ".nx/cache/terminalOutputs/5564729932305435585",
+        "hash": "13299118218044102894"
+      },
+      {
+        "file": "docs/styles.4e4904f86561714d.css",
+        "hash": "8084961038976241176"
+      },
+      {
+        "file": "docs/main.9dffef0834afcc77.js",
+        "hash": "15293206995965000779"
+      },
+      {
+        "file": "docs/polyfills.24fa83026ed2ab9c.js",
+        "hash": "11932240537199431534"
+      },
+      {
+        "file": "docs/runtime.4c9e0cc02dde3c26.js",
+        "hash": "10913195558496926535"
+      },
+      {
+        "file": "docs/3rdpartylicenses.txt",
+        "hash": "3354620293435508824"
+      },
+      {
+        "file": "docs/404.html",
+        "hash": "12945161095383214093"
+      },
+      {
+        "file": "docs/assets/options.json",
+        "hash": "18352207268901115380"
+      },
+      {
+        "file": "docs/assets/prebuilt-themes/pink-bluegrey.css",
+        "hash": "14798010974471255463"
+      },
+      {
+        "file": "docs/favicon.ico",
+        "hash": "16621735605861210942"
+      },
+      {
+        "file": "docs/assets/redemption-64x64.png",
+        "hash": "17166603746412824949"
+      },
+      {
+        "file": "docs/assets/prebuilt-themes/indigo-pink.css",
+        "hash": "6915642372727936167"
+      },
+      {
+        "file": "docs/assets/redemption-128x128.png",
+        "hash": "16415422340029202496"
+      },
+      {
+        "file": "docs/assets/prebuilt-themes/purple-green.css",
+        "hash": "151979109619712501"
+      },
+      {
+        "file": "docs/assets/redemption-512x512.png",
+        "hash": "18374973710451516527"
+      },
+      {
+        "file": "docs/assets/prebuilt-themes/deeppurple-amber.css",
+        "hash": "7485363516018310644"
+      },
+      {
+        "file": ".nx/cache/5564729932305435585/outputs/docs/3rdpartylicenses.txt",
+        "hash": "3354620293435508824"
+      },
+      {
+        "file": ".nx/cache/5564729932305435585/outputs/docs/assets/prebuilt-themes/indigo-pink.css",
+        "hash": "6915642372727936167"
+      },
+      {
+        "file": ".nx/cache/5564729932305435585/outputs/docs/404.html",
+        "hash": "12945161095383214093"
+      },
+      {
+        "file": ".nx/cache/5564729932305435585/outputs/docs/index.html",
+        "hash": "11878235489712285251"
+      },
+      {
+        "file": ".nx/cache/5564729932305435585.commit",
+        "hash": "4664556114322093609"
+      },
+      {
+        "file": ".nx/cache/5564729932305435585/outputs/docs/assets/redemption-128x128.png",
+        "hash": "16415422340029202496"
+      },
+      {
+        "file": ".nx/cache/5564729932305435585/outputs/docs/assets/redemption-64x64.png",
+        "hash": "17166603746412824949"
+      },
+      {
+        "file": ".nx/cache/5564729932305435585/outputs/docs/styles.4e4904f86561714d.css",
+        "hash": "8084961038976241176"
+      },
+      {
+        "file": ".nx/cache/5564729932305435585/outputs/docs/polyfills.24fa83026ed2ab9c.js",
+        "hash": "11932240537199431534"
+      },
+      {
+        "file": ".nx/cache/5564729932305435585/outputs/docs/assets/redemption-512x512.png",
+        "hash": "18374973710451516527"
+      },
+      {
+        "file": "docs/index.html",
+        "hash": "11878235489712285251"
+      },
+      {
+        "file": ".nx/cache/5564729932305435585/outputs/docs/assets/prebuilt-themes/deeppurple-amber.css",
+        "hash": "7485363516018310644"
+      },
+      {
+        "file": ".nx/cache/5564729932305435585/terminalOutput",
+        "hash": "13299118218044102894"
+      },
+      {
+        "file": ".nx/cache/5564729932305435585/outputs/docs/assets/prebuilt-themes/purple-green.css",
+        "hash": "151979109619712501"
+      },
+      {
+        "file": ".nx/cache/5564729932305435585/outputs/docs/main.9dffef0834afcc77.js",
+        "hash": "15293206995965000779"
+      },
+      {
+        "file": ".nx/cache/5564729932305435585/outputs/docs/runtime.4c9e0cc02dde3c26.js",
+        "hash": "10913195558496926535"
+      },
+      {
+        "file": ".nx/cache/5564729932305435585/outputs/docs/favicon.ico",
+        "hash": "16621735605861210942"
+      },
+      {
+        "file": ".nx/cache/5564729932305435585/outputs/docs/assets/options.json",
+        "hash": "18352207268901115380"
+      },
+      {
+        "file": ".nx/cache/5564729932305435585/outputs/docs/assets/prebuilt-themes/pink-bluegrey.css",
+        "hash": "14798010974471255463"
+      },
+      {
+        "file": ".nx/cache/5564729932305435585/code",
+        "hash": "1838281907459330133"
       }
     ]
   }
