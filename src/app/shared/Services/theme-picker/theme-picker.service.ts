@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { StyleManagerService } from '../style-manager/style-manager.service';
 import { Observable } from 'rxjs';
-import { ThemeOption } from '../../Interfaces/theme-option.model';
+import { ThemeOption } from '../../interfaces/theme-option.model';
+import { StyleManagerService } from '../style-manager/style-manager.service';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +11,14 @@ export class ThemePickerService {
   constructor(private http: HttpClient, private styleManager: StyleManagerService) { }
 
   LOCAL_STORAGE_KEY = "theme";
-  defaultTheme = "pink-bluegrey";
+  defaultTheme = this.darkTheme;
+
+  get lightTheme(): string { return "deeppurple-amber"; }
+  get darkTheme(): string { return "purple-green"; }
+  get currentTheme(): string {
+    return this.getTheme();
+  }
+
   getThemeOptions(): Observable<ThemeOption[]> {
     return this.http.get<ThemeOption[]>("assets/options.json")
   }

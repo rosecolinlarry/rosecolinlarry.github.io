@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { LinkData } from '../../Interfaces/link-data.model';
+import { LinkData } from '../../interfaces/link-data.model';
 
 @Component({
   selector: 'app-topnav',

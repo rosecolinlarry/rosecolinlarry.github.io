@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ThemePickerService } from '../../Services/theme-picker/theme-picker.service';
-import { ThemeOption } from '../../Interfaces/theme-option.model';
+import { ThemeOption } from '../../interfaces/theme-option.model';
 import { Observable } from 'rxjs';
+import { ThemePickerService } from '../../services/theme-picker/theme-picker.service';
 
 @Component({
   selector: 'app-footer',
