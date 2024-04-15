@@ -62,112 +62,12 @@
         "hash": "4689145951703824387"
       },
       {
-        "file": ".nx/cache/14499548521522674581.commit",
-        "hash": "4664556114322093609"
-      },
-      {
-        "file": ".nx/cache/14499548521522674581/code",
-        "hash": "1838281907459330133"
-      },
-      {
-        "file": ".nx/cache/14499548521522674581/outputs/docs/3rdpartylicenses.txt",
-        "hash": "3354620293435508824"
-      },
-      {
-        "file": ".nx/cache/14499548521522674581/outputs/docs/404.html",
-        "hash": "12945161095383214093"
-      },
-      {
-        "file": ".nx/cache/14499548521522674581/outputs/docs/assets/options.json",
-        "hash": "18352207268901115380"
-      },
-      {
-        "file": ".nx/cache/14499548521522674581/outputs/docs/assets/prebuilt-themes/deeppurple-amber.css",
-        "hash": "7485363516018310644"
-      },
-      {
-        "file": ".nx/cache/14499548521522674581/outputs/docs/assets/prebuilt-themes/indigo-pink.css",
-        "hash": "6915642372727936167"
-      },
-      {
-        "file": ".nx/cache/14499548521522674581/outputs/docs/assets/prebuilt-themes/pink-bluegrey.css",
-        "hash": "14798010974471255463"
-      },
-      {
-        "file": ".nx/cache/14499548521522674581/outputs/docs/assets/prebuilt-themes/purple-green.css",
-        "hash": "151979109619712501"
-      },
-      {
-        "file": ".nx/cache/14499548521522674581/outputs/docs/assets/redemption-128x128.png",
-        "hash": "16415422340029202496"
-      },
-      {
-        "file": ".nx/cache/14499548521522674581/outputs/docs/assets/redemption-512x512.png",
-        "hash": "18374973710451516527"
-      },
-      {
-        "file": ".nx/cache/14499548521522674581/outputs/docs/assets/redemption-64x64.png",
-        "hash": "17166603746412824949"
-      },
-      {
-        "file": ".nx/cache/14499548521522674581/outputs/docs/favicon.ico",
-        "hash": "16621735605861210942"
-      },
-      {
-        "file": ".nx/cache/14499548521522674581/outputs/docs/index.html",
-        "hash": "18162811462410078020"
-      },
-      {
-        "file": ".nx/cache/14499548521522674581/outputs/docs/main.e266a2461fc060be.js",
-        "hash": "8853769861825430661"
-      },
-      {
-        "file": ".nx/cache/14499548521522674581/outputs/docs/polyfills.4afea9333193dfd5.js",
-        "hash": "7538527734873312436"
-      },
-      {
-        "file": ".nx/cache/14499548521522674581/outputs/docs/runtime.4c9e0cc02dde3c26.js",
-        "hash": "10913195558496926535"
-      },
-      {
-        "file": ".nx/cache/14499548521522674581/outputs/docs/styles.4e4904f86561714d.css",
-        "hash": "8084961038976241176"
-      },
-      {
-        "file": ".nx/cache/14499548521522674581/terminalOutput",
-        "hash": "15013191379616062224"
-      },
-      {
         "file": ".nx/cache/d/daemon.log",
-        "hash": "61220043679584805"
+        "hash": "9198763278128078243"
       },
       {
         "file": ".nx/cache/d/server-process.json",
-        "hash": "14441689212681245692"
-      },
-      {
-        "file": ".nx/cache/lockfile.hash",
-        "hash": "1723024189018750628"
-      },
-      {
-        "file": ".nx/cache/nx-console-project-graph/project-graph.html",
-        "hash": "17036869540637447991"
-      },
-      {
-        "file": ".nx/cache/parsed-lock-file.json",
-        "hash": "8115451266344546866"
-      },
-      {
-        "file": ".nx/cache/run.json",
-        "hash": "4500901298665227472"
-      },
-      {
-        "file": ".nx/cache/terminalOutputs/13278899102495118989",
-        "hash": "12202690677343717995"
-      },
-      {
-        "file": ".nx/cache/terminalOutputs/14499548521522674581",
-        "hash": "15013191379616062224"
+        "hash": "12287118483308639467"
       },
       {
         "file": ".vscode/extensions.json",
@@ -188,70 +88,6 @@
       {
         "file": "README.md",
         "hash": "1786599249882828345"
-      },
-      {
-        "file": "docs/3rdpartylicenses.txt",
-        "hash": "3354620293435508824"
-      },
-      {
-        "file": "docs/404.html",
-        "hash": "12945161095383214093"
-      },
-      {
-        "file": "docs/assets/options.json",
-        "hash": "18352207268901115380"
-      },
-      {
-        "file": "docs/assets/prebuilt-themes/deeppurple-amber.css",
-        "hash": "7485363516018310644"
-      },
-      {
-        "file": "docs/assets/prebuilt-themes/indigo-pink.css",
-        "hash": "6915642372727936167"
-      },
-      {
-        "file": "docs/assets/prebuilt-themes/pink-bluegrey.css",
-        "hash": "14798010974471255463"
-      },
-      {
-        "file": "docs/assets/prebuilt-themes/purple-green.css",
-        "hash": "151979109619712501"
-      },
-      {
-        "file": "docs/assets/redemption-128x128.png",
-        "hash": "16415422340029202496"
-      },
-      {
-        "file": "docs/assets/redemption-512x512.png",
-        "hash": "18374973710451516527"
-      },
-      {
-        "file": "docs/assets/redemption-64x64.png",
-        "hash": "17166603746412824949"
-      },
-      {
-        "file": "docs/favicon.ico",
-        "hash": "16621735605861210942"
-      },
-      {
-        "file": "docs/index.html",
-        "hash": "18162811462410078020"
-      },
-      {
-        "file": "docs/main.e266a2461fc060be.js",
-        "hash": "8853769861825430661"
-      },
-      {
-        "file": "docs/polyfills.4afea9333193dfd5.js",
-        "hash": "7538527734873312436"
-      },
-      {
-        "file": "docs/runtime.4c9e0cc02dde3c26.js",
-        "hash": "10913195558496926535"
-      },
-      {
-        "file": "docs/styles.4e4904f86561714d.css",
-        "hash": "8084961038976241176"
       },
       {
         "file": "nx.json",
@@ -350,12 +186,11 @@
       },
       {
         "file": "src/app/app.module.ts",
-        "hash": "10168225973450282856",
+        "hash": "8536303071261673267",
         "deps": [
           "npm:@angular/core",
           "npm:@angular/platform-browser",
-          "npm:@angular/common",
-          "npm:@angular/material"
+          "npm:@angular/common"
         ]
       },
       {
@@ -587,11 +422,11 @@
       },
       {
         "file": "src/app/dashboard/dashboard.component.css",
-        "hash": "13058532170173998218"
+        "hash": "11502330230456795284"
       },
       {
         "file": "src/app/dashboard/dashboard.component.html",
-        "hash": "7046309258883573421"
+        "hash": "8446745000998426526"
       },
       {
         "file": "src/app/dashboard/dashboard.component.spec.ts",
@@ -604,7 +439,7 @@
       },
       {
         "file": "src/app/dashboard/dashboard.component.ts",
-        "hash": "13067617702329223465",
+        "hash": "12725425509665813251",
         "deps": [
           "npm:@angular/core",
           "npm:@angular/cdk",
@@ -825,30 +660,75 @@
         ]
       },
       {
-        "file": "src/app/shared/components/dashboard/dashboard.component.html",
+        "file": "src/app/shared/Enums/action-type.ts",
+        "hash": "5885688468361888185"
+      },
+      {
+        "file": "src/app/shared/Enums/option-set-type.ts",
+        "hash": "5746188972426091213"
+      },
+      {
+        "file": "src/app/shared/Enums/option-type.ts",
+        "hash": "1378069954998948437"
+      },
+      {
+        "file": "src/app/shared/Enums/rarity.ts",
+        "hash": "9184449774423765313"
+      },
+      {
+        "file": "src/app/shared/Enums/success-type.ts",
+        "hash": "1960385141145845110"
+      },
+      {
+        "file": "src/app/shared/components/darkmode-button/darkmode-button.component.html",
+        "hash": "4652262372196892030"
+      },
+      {
+        "file": "src/app/shared/components/darkmode-button/darkmode-button.component.scss",
         "hash": "3244421341483603138"
       },
       {
-        "file": "src/app/shared/components/dashboard/dashboard.component.scss",
-        "hash": "11559503625051313407"
-      },
-      {
-        "file": "src/app/shared/components/dashboard/dashboard.component.spec.ts",
-        "hash": "13244573416452822889",
+        "file": "src/app/shared/components/darkmode-button/darkmode-button.component.spec.ts",
+        "hash": "7144824587897869252",
         "deps": [
           "npm:@angular/core"
         ]
       },
       {
-        "file": "src/app/shared/components/dashboard/dashboard.component.ts",
-        "hash": "17372269101520652396",
+        "file": "src/app/shared/components/darkmode-button/darkmode-button.component.ts",
+        "hash": "2038436573832314647",
+        "deps": [
+          "npm:@angular/core",
+          "npm:rxjs"
+        ]
+      },
+      {
+        "file": "src/app/shared/components/darkmode-switch/darkmode-switch.component.html",
+        "hash": "14521793075529789322"
+      },
+      {
+        "file": "src/app/shared/components/darkmode-switch/darkmode-switch.component.scss",
+        "hash": "15036214574332298676"
+      },
+      {
+        "file": "src/app/shared/components/darkmode-switch/darkmode-switch.component.spec.ts",
+        "hash": "13208905596040536649",
         "deps": [
           "npm:@angular/core"
+        ]
+      },
+      {
+        "file": "src/app/shared/components/darkmode-switch/darkmode-switch.component.ts",
+        "hash": "12503069262455998355",
+        "deps": [
+          "npm:@angular/core",
+          "npm:rxjs",
+          "npm:@angular/material"
         ]
       },
       {
         "file": "src/app/shared/components/footer/footer.component.html",
-        "hash": "4739189362735306755"
+        "hash": "1390601613639060428"
       },
       {
         "file": "src/app/shared/components/footer/footer.component.scss",
@@ -924,7 +804,7 @@
       },
       {
         "file": "src/app/shared/components/topnav/topnav.component.html",
-        "hash": "12447502509256971575"
+        "hash": "14123509636730540737"
       },
       {
         "file": "src/app/shared/components/topnav/topnav.component.scss",
@@ -948,24 +828,8 @@
         ]
       },
       {
-        "file": "src/app/shared/enums/action-type.ts",
-        "hash": "5885688468361888185"
-      },
-      {
-        "file": "src/app/shared/enums/option-set-type.ts",
-        "hash": "5746188972426091213"
-      },
-      {
-        "file": "src/app/shared/enums/option-type.ts",
-        "hash": "1378069954998948437"
-      },
-      {
-        "file": "src/app/shared/enums/rarity.ts",
-        "hash": "9184449774423765313"
-      },
-      {
-        "file": "src/app/shared/enums/success-type.ts",
-        "hash": "1960385141145845110"
+        "file": "src/app/shared/constants.ts",
+        "hash": "3244421341483603138"
       },
       {
         "file": "src/app/shared/interfaces/fantasy-shop/ability-bonus.ts",
@@ -1073,7 +937,7 @@
       },
       {
         "file": "src/app/shared/shared.module.ts",
-        "hash": "10968976207561686388",
+        "hash": "17379001763351076369",
         "deps": [
           "npm:@angular/core",
           "npm:@angular/material",
@@ -1150,52 +1014,63 @@
         "hash": "8550436539328535120"
       },
       {
-        "file": ".nx/cache/terminalOutputs/15427630243208789531",
-        "hash": "9596038822073198065"
+        "file": ".nx/cache/lockfile.hash",
+        "hash": "1723024189018750628"
       },
       {
-        "file": "src/app/shared/components/darkmode-switch/darkmode-switch.component.html",
-        "hash": "14521793075529789322"
+        "file": ".nx/cache/parsed-lock-file.json",
+        "hash": "8115451266344546866"
       },
       {
-        "file": "src/app/shared/components/darkmode-switch/darkmode-switch.component.spec.ts",
-        "hash": "15746802454992662423",
+        "file": ".nx/cache/terminalOutputs/12564662997205816754",
+        "hash": "18309167928718904465"
+      },
+      {
+        "file": ".nx/cache/nx-console-project-graph/static/runtime.js",
+        "hash": "9652903316845995179"
+      },
+      {
+        "file": ".nx/cache/nx-console-project-graph/static/styles.js",
+        "hash": "13596360365094399219"
+      },
+      {
+        "file": ".nx/cache/nx-console-project-graph/static/environment.js",
+        "hash": "8813444742036578208"
+      },
+      {
+        "file": ".nx/cache/nx-console-project-graph/static/favicon.ico",
+        "hash": "9303420814833116677"
+      },
+      {
+        "file": ".nx/cache/nx-console-project-graph/static/main.js",
+        "hash": "17108493703970937027",
         "deps": [
-          "npm:@angular/core"
+          "npm:util"
         ]
       },
       {
-        "file": "src/app/shared/components/darkmode-switch/darkmode-switch.component.ts",
-        "hash": "11547243879947591718",
-        "deps": [
-          "npm:@angular/core",
-          "npm:rxjs",
-          "npm:@angular/material"
-        ]
+        "file": ".nx/cache/nx-console-project-graph/static/polyfills.js",
+        "hash": "3181124310005851816"
       },
       {
-        "file": ".nx/cache/project-graph.json~ea44471d",
-        "hash": "10297498646352137707"
+        "file": ".nx/cache/nx-console-project-graph/static/styles.css",
+        "hash": "14388753047742269978"
       },
       {
-        "file": ".nx/cache/project-graph.json~cd97d496",
-        "hash": "10297498646352137707"
+        "file": ".nx/cache/nx-console-project-graph/static/3rdpartylicenses.txt",
+        "hash": "5667550289807473445"
       },
       {
-        "file": ".nx/cache/project-graph.json~24b0eea5",
-        "hash": "10297498646352137707"
+        "file": ".nx/cache/nx-console-project-graph/project-graph.html",
+        "hash": "17036869540637447991"
       },
       {
-        "file": ".nx/cache/project-graph.json~28ecf221",
-        "hash": "10297498646352137707"
+        "file": ".nx/cache/run.json",
+        "hash": "7888759984439209279"
       },
       {
-        "file": "src/app/shared/components/darkmode-switch/darkmode-switch.component.scss",
-        "hash": "4055606894390288348"
-      },
-      {
-        "file": "src/app/shared/constants.ts",
-        "hash": "3244421341483603138"
+        "file": ".nx/cache/terminalOutputs/4905295793520506849",
+        "hash": "9675018134963810552"
       }
     ]
   }
