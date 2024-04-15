@@ -7,7 +7,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { SharedModule } from '../../shared.module';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterLink, RouterModule } from '@angular/router';
-import { CodingExercisesModule } from '../../../CodingExercises/coding-exercises.module'
+import { CodingExercisesModule } from '../../../coding-exercises/coding-exercises.module'
 
 describe('TopnavComponent', () => {
   let component: TopnavComponent;

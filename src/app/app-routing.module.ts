@@ -1,16 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CodingExercisesComponent } from './CodingExercises/coding-exercises.component';
-import { MainLayoutComponent } from './Shared/Components/main-layout/main-layout.component';
-import { StorefrontComponent } from './FantasyShop/storefront/storefront.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
-  {path: 'home', component: MainLayoutComponent},
+  {path: 'home', component: DashboardComponent},
   {
-    path: '', component: MainLayoutComponent,
-    children: [
-      { path: 'coding-exercises', component: CodingExercisesComponent },
-      { path: 'fantasy-shop', component: StorefrontComponent }]
+    path: '', component: DashboardComponent,
   }];
 
 @NgModule({
