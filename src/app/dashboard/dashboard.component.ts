@@ -9,19 +9,6 @@ import { map } from 'rxjs/operators';
 })
 export class DashboardComponent {
   private breakpointObserver = inject(BreakpointObserver);
-  @HostBinding('class')
-  currentTheme: 'light-theme' | 'dark-theme' = 'light-theme';
-
-  isDarkMode = false;
-
-  onThemeChanged() {
-    this.isDarkMode = !this.isDarkMode;
-    if (this.isDarkMode) {
-      this.currentTheme = 'dark-theme';
-    } else {
-      this.currentTheme = 'light-theme'
-    }
-  }
 
   /** Based on the screen size, switch from standard to one column per row */
   cards = this.breakpointObserver.observe(Breakpoints.Handset).pipe(

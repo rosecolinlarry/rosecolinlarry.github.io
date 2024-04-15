@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { TopnavComponent } from './components/topnav/topnav.component';
 import { MatButtonModule } from '@angular/material/button';
@@ -16,15 +15,18 @@ import { MainLayoutComponent } from './components/main-layout/main-layout.compon
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatMenuModule } from '@angular/material/menu';
 import { ThemeMenuComponent } from './components/footer/theme-menu/theme-menu.component';
+import { DashboardComponent } from '../dashboard/dashboard.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { DarkmodeSwitchComponent } from './components/darkmode-switch/darkmode-switch.component';
 
 @NgModule({
   declarations: [
-    DashboardComponent,
     FooterComponent,
     TopnavComponent,
     MainLayoutComponent,
-    ThemeMenuComponent
-  ],
+    ThemeMenuComponent,
+    DashboardComponent
+  , DarkmodeSwitchComponent],
   imports: [
     CommonModule,
     RouterLink,
@@ -39,13 +41,14 @@ import { ThemeMenuComponent } from './components/footer/theme-menu/theme-menu.co
     RouterModule,
     MatDialogModule,
     MatSlideToggleModule,
-    MatMenuModule
+    MatMenuModule,
+    MatGridListModule
   ],
   exports: [
-    DashboardComponent,
     FooterComponent,
     TopnavComponent,
-    FooterComponent
+    FooterComponent,
+    DashboardComponent
   ]
 })
 

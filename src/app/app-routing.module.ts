@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { MainLayoutComponent } from './shared/components/main-layout/main-layout.component';
 
 const routes: Routes = [
-  {path: 'home', component: DashboardComponent},
+  {path: 'home', component: MainLayoutComponent},
   {
-    path: '', component: DashboardComponent,
+    path: '', component: MainLayoutComponent,
   }];
 
 @NgModule({

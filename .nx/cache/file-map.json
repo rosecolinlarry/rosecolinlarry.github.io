@@ -139,7 +139,7 @@
       },
       {
         "file": ".nx/cache/d/daemon.log",
-        "hash": "16644795888879730523"
+        "hash": "61220043679584805"
       },
       {
         "file": ".nx/cache/d/server-process.json",
@@ -319,7 +319,7 @@
       },
       {
         "file": "src/app/app-routing.module.ts",
-        "hash": "10001945892408296615",
+        "hash": "5777763600174027753",
         "deps": [
           "npm:@angular/core",
           "npm:@angular/router"
@@ -350,7 +350,7 @@
       },
       {
         "file": "src/app/app.module.ts",
-        "hash": "5044625606489083924",
+        "hash": "10168225973450282856",
         "deps": [
           "npm:@angular/core",
           "npm:@angular/platform-browser",
@@ -591,7 +591,7 @@
       },
       {
         "file": "src/app/dashboard/dashboard.component.html",
-        "hash": "1493514965334749581"
+        "hash": "7046309258883573421"
       },
       {
         "file": "src/app/dashboard/dashboard.component.spec.ts",
@@ -604,7 +604,7 @@
       },
       {
         "file": "src/app/dashboard/dashboard.component.ts",
-        "hash": "650830738386149272",
+        "hash": "13067617702329223465",
         "deps": [
           "npm:@angular/core",
           "npm:@angular/cdk",
@@ -826,7 +826,7 @@
       },
       {
         "file": "src/app/shared/components/dashboard/dashboard.component.html",
-        "hash": "11831585181319785435"
+        "hash": "3244421341483603138"
       },
       {
         "file": "src/app/shared/components/dashboard/dashboard.component.scss",
@@ -841,7 +841,7 @@
       },
       {
         "file": "src/app/shared/components/dashboard/dashboard.component.ts",
-        "hash": "15177585057336661801",
+        "hash": "17372269101520652396",
         "deps": [
           "npm:@angular/core"
         ]
@@ -900,7 +900,7 @@
       },
       {
         "file": "src/app/shared/components/main-layout/main-layout.component.html",
-        "hash": "18279527966900965637"
+        "hash": "302513485947921509"
       },
       {
         "file": "src/app/shared/components/main-layout/main-layout.component.scss",
@@ -917,7 +917,7 @@
       },
       {
         "file": "src/app/shared/components/main-layout/main-layout.component.ts",
-        "hash": "8479123130898819252",
+        "hash": "11812354454973512761",
         "deps": [
           "npm:@angular/core"
         ]
@@ -1064,7 +1064,7 @@
       },
       {
         "file": "src/app/shared/services/theme-picker/theme-picker.service.ts",
-        "hash": "8748523995533512257",
+        "hash": "4181295208441980880",
         "deps": [
           "npm:@angular/common",
           "npm:@angular/core",
@@ -1073,7 +1073,7 @@
       },
       {
         "file": "src/app/shared/shared.module.ts",
-        "hash": "14876216446362170256",
+        "hash": "10968976207561686388",
         "deps": [
           "npm:@angular/core",
           "npm:@angular/material",
@@ -1151,7 +1151,51 @@
       },
       {
         "file": ".nx/cache/terminalOutputs/15427630243208789531",
-        "hash": "7104539014800249732"
+        "hash": "9596038822073198065"
+      },
+      {
+        "file": "src/app/shared/components/darkmode-switch/darkmode-switch.component.html",
+        "hash": "14521793075529789322"
+      },
+      {
+        "file": "src/app/shared/components/darkmode-switch/darkmode-switch.component.spec.ts",
+        "hash": "15746802454992662423",
+        "deps": [
+          "npm:@angular/core"
+        ]
+      },
+      {
+        "file": "src/app/shared/components/darkmode-switch/darkmode-switch.component.ts",
+        "hash": "11547243879947591718",
+        "deps": [
+          "npm:@angular/core",
+          "npm:rxjs",
+          "npm:@angular/material"
+        ]
+      },
+      {
+        "file": ".nx/cache/project-graph.json~ea44471d",
+        "hash": "10297498646352137707"
+      },
+      {
+        "file": ".nx/cache/project-graph.json~cd97d496",
+        "hash": "10297498646352137707"
+      },
+      {
+        "file": ".nx/cache/project-graph.json~24b0eea5",
+        "hash": "10297498646352137707"
+      },
+      {
+        "file": ".nx/cache/project-graph.json~28ecf221",
+        "hash": "10297498646352137707"
+      },
+      {
+        "file": "src/app/shared/components/darkmode-switch/darkmode-switch.component.scss",
+        "hash": "4055606894390288348"
+      },
+      {
+        "file": "src/app/shared/constants.ts",
+        "hash": "3244421341483603138"
       }
     ]
   }

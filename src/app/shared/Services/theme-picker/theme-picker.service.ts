@@ -11,12 +11,20 @@ export class ThemePickerService {
   constructor(private http: HttpClient, private styleManager: StyleManagerService) { }
 
   LOCAL_STORAGE_KEY = "theme";
-  defaultTheme = "pink-bluegrey";
+  defaultTheme = this.darkTheme;
+
+  get lightTheme(): string { return "deeppurple-amber"; }
+  get darkTheme(): string { return "purple-green"; }
+  get currentTheme(): string {
+    return this.getTheme();
+  }
+
   getThemeOptions(): Observable<ThemeOption[]> {
     return this.http.get<ThemeOption[]>("assets/options.json")
   }
 
   setTheme(theme: string) {
+    console.log(`setTheme(${theme})`)
     localStorage.setItem(this.LOCAL_STORAGE_KEY, theme);
     this.styleManager.setStyle(
       "theme",
