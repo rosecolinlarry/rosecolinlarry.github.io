@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { UiLibraryComponent } from '@apps/ui';
+import { DarkmodeButtonComponent } from '@apps/ui';
 @Component({
     selector: 'app-dashboard',
     standalone: true,
     templateUrl: './dashboard.component.html',
     styleUrl: './dashboard.component.scss',
-    imports: [CommonModule, UiLibraryComponent]
+    imports: [CommonModule, DarkmodeButtonComponent]
 })
 export class DashboardComponent {}

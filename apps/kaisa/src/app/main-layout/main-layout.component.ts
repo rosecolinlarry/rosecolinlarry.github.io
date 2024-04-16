@@ -10,6 +10,7 @@ import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 import { DashboardComponent } from "../dashboard/dashboard.component";
 import { NxWelcomeComponent } from "../nx-welcome.component";
+import { DarkmodeButtonComponent } from "../../../../ui-library/src/lib/darkmode-button/darkmode-button.component";
 
 @Component({
     selector: 'app-main-layout',
@@ -24,7 +25,8 @@ import { NxWelcomeComponent } from "../nx-welcome.component";
         MatIconModule,
         AsyncPipe,
         DashboardComponent,
-        NxWelcomeComponent
+        NxWelcomeComponent,
+        DarkmodeButtonComponent
     ]
 })
 export class MainLayoutComponent {

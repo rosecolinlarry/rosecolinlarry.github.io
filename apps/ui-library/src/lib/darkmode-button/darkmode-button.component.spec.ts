@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { UiLibraryComponent } from './ui-library.component';
+import { DarkmodeButtonComponent } from './darkmode-button.component';
 
-describe('UiLibraryComponent', () => {
-  let component: UiLibraryComponent;
-  let fixture: ComponentFixture<UiLibraryComponent>;
+describe('DarkmodeButtonComponent', () => {
+  let component: DarkmodeButtonComponent;
+  let fixture: ComponentFixture<DarkmodeButtonComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [UiLibraryComponent],
+      imports: [DarkmodeButtonComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(UiLibraryComponent);
+    fixture = TestBed.createComponent(DarkmodeButtonComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
