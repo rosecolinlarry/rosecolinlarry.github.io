@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@rosecolinlarry.github.io/shared-ui": ["libs/shared/ui/src/index.ts"]
+      "@apps/ui": ["apps/ui-library/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
