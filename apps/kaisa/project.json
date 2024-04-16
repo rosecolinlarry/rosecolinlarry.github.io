@@ -12,7 +12,7 @@
         "{options.outputPath}"
       ],
       "options": {
-        "outputPath": "docs/apps/kaisa/browser",
+        "outputPath": "docs",
         "index": "apps/kaisa/src/index.html",
         "main": "apps/kaisa/src/main.ts",
         "polyfills": [
