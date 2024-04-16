@@ -12,7 +12,7 @@
         "{options.outputPath}"
       ],
       "options": {
-        "outputPath": "dist/apps/kaisa/browser",
+        "outputPath": "docs/apps/kaisa/browser",
         "index": "apps/kaisa/src/index.html",
         "main": "apps/kaisa/src/main.ts",
         "polyfills": [
@@ -101,7 +101,7 @@
       ],
       "executor": "@angular-devkit/build-angular:server",
       "options": {
-        "outputPath": "dist/apps/kaisa/server",
+        "outputPath": "docs/apps/kaisa/server",
         "main": "apps/kaisa/server.ts",
         "tsConfig": "apps/kaisa/tsconfig.server.json",
         "inlineStyleLanguage": "scss"

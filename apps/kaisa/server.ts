@@ -10,22 +10,22 @@ import bootstrap from './src/main.server';
 // The Express app is exported so that it can be used by serverless Functions.
 export function app(): express.Express {
   const server = express();
-  const distFolder = join(process.cwd(), 'dist/apps/kaisa/browser');
-  const indexHtml = existsSync(join(distFolder, 'index.original.html'))
-    ? join(distFolder, 'index.original.html')
-    : join(distFolder, 'index.html');
+  const docsFolder = join(process.cwd(), 'docs/apps/kaisa/browser');
+  const indexHtml = existsSync(join(docsFolder, 'index.original.html'))
+    ? join(docsFolder, 'index.original.html')
+    : join(docsFolder, 'index.html');
 
   const commonEngine = new CommonEngine();
 
   server.set('view engine', 'html');
-  server.set('views', distFolder);
+  server.set('views', docsFolder);
 
   // Example Express Rest API endpoints
   // server.get('/api/**', (req, res) => { });
   // Serve static files from /browser
   server.get(
     '*.*',
-    express.static(distFolder, {
+    express.static(docsFolder, {
       maxAge: '1y',
     })
   );
@@ -39,7 +39,7 @@ export function app(): express.Express {
         bootstrap,
         documentFilePath: indexHtml,
         url: `${protocol}://${headers.host}${originalUrl}`,
-        publicPath: distFolder,
+        publicPath: docsFolder,
         providers: [{ provide: APP_BASE_HREF, useValue: baseUrl }],
       })
       .then((html) => res.send(html))
