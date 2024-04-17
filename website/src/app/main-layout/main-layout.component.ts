@@ -10,24 +10,26 @@ import { DashboardComponent } from "../dashboard/dashboard.component";
 import { HeaderComponent } from "./header/header.component";
 import { FooterComponent } from "./footer/footer.component";
 import { routes } from '../app.routes';
+import { DarkmodeToggleComponent } from "./header/darkmode-toggle/darkmode-toggle.component";
 
 @Component({
-  selector: 'app-main-layout',
-  templateUrl: './main-layout.component.html',
-  styleUrl: './main-layout.component.scss',
-  standalone: true,
-  imports: [
-    CommonModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatListModule,
-    MatIconModule,
-    AsyncPipe,
-    DashboardComponent,
-    HeaderComponent,
-    FooterComponent,
-  ]
+    selector: 'app-main-layout',
+    templateUrl: './main-layout.component.html',
+    styleUrl: './main-layout.component.scss',
+    standalone: true,
+    imports: [
+        CommonModule,
+        MatToolbarModule,
+        MatButtonModule,
+        MatSidenavModule,
+        MatListModule,
+        MatIconModule,
+        AsyncPipe,
+        DashboardComponent,
+        HeaderComponent,
+        FooterComponent,
+        DarkmodeToggleComponent
+    ]
 })
 export class MainLayoutComponent implements OnDestroy {
   navItems = routes;

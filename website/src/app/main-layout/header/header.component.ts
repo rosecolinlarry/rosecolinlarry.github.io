@@ -14,5 +14,4 @@ import { AsyncPipe } from '@angular/common';
 export class HeaderComponent {
   @Input()
   snav: any;
-
 }
