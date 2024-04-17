@@ -1,3 +1,5 @@
+@import '../../styles.scss';
+
 .sidenav-container {
   height: 100%;
 }
@@ -18,4 +20,14 @@
 
 div.spacer {
   flex-grow: 1;
+}
+
+#banner-header {
+  --color_32: 132, 139, 194;
+  --font_0: normal normal normal 72px/1.4em syne, sans-serif;
+  text-size-adjust: 100%;
+  font: var(--font_0);
+  font-size: 32px;
+  vertical-align: baseline;
+  // color: rgb(var(--color_32));
 }
