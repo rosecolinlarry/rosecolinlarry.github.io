@@ -1,0 +1,20 @@
+<div>
+<app-header [snav]="snav"></app-header>
+  <mat-sidenav-container>
+    <mat-sidenav
+      #snav
+      [mode]="mobileQuery.matches ? 'over' : 'side'"
+      [fixedInViewport]="mobileQuery.matches"
+      fixedTopGap="56"
+    >
+      <mat-nav-list>
+        @for (nav of navItems; track nav) {
+        <a mat-list-item routerLink=`{nav.path}`>{{ nav.title }}</a>
+        }
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <app-dashboard></app-dashboard>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
