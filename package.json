@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "serve:ssr:kaisa": "node docs/kaisa/server/server.mjs"
+    "serve:ssr:kaisa": "node docs/website/server/server.mjs"
   },
   "private": true,
   "dependencies": {
