@@ -29,8 +29,6 @@
   width: 1px;
   white-space: nowrap;
   outline: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   left: 0;
 }
 [dir='rtl'] .cdk-visually-hidden {
