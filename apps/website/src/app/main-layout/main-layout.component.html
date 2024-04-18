@@ -1,0 +1,23 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+  >
+    <mat-toolbar>Where to?</mat-toolbar>
+    <mat-nav-list>
+      <a *ngFor="let link of links" mat-list-item href="{{ link.path }}">{{
+        link.title
+      }}</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <app-header class="sticky" [drawer]="drawer"></app-header>
+    <div class="content-padding">
+      <ng-content></ng-content>
+    </div>
+    <app-footer></app-footer>
+  </mat-sidenav-content>
+</mat-sidenav-container>
