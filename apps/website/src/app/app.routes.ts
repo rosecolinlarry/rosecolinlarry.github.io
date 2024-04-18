@@ -1,6 +1,5 @@
 import { Route } from '@angular/router';
-import { MainLayoutComponent } from './main-layout/main-layout.component';
-
+import { DashboardComponent } from './dashboard/dashboard.component';
 export const appRoutes: Route[] = [
-  { path: '', title: 'Home', component: MainLayoutComponent },
+  { path: '', title: 'Home', component: DashboardComponent },
 ];

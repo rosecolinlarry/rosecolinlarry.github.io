@@ -8,24 +8,16 @@
   >
     <mat-toolbar>Where to?</mat-toolbar>
     <mat-nav-list>
-      <a *ngFor="let link of links" mat-list-item href="{{link.path}}">{{link.title}}</a>
+      <a *ngFor="let link of links" mat-list-item href="{{ link.path }}">{{
+        link.title
+      }}</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="primary">
-      <button
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()"
-      >
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-      </button>
-      <div id="banner-header" class="">KAISA DESIGNS</div>
-      <div class="spacer"></div>
-      <lib-darkmode-button></lib-darkmode-button>
-    </mat-toolbar>
-    <!-- TODO KA Make this a router outlet so it changes pages -->
-    <app-dashboard class="dashboard"></app-dashboard> 
+    <app-header class="sticky" [drawer]="drawer"></app-header>
+    <div class="content-padding">
+      <ng-content></ng-content>
+    </div>
+    <app-footer></app-footer>
   </mat-sidenav-content>
 </mat-sidenav-container>
