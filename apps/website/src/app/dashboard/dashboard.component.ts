@@ -8,7 +8,11 @@ import { MatCardModule } from '@angular/material/card';
   standalone: true,
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss',
-  imports: [CommonModule, DarkmodeButtonComponent, MatButtonModule, MatCardModule],
+  imports: [
+    CommonModule,
+    DarkmodeButtonComponent,
+    MatButtonModule,
+    MatCardModule,
+  ],
 })
-export class DashboardComponent { }
-
+export class DashboardComponent {}

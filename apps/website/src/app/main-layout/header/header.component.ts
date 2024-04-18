@@ -16,11 +16,12 @@ import { MatRippleModule } from '@angular/material/core';
     DarkmodeButtonComponent,
     MatButtonModule,
     MatRippleModule,
-    MatIconModule],
+    MatIconModule,
+  ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
-export class HeaderComponent { 
+export class HeaderComponent {
   @Input()
   drawer!: MatSidenav;
 }

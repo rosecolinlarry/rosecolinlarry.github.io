@@ -5,13 +5,10 @@ import { MatToolbarModule, MatToolbarRow } from '@angular/material/toolbar';
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: 
-  [CommonModule,
-    MatToolbarModule
-  ],
+  imports: [CommonModule, MatToolbarModule],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss',
 })
 export class FooterComponent {
-  currentYear= (new Date()).getFullYear()
+  currentYear = new Date().getFullYear();
 }

@@ -12,25 +12,25 @@ import { Route } from '@angular/router';
 import { appRoutes } from '../app.routes';
 import { HeaderComponent } from './header/header.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { FooterComponent } from "./footer/footer.component";
+import { FooterComponent } from './footer/footer.component';
 
 @Component({
-    selector: 'app-main-layout',
-    templateUrl: './main-layout.component.html',
-    styleUrl: './main-layout.component.scss',
-    standalone: true,
-    imports: [
-        CommonModule,
-        MatButtonModule,
-        MatSidenavModule,
-        MatToolbarModule,
-        MatListModule,
-        MatIconModule,
-        AsyncPipe,
-        DashboardComponent,
-        HeaderComponent,
-        FooterComponent
-    ]
+  selector: 'app-main-layout',
+  templateUrl: './main-layout.component.html',
+  styleUrl: './main-layout.component.scss',
+  standalone: true,
+  imports: [
+    CommonModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatListModule,
+    MatIconModule,
+    AsyncPipe,
+    DashboardComponent,
+    HeaderComponent,
+    FooterComponent,
+  ],
 })
 export class MainLayoutComponent {
   links: Route[] = appRoutes;

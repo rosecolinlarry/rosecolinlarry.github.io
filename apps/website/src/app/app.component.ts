@@ -8,10 +8,6 @@ import { MainLayoutComponent } from './main-layout/main-layout.component';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
-  imports: [
-    RouterModule,
-    CommonModule,
-    MainLayoutComponent]
+  imports: [RouterModule, CommonModule, MainLayoutComponent],
 })
-export class AppComponent {
-}
+export class AppComponent {}

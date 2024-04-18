@@ -17,7 +17,8 @@ describe('AppComponent', () => {
         RouterModule,
         BrowserModule,
         BrowserAnimationsModule,
-        MainLayoutComponent],
+        MainLayoutComponent,
+      ],
     }).compileComponents();
 
     fixture = TestBed.createComponent(AppComponent);
@@ -27,5 +28,5 @@ describe('AppComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
-  })
+  });
 });
