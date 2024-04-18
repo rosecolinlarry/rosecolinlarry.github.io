@@ -836,7 +836,7 @@ nx g &#64;nx/angular:component ui/src/lib/button</pre>
               </svg>
               View project details
             </summary>
-            <pre>nx show project kaisa --web</pre>
+            <pre>nx show project website --web</pre>
           </details>
           <details>
             <summary>
