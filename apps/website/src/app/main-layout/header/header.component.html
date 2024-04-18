@@ -1,13 +1,14 @@
-<mat-toolbar class="toolbar-header" color="primary">
-    <button
-      type="button"
-      aria-label="Toggle sidenav"
-      mat-icon-button
-      (click)="drawer.toggle()"
-    >
-      <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-    </button>
-    <span class="banner-header">Kaisa Designs</span>
-    <span class="spacer"></span>
-    <lib-darkmode-button></lib-darkmode-button>
+<mat-toolbar id="header" class="toolbar-header" color="primary">
+  <button
+    id="sidenav-toggle-button"
+    type="button"
+    aria-label="Toggle sidenav"
+    mat-icon-button
+    (click)="drawer.toggle()"
+  >
+    <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+  </button>
+  <div class="banner-header questrial-regular">Yet Another Angular Site</div>
+  <div class="spacer"></div>
+  <lib-darkmode-button id="darkmode-button"></lib-darkmode-button>
 </mat-toolbar>
