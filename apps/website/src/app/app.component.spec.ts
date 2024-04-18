@@ -1,6 +1,10 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
+import { MainLayoutComponent } from './main-layout/main-layout.component';
+import { CommonModule } from '@angular/common';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('AppComponent', () => {
   let component: AppComponent;
@@ -8,7 +12,12 @@ describe('AppComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AppComponent, RouterModule],
+      imports: [
+        AppComponent,
+        RouterModule,
+        BrowserModule,
+        BrowserAnimationsModule,
+        MainLayoutComponent],
     }).compileComponents();
 
     fixture = TestBed.createComponent(AppComponent);
