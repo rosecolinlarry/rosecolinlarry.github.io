@@ -1,3 +1,5 @@
+@import '../../../styles.scss';
+
 .listing-card {
   max-width: 300px;
   display: flex;
@@ -7,6 +9,22 @@
   }
   &__info {
     flex-direction: column;
+  }
+  &__product-text {
+    display: flex;
+    flex-grow: inherit;
+    flex-direction: column;
+    .pricing-info {
+      display: inherit;
+      align-items: inherit;
+    }
+  }
+  &__price {
+    display: flex;
+    flex-direction: row;
+    p {
+      padding-right: 10px;
+    }
   }
 }
 
@@ -32,4 +50,8 @@
   line-height: 22px;
   display: flex;
   justify-content: center;
+}
+
+mat-card-content {
+  padding-bottom: 5px;
 }

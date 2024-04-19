@@ -1,7 +1,6 @@
 import {
   Component,
   EventEmitter,
-  HostBinding,
   Input,
   Output,
 } from '@angular/core';
@@ -10,7 +9,6 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { ThemePickerService } from '../theming/theme-picker/theme-picker.service';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'lib-darkmode-button',
