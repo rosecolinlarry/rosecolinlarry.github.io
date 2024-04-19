@@ -4,17 +4,18 @@ import { DarkmodeButtonComponent } from '@libs/ui';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
+
 @Component({
   selector: 'app-shop-item',
   standalone: true,
   templateUrl: './shop-item.component.html',
-  styleUrl: './shop-item.component.scss',
+  styleUrl: './shop-item.scss',
   imports: [
     CommonModule,
     DarkmodeButtonComponent,
     MatButtonModule,
     MatCardModule,
-    MatIconModule,
+    MatIconModule
   ],
 })
 export class ShopItemComponent {}

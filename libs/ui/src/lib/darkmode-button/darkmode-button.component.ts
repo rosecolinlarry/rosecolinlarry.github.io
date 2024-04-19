@@ -1,9 +1,4 @@
-import {
-  Component,
-  EventEmitter,
-  Input,
-  Output,
-} from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -19,20 +14,15 @@ import { HttpClient } from '@angular/common/http';
   styleUrl: './darkmode-button.component.scss',
 })
 export class DarkmodeButtonComponent {
-  @Input()
-  isDarkmode: boolean;
-  @Output() toggleDarkmode: EventEmitter<boolean> = new EventEmitter();
-  constructor(private themePickerService: ThemePickerService) {
-    this.isDarkmode =
-      themePickerService.currentTheme == themePickerService.darkTheme;
+  isDarkMode: boolean;
+  themePickerService: ThemePickerService;
+  constructor(themePickerService: ThemePickerService) {
+    this.themePickerService = themePickerService;
+    this.isDarkMode = this.themePickerService.isDarkMode;
   }
 
   onClick() {
-    this.isDarkmode = !this.isDarkmode;
-    this.toggleDarkmode.emit(this.isDarkmode);
-    const newTheme = this.isDarkmode
-      ? this.themePickerService.darkTheme
-      : this.themePickerService.lightTheme;
-    this.themePickerService.setTheme(newTheme);
+    this.themePickerService.setTheme();
+    this.isDarkMode = this.themePickerService.isDarkMode;
   }
 }

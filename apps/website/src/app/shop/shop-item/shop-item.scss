@@ -1,4 +1,5 @@
-@import '../../../styles.scss';
+@use 'sass:map';
+@use '@angular/material' as mat;
 
 .listing-card {
   max-width: 300px;
@@ -54,4 +55,8 @@
 
 mat-card-content {
   padding-bottom: 5px;
+}
+
+.green-text {
+  font-weight: 900;
 }
