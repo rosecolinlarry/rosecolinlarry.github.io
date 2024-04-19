@@ -3,7 +3,7 @@
 
 @mixin color($light-theme) {
   .green-text {
-    color: mat.get-theme-color($light-theme, warn, 500);
+    color: mat.get-theme-color($light-theme, primary, 500);
   }
 }
 
@@ -12,7 +12,6 @@
     @include color($light-theme);
   }
 }
-
 
 @mixin color($dark-theme) {
   .green-text {

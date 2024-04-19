@@ -1,5 +1,5 @@
 @use '@angular/material' as mat;
-@use './app/shop/shop-item/shop-item-theme' as shop-item;
+@use './app/shop/shop-item/shop-item.component.theme' as shop-item;
 
 @include mat.core();
 

@@ -66,8 +66,6 @@ MIT
 @angular/router
 MIT
 
-@libs/ui
-
 rxjs
 Apache-2.0
                                Apache License
@@ -273,6 +271,8 @@ Apache-2.0
  limitations under the License.
  
 
+
+ui
 
 zone.js
 MIT
