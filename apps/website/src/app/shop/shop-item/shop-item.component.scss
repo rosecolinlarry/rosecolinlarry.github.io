@@ -58,5 +58,27 @@ mat-card-content {
 }
 
 .green-text {
-  font-weight: 900;
+  font-weight: 600;
+}
+
+.dull-text {
+  font-weight: 400;
+}
+
+.dark-mode {
+  .green-text {
+    color: greenyellow;
+  }
+  .dull-text {
+    color: white;
+  }
+}
+
+.light-mode {
+  .green-text {
+    color: darkgreen;
+  }
+  .dull-text {
+    color: black;
+  }
 }
