@@ -1,0 +1,18 @@
+.storefront {
+    &__dashboard {
+        &__products {
+            
+        }
+        &__orders {
+
+        }
+    }
+}
+
+mat-grid-list {
+}
+
+.mat-grid-tile-content {
+    display: flex;
+    flex-direction: row;
+}

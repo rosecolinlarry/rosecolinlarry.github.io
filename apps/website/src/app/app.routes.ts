@@ -1,4 +1,4 @@
-import { Route, Routes } from '@angular/router';
+import { Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RouteData } from './shared/interfaces/route-data';
 import { ProductsComponent } from '@rosecolinlarry/products';

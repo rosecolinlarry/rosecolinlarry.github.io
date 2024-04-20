@@ -12,8 +12,7 @@
 
 .content-padding {
   display: flex;
-  padding-left: 40px;
-  padding-top: 20px;
-  padding-right: 40px;
-  padding-bottom: 20px;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 20px 50px
 }

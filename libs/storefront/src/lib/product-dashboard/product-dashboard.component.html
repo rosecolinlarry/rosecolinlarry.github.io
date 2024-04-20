@@ -1,0 +1,77 @@
+<!-- dashboard.component.html -->
+<div class="grid-container">
+  <h1 class="mat-h1">Dashboard</h1>
+  <mat-grid-list cols="{{ (cardLayout | async)?.columns }}" rowHeight="200px">
+    <!--Mini Cards-->
+    <mat-grid-tile>
+      <lib-dashboard-mini-card
+        [icon]="'someicon'"
+        [title]="'aaaa'"
+        [value]="3"
+        [color]="'red'"
+        [isIncrease]="true"
+        duration="since last month"
+        [percentValue]="20"
+        [isCurrency]="true"
+      ></lib-dashboard-mini-card>
+    </mat-grid-tile>
+    <mat-grid-tile
+      *ngFor="let mc of miniCardData"
+      [colspan]="(cardLayout | async)?.miniCard?.cols"
+      [rowspan]="(cardLayout | async)?.miniCard?.rows"
+    >
+      <lib-dashboard-mini-card
+        [icon]="mc.icon"
+        [title]="mc.title"
+        [value]="mc.value"
+        [color]="mc.color"
+        [isIncrease]="mc.isIncrease"
+        duration="since last month"
+        [percentValue]="mc.percentValue"
+        [isCurrency]="mc.isCurrency"
+      ></lib-dashboard-mini-card>
+    </mat-grid-tile>
+    <!--Charts-->
+    <mat-grid-tile
+      [colspan]="(cardLayout | async)?.chart?.cols"
+      [rowspan]="(cardLayout | async)?.chart?.rows"
+    >
+      <lib-dashboard-card title="Monthly Revenue">
+        <!-- <lib-dashboard-annual-sale-chart></lib-dashboard-annual-sale-chart> -->
+      </lib-dashboard-card>
+    </mat-grid-tile>
+    <mat-grid-tile
+      [colspan]="(cardLayout | async)?.chart?.cols"
+      [rowspan]="(cardLayout | async)?.chart?.rows"
+    >
+      <lib-dashboard-card title="Product Sales">
+        <!-- <lib-dashboard-product-sales-chart></lib-dashboard-product-sales-chart> -->
+      </lib-dashboard-card>
+    </mat-grid-tile>
+    <mat-grid-tile
+      [colspan]="(cardLayout | async)?.chart?.cols"
+      [rowspan]="(cardLayout | async)?.chart?.rows"
+    >
+      <lib-dashboard-card title="Sales by Traffic Source">
+        <!-- <lib-dashboard-sales-traffic-chart></lib-dashboard-sales-traffic-chart> -->
+      </lib-dashboard-card>
+    </mat-grid-tile>
+    <mat-grid-tile
+      [colspan]="(cardLayout | async)?.chart?.cols"
+      [rowspan]="(cardLayout | async)?.chart?.rows"
+    >
+      <lib-dashboard-card title="Online Store Sessions by Traffic Source">
+        <!-- <lib-dashboard-store-sessions-chart></lib-dashboard-store-sessions-chart> -->
+      </lib-dashboard-card>
+    </mat-grid-tile>
+    <!--Table-->
+    <mat-grid-tile
+      [colspan]="(cardLayout | async)?.table?.cols"
+      [rowspan]="(cardLayout | async)?.table?.rows"
+    >
+      <lib-dashboard-card title="Latest Orders">
+        <!-- <lib-dashboard-orders-table></lib-dashboard-orders-table> -->
+      </lib-dashboard-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
