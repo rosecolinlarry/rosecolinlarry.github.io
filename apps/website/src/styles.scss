@@ -68,12 +68,9 @@ $light-theme: mat.define-light-theme(
 );
 
 // Apply the dark theme by default
-@include mat.core-theme($dark-theme);
 @include mat.all-component-themes($dark-theme);
-@include mat.typography-hierarchy($website-typography);
 
-.light-mode {
-  @include mat.core-theme($light-theme);
+.light-mode { 
   @include mat.all-component-bases($light-theme);
   @include mat.all-component-colors($light-theme);
 }
@@ -85,7 +82,7 @@ body {
 }
 body {
   margin: 0;
-  font-family: 'Raleway', Roboto, 'Helvetica Neue', sans-serif;
+  font-family: 'Josefin Sans', 'Raleway', sans-serif;
 }
 
 .strikethrough {
