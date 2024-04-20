@@ -5,6 +5,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenav } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
 import { MatRippleModule } from '@angular/material/core';
+import { DarkmodeToggleComponent} from '@rosecolinlarry/shared-ui';
 
 @Component({
   selector: 'app-header',
@@ -15,6 +16,7 @@ import { MatRippleModule } from '@angular/material/core';
     MatButtonModule,
     MatRippleModule,
     MatIconModule,
+    DarkmodeToggleComponent
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
