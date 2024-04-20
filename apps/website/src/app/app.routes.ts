@@ -1,9 +1,10 @@
-import { Routes } from '@angular/router';
+import { Route, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RouteData } from './shared/interfaces/route-data';
-import { ShopComponent } from './shop/shop.component';
-import { ProductListComponent } from '@rosecolinlarry/products';
+import { ProductsComponent } from '@rosecolinlarry/products';
 import { OrderListComponent } from '@rosecolinlarry/orders';
+import { StorefrontComponent } from '@rosecolinlarry/storefront';
+import { PageNotFoundComponent } from '@rosecolinlarry/errors';
 
 export const appRoutes: Routes = [
   {
@@ -15,19 +16,27 @@ export const appRoutes: Routes = [
   {
     path: 'shop',
     title: 'Shop',
-    component: ShopComponent,
+    component: StorefrontComponent,
     data: { iconName: 'storefront' } as RouteData,
+    children: [
+      {
+        path: 'products',
+        title: 'Products',
+        component: ProductsComponent,
+        data: { iconName: 'list' } as RouteData,
+      },
+      {
+        path: 'orders',
+        title: 'Orders',
+        component: OrderListComponent,
+        data: { iconName: 'list' } as RouteData,
+      }
+    ]
   },
   {
-    path: 'products',
-    title: 'Products',
-    component: ProductListComponent,
-    data: { iconName: 'list' } as RouteData,
+    path: '**', 
+    title: 'Page Not Found',
+    component: PageNotFoundComponent,
+    data: { hideFromMenu: true} as RouteData,
   },
-  {
-    path: 'orders',
-    title: 'Orders',
-    component: OrderListComponent,
-    data: { iconName: 'list' } as RouteData,
-  }
 ];

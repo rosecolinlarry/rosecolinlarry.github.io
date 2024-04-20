@@ -13,6 +13,7 @@ import { appRoutes } from '../app.routes';
 import { HeaderComponent } from './header/header.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { FooterComponent } from './footer/footer.component';
+import { RouteData } from '../shared/interfaces/route-data';
 
 @Component({
   selector: 'app-main-layout',
@@ -38,6 +39,15 @@ import { FooterComponent } from './footer/footer.component';
 export class MainLayoutComponent {
   links: Route[] = appRoutes;
   private breakpointObserver = inject(BreakpointObserver);
+
+  // Get menu items to display
+  get menuItems(): Route[] {
+    const items = appRoutes.filter(x => {
+      const data = x.data as RouteData;
+      return !data.hideFromMenu;
+    })
+    return items;
+  }
 
   isHandset$: Observable<boolean> = this.breakpointObserver
     .observe(Breakpoints.Handset)

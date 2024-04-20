@@ -1,11 +1,18 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { ShopItemComponent } from '../product-card/product-card.component';
 
 @Component({
   selector: 'lib-products',
   standalone: true,
-  imports: [CommonModule],
+  imports: [
+    CommonModule,
+    MatButtonModule,
+    MatCardModule,
+    ShopItemComponent],
   templateUrl: './products.component.html',
-  styleUrl: './products.component.css',
+  styleUrl: './products.component.scss',
 })
-export class ProductsComponent {}
+export class ProductsComponent { }
