@@ -10,7 +10,7 @@ Kaisa.
 
 ## ⏳ When Am I?
 
-Check the copyright in the footer.
+Now.
 
 ## 🗺️ Where Am I?
 
@@ -23,7 +23,7 @@ Good, you?
 ## 🪴 Why Am I?
 
 1. Wix has a 500mb limit and I am looking into hosting my own website for my portfolio (which has a lot of images, putting me over that limit)
-2. Practicing my skills outside of work because it is both fun and I will hopefully be able to convince the teams to use `nx` and implement darkmode. If I am an expert, it will be easy to implement with little risk to dealines.
+2. Practicing my skills outside of work because it is both fun
 3. This is fun.
 
 ### Things I would like to explore
