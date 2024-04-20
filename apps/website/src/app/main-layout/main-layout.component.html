@@ -8,7 +8,7 @@
   >
     <mat-toolbar>Where to?</mat-toolbar>
     <mat-nav-list>
-      <a *ngFor="let link of links" mat-list-item href="{{ link.path }}">{{
+      <a routerLink="/{{link.path}}" routerLinkActive="active" *ngFor="let link of links" mat-list-item>{{
         link.title
       }}</a>
     </mat-nav-list>
