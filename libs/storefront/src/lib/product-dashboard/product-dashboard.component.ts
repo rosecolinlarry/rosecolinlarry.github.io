@@ -10,6 +10,7 @@ import { MatCardModule } from '@angular/material/card';
 import { DashboardCardComponent } from '@rosecolinlarry/shared-ui'
 import { DashboardMiniCardComponent } from "../../../../shared/ui/src/lib/dashboard-mini-card/dashboard-mini-card.component";
 import { StoreSummaryService, StoreSummary } from '@rosecolinlarry/shared-util';
+import { ProductCardComponent } from '@rosecolinlarry/products';
 
 @Component({
   selector: 'lib-product-dashboard',
@@ -24,7 +25,8 @@ import { StoreSummaryService, StoreSummary } from '@rosecolinlarry/shared-util';
     MatButtonModule,
     MatCardModule,
     DashboardCardComponent,
-    DashboardMiniCardComponent
+    DashboardMiniCardComponent,
+    ProductCardComponent
   ]
 })
 export class ProductDashboardComponent implements OnInit {
@@ -34,7 +36,7 @@ export class ProductDashboardComponent implements OnInit {
     { title: "Total Orders", value: "243", isIncrease: true, color: "warn", percentValue: "0.4565", icon: "shopping_cart", isCurrency: false },
     { title: "Returning Customers", value: "35", isIncrease: false, color: "primary", percentValue: "0.8361", icon: "portrait", isCurrency: false }
   ];
-  
+
   constructor(private breakpointObserver: BreakpointObserver, private summaryService: StoreSummaryService) { }
 
   ngOnInit() {

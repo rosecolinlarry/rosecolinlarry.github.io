@@ -1,4 +1,9 @@
 <mat-card class="dashboard-card">
+    <img
+    mat-card-image
+    src="https://i.imgur.com/is4kHp1.jpeg"
+    alt="Photo of Apex"
+  />
     <mat-card-header class="card-header">
         <mat-card-title>
             <h1 class="value-text" *ngIf="isCurrency">{{value | currency:'$':'symbol':'0.0' }}</h1>
