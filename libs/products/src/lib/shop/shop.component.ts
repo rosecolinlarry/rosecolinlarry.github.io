@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
-import { ShopItemComponent } from '@rosecolinlarry/products';
+import { ShopItemComponent } from '../shop-item/shop-item.component';
+import { ProductsComponent } from '@rosecolinlarry/products';
 
 @Component({
   selector: 'app-shop',
@@ -13,7 +14,8 @@ import { ShopItemComponent } from '@rosecolinlarry/products';
     CommonModule,
     MatButtonModule,
     MatCardModule,
-    ShopItemComponent
+    ShopItemComponent,
+    ProductsComponent
   ],
 })
 export class ShopComponent {}

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-star-rating',
+  selector: 'lib-star-rating',
   standalone: true,
   imports: [],
   templateUrl: './star-rating.component.html',

@@ -5,7 +5,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 
 @Component({
-  selector: 'app-shop-item',
+  selector: 'lib-shop-item',
   standalone: true,
   templateUrl: './shop-item.component.html',
   styleUrl: './shop-item.component.scss',
