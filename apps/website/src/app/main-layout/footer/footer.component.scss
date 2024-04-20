@@ -2,8 +2,8 @@
 
 .toolbar-footer {
   display: flex;
-  position: absolute;
-  bottom: 0;
+  bottom: auto;
+  margin-bottom: 0;
   left: 0;
   z-index: 10;
 }

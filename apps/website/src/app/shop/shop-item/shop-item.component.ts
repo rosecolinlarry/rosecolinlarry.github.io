@@ -2,15 +2,18 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
+
 @Component({
-  selector: 'app-dashboard',
+  selector: 'app-shop-item',
   standalone: true,
-  templateUrl: './dashboard.component.html',
-  styleUrl: './dashboard.component.scss',
+  templateUrl: './shop-item.component.html',
+  styleUrl: './shop-item.component.scss',
   imports: [
     CommonModule,
     MatButtonModule,
     MatCardModule,
+    MatIconModule
   ],
 })
-export class DashboardComponent {}
+export class ShopItemComponent {}

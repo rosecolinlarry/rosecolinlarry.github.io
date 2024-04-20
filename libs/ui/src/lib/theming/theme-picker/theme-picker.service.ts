@@ -1,28 +1,33 @@
 import { Injectable } from '@angular/core';
-import { StyleManagerService } from '../style-manager/style-manager.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ThemePickerService {
-  constructor(private styleManager: StyleManagerService) {}
-
   LOCAL_STORAGE_KEY = 'theme';
-  defaultTheme = this.darkTheme;
+  lightModeClassName = 'light-mode';
+  darkModeClassName = 'dark-mode';
+  defaultTheme = this.darkModeClassName;
 
-  get lightTheme(): string {
-    return 'deeppurple-amber';
-  }
-  get darkTheme(): string {
-    return 'purple-green';
-  }
   get currentTheme(): string {
     return this.getTheme();
   }
+  get isDarkMode(): boolean {
+    return this.currentTheme == this.darkModeClassName;
+  }
 
-  setTheme(theme: string) {
-    localStorage.setItem(this.LOCAL_STORAGE_KEY, theme);
-    this.styleManager.setStyle('theme', `assets/themes/${theme}.css`);
+  setTheme() {
+    
+    if (this.isDarkMode) {
+      document.body.classList.remove(this.darkModeClassName); // Remove darkmode
+      document.body.classList.add(this.lightModeClassName); // Add lightmode
+      localStorage.setItem(this.LOCAL_STORAGE_KEY, this.lightModeClassName); // Store darkmode as current theme
+    }
+    else {
+      document.body.classList.add(this.darkModeClassName); // Add darmmode
+      document.body.classList.remove(this.lightModeClassName); // Remove lightmode
+      localStorage.setItem(this.LOCAL_STORAGE_KEY, this.darkModeClassName); // Store darkmode as current theme
+    }
   }
 
   getTheme(): string {
