@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 import { DashboardComponent } from '../dashboard/dashboard.component';
 import { Route, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
-import { routes } from '../app.routes';
+import { appRoutes } from '../app.routes';
 import { HeaderComponent } from './header/header.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { FooterComponent } from './footer/footer.component';
@@ -36,7 +36,7 @@ import { FooterComponent } from './footer/footer.component';
   ],
 })
 export class MainLayoutComponent {
-  links: Route[] = routes;
+  links: Route[] = appRoutes;
   private breakpointObserver = inject(BreakpointObserver);
 
   isHandset$: Observable<boolean> = this.breakpointObserver
