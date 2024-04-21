@@ -1,0 +1,279 @@
+<button
+  mat-icon-button
+  [matMenuTriggerFor]="menu"
+  class="product-menu-dropdown-button"
+  style="position: absolute; z-index: 20; align-self: flex-end"
+>
+  <mat-icon>more_vert</mat-icon>
+</button>
+<mat-menu
+  #menu="matMenu"
+  xPosition="before"
+  yPosition="below"
+  [hasBackdrop]="false"
+  style="
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  "
+>
+  <button
+    mat-menu-item
+    style="
+      padding: 0;
+      margin: 6px -10px 0 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 24px;
+    "
+  >
+    <mat-icon style="padding: 0; margin: 0">shopping_cart</mat-icon>
+  </button>
+  <button
+    mat-menu-item
+    style="
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 24px;
+      margin-bottom: -10px;
+    "
+  >
+    <mat-icon style="padding: 0; margin: 0; max-width: fit-content">{{
+      productInfo.isFavorite ? 'favorite' : 'favorite_border'
+    }}</mat-icon>
+  </button>
+  <button
+    mat-menu-item
+    style="
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 24px;
+      margin-bottom: -20px;
+    "
+  >
+    <mat-icon style="padding: 0; margin: 0; max-width: fit-content">
+      share
+    </mat-icon>
+  </button>
+</mat-menu>
+
+<mat-card
+  class="listing-card flexgrow"
+  style="width: 300px; min-height: fit-content; max-height: 536px"
+>
+  <img
+    class="listing-card__product-image"
+    mat-card-image
+    src="{{ productInfo.imageSrc }}"
+    alt="Photo of Apex"
+  />
+
+  <mat-card-header class="listing-card__info">
+    <mat-card-title class="listing-card__title flexcolgrow"
+      ><h4 style="height: min-content; margin: 0; padding: 0; font-size: large">
+        {{ productInfo.title }}
+      </h4></mat-card-title
+    >
+    <mat-card-subtitle
+      style="
+        height: min-content;
+        margin: 0;
+        padding: 0 0 8px 0;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+      "
+      class="shop-name-with-rating"
+    >
+      <lib-condensed-star-rating
+        style="height: min-content; margin: 0 10px 0 0; padding: 0"
+        [averageStars]="productInfo.averageStars"
+        [totalReviews]="productInfo.totalReviews"
+      >
+      </lib-condensed-star-rating>
+      <span
+        style="
+          height: min-content;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          flex-direction: row;
+          flex-grow: 1;
+          align-content: center;
+          font-weight: 300;
+          font-size: medium;
+        "
+      >
+      <p
+        style="
+          height: min-content;
+          margin: 3.5px 0 0 0;
+          padding: 0 0 0 0;
+          display: flex;
+          align-content: center;
+          align-self: center;
+          font-weight: 300;
+        "
+      >
+        {{ productInfo.sellerName }}
+      </p>
+        <mat-icon
+          *ngIf="productInfo.verified"
+          style="
+            height: min-content;
+            margin: -2px 0 0 0;
+            padding: 0;
+            align-self: center;
+            align-content: center;
+            display: flex;
+            justify-content: center;
+          "
+          class="verified-icon"
+          >verified</mat-icon
+        >
+      </span>
+    </mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content class="listing-card__product-text">
+    <div
+      class="listing-card__price pricing-text-row"
+      style="margin: 0; padding: 0 0 8px 0; height: min-content"
+    >
+      <p
+        style="margin: 0 5px 0 0; padding: 0; height: min-content"
+        class="sale-price green-text"
+      >
+        {{ productInfo.sellingPrice | currency }}
+      </p>
+      <p
+        style="
+          margin: 0 5px 0 0;
+          padding: 0;
+          height: min-content;
+          font-weight: 300;
+        "
+        class="sale-price strikethrough dull-text"
+        *ngIf="productInfo.onSale"
+      >
+        {{ productInfo.listPrice | currency }}
+      </p>
+      <p
+        *ngIf="productInfo.onSale"
+        style="margin: 0; padding: 0; height: min-content; font-weight: 300"
+        class="sale-price dull-text"
+      >
+        <!-- TODO Make a pipe for this -->
+        ({{ percentOff | percent }} off)
+      </p>
+    </div>
+    <div
+      class="below-price-row"
+      style="
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 24px;
+      "
+    >
+      <div
+        class="on-sale-row"
+        style="
+          display: flex;
+          flex-direction: row;
+          flex-grow: 0;
+          justify-content: space-between;
+          text-wrap: nowrap;
+        "
+      >
+        <p
+          *ngIf="productInfo.onSale"
+          style="
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-content: center;
+            flex-direction: row;
+            flex-grow: 0;
+            align-self: center;
+            flex-wrap: nowrap;
+            text-wrap: nowrap;
+            font-weight: 300;
+          "
+          class="green-text"
+        >
+          Sale ends in 2 hours
+        </p>
+      </div>
+      <div *ngIf="productInfo.onSale" class="spacer"></div>
+      <div class="free-shipping-row" style="display: flex; flex-grow: 1">
+        <span
+          *ngIf="productInfo.freeShipping"
+          style="
+            margin: 0;
+            padding: 0;
+            height: min-content;
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+            flex-wrap: nowrap;
+            text-wrap: nowrap;
+          "
+          class="dull-text"
+        >
+          <span
+            style="
+              margin: 0 5px 0 0;
+              padding: 0;
+              display: flex;
+              align-content: center;
+              flex-direction: row;
+              align-self: center;
+            "
+            class="material-symbols-sharp"
+          >
+            local_shipping
+          </span>
+          <p
+            style="
+              margin: 0;
+              padding: 2px 0 0 0;
+              display: flex;
+              align-content: center;
+              flex-direction: row;
+              align-self: center;
+              text-wrap: nowrap;
+              font-weight: 300;
+              font-size: small;
+            "
+          >
+            Free Shipping
+          </p>
+        </span>
+      </div>
+    </div>
+  </mat-card-content>
+  <!-- 
+  <mat-card-actions
+    class="listing-card__actions"
+    style="margin: 0; padding: 0; height: min-content"
+  >
+    <button mat-stroked-button color="accent" style="margin-left: 13px">
+      <mat-icon>add_shopping_cart</mat-icon>
+      Add to Cart
+    </button>
+    <button mat-button color="accent" class="text-then-icon-button">
+      More
+      <mat-icon>trending_flat</mat-icon>
+    </button>
+  </mat-card-actions> -->
+</mat-card>

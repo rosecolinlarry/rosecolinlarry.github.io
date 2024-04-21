@@ -1,0 +1,12 @@
+<!-- dashboard.component.html -->
+<div>
+  <h1>Dashboard</h1>
+  <div class="product-grid flexrow">
+    <ng-container *ngFor="let productInfo of fakeProductList">
+      <lib-product-card
+        [productInfo]="productInfo"
+        class="flexcolgrow"
+      ></lib-product-card>
+    </ng-container>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<mat-card class="dashboard-card">
+  <mat-card-header class="dashboard-card-header flexcolgrow">
+    <mat-card-title-group class="dashboard-card-title-group flexcolgrow">
+      <mat-card-title class="dashboard-card-title">
+        <h4 class="dashboard-card-title-header">{{ title }}</h4>
+        <div class="spacer"></div>
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu" xPosition="before">
+          <button mat-menu-item>Expand</button>
+          <button mat-menu-item>Remove</button>
+        </mat-menu></mat-card-title
+      >
+      <mat-card-subtitle class="dashboard-card-subtitle" >a subtitle</mat-card-subtitle>
+    </mat-card-title-group>
+  </mat-card-header>
+  <mat-card-content class="dashboard-card-content flexcolgrow">
+    <img class="dashboard-card-image" mat-card-image src="https://i.imgur.com/is4kHp1.jpeg" />
+    <ng-content></ng-content>
+  </mat-card-content>
+  <mat-card-footer>
+    <mat-card-actions>
+      <button mat-icon-button class="bookmark-icon-button yellow-on-click">
+        <mat-icon class="bookmark-icon color-changing-icon yellow-on-click">bookmark</mat-icon>
+      </button>
+      <button mat-icon-button class="star-icon-button yellow-on-click">
+        <mat-icon class="star-icon color-changing-icon yellow-on-click">star</mat-icon>
+      </button>
+      <div class="spacer"></div>
+      <button mat-icon-button class="cart-icon-button">
+        <mat-icon class="cart-icon color-changing-icon green-on-click">add_shopping_cart</mat-icon>
+      </button>
+    </mat-card-actions>
+  </mat-card-footer>
+</mat-card>

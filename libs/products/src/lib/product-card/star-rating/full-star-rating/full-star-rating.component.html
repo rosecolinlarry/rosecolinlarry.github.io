@@ -1,0 +1,22 @@
+<div class="flexrow">
+  <!-- Filled -->
+  <span
+    class="material-symbols-sharp tiny-icon filled-star"
+    *ngFor="let star of filledStarsArray"
+  >
+    star
+  </span>
+  <!-- Half -->
+  <span
+    class="material-symbols-sharp tiny-icon half-star"
+    *ngFor="let star of halfStarsArray"
+    >star_half</span
+  >
+  <!-- Empty -->
+  <span
+    class="material-symbols-outlined tiny-icon empty-star dull-text"
+    *ngFor="let star of emptyStarsArray"
+  >
+    star
+  </span>
+</div>

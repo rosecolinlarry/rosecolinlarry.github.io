@@ -1,0 +1,119 @@
+.material-symbols-outlined {
+  font-variation-settings:
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 20
+}
+
+.material-symbols-sharp {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 20
+}
+
+.listing-card {
+  height: inherit;
+  max-height: 450px;
+  min-width: 300px;
+  display: flex;
+  flex-grow: 1;
+  &__actions {
+    justify-content: space-between;
+  }
+  &__info {
+    flex-direction: column;
+  }
+  &__product-text {
+    display: flex;
+    flex-grow: inherit;
+    flex-direction: column;
+    .pricing-info {
+      display: inherit;
+      align-items: inherit;
+    }
+  }
+  &__product-image {
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+  }
+  &__price {
+    display: flex;
+    flex-direction: row;
+    p {
+      padding-right: 10px;
+    }
+  }
+}
+
+.text-then-icon-button {
+  flex-flow: row-reverse;
+  mat-icon {
+    padding-left: 5px;
+  }
+}
+
+.shop-name-with-rating {
+  display: flex;
+  flex-grow: inherit;
+  align-items: center;
+  p {
+    display: inherit;
+    align-items: inherit;
+  }
+}
+
+.verified-icon {
+  line-height: 18px;
+  font-size: 18px;
+  align-content: center;
+  font-weight: 100;
+  color: rgb(84, 106, 255);
+}
+
+mat-card-content {
+  padding-bottom: 5px;
+}
+
+.green-text {
+  font-weight: 600;
+}
+
+.dull-text {
+  font-weight: 400;
+}
+
+.dark-mode {
+  .green-text {
+    color: greenyellow;
+  }
+  .dull-text {
+    color: white;
+  }
+  .mat-mdc-menu-panel.mat-mdc-menu-panel {
+    background-color: rgba(79, 79, 79, 0.75);
+  }
+}
+
+.light-mode {
+  .green-text {
+    color: darkgreen;
+  }
+  .dull-text {
+    color: black;
+  }
+  .mat-mdc-menu-panel.mat-mdc-menu-panel {
+    background-color: rgba(255, 255, 255, 0.75);
+  }
+}
+
+.mat-mdc-menu-panel.mat-mdc-menu-panel {
+  min-width: unset !important;
+  width: 36px;
+  margin-right: 7px;
+  padding-top: 0;
+  height: min-content;
+  overflow: hidden;
+}
