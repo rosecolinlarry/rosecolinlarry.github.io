@@ -1,3 +1,71 @@
+<button
+  mat-icon-button
+  [matMenuTriggerFor]="menu"
+  class="product-menu-dropdown-button"
+  style="position: absolute; z-index: 20; align-self: flex-end"
+>
+  <mat-icon>more_vert</mat-icon>
+</button>
+<mat-menu
+  #menu="matMenu"
+  xPosition="before"
+  yPosition="below"
+  [hasBackdrop]="false"
+  style="
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  "
+>
+  <button
+    mat-menu-item
+    style="
+      padding: 0;
+      margin: 6px -10px 0 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 24px;
+    "
+  >
+    <mat-icon style="padding: 0; margin: 0">shopping_cart</mat-icon>
+  </button>
+  <button
+    mat-menu-item
+    style="
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 24px;
+      margin-bottom: -10px;
+    "
+  >
+    <mat-icon style="padding: 0; margin: 0; max-width: fit-content">{{
+      isFavorite ? 'favorite' : 'favorite_border'
+    }}</mat-icon>
+  </button>
+  <button
+    mat-menu-item
+    style="
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 24px;
+      margin-bottom: -20px;
+    "
+  >
+    <mat-icon style="padding: 0; margin: 0; max-width: fit-content">
+      share
+    </mat-icon>
+  </button>
+</mat-menu>
+
 <mat-card
   class="listing-card flexgrow"
   style="width: 300px; min-height: fit-content; max-height: 536px"
@@ -5,13 +73,13 @@
   <img
     class="listing-card__product-image"
     mat-card-image
-    src="https://i.imgur.com/is4kHp1.jpeg"
+    src="{{imageSrc}}"
     alt="Photo of Apex"
   />
 
   <mat-card-header class="listing-card__info">
     <mat-card-title class="listing-card__title flexcolgrow"
-      ><h4 style="height: min-content; margin: 0; padding: 0; font-size: large;">
+      ><h4 style="height: min-content; margin: 0; padding: 0; font-size: large">
         {{ title }}
       </h4></mat-card-title
     >
@@ -107,84 +175,93 @@
         ({{ percentOff | percent }} off)
       </p>
     </div>
-    <div class="below-price-row" style="display: flex; flex-direction: row; justify-content: space-between; height: 24px;">
     <div
-      class="on-sale-row"
+      class="below-price-row"
       style="
         display: flex;
         flex-direction: row;
-        flex-grow: 0;
         justify-content: space-between;
-        text-wrap: nowrap;
+        height: 24px;
       "
     >
-      <p
-        *ngIf="onSale"
+      <div
+        class="on-sale-row"
         style="
-          margin: 0;
-          padding: 0;
           display: flex;
-          align-content: center;
           flex-direction: row;
           flex-grow: 0;
-          align-self: center;
-          flex-wrap: nowrap;
-          text-wrap: nowrap;
-          font-weight: 300;
-        "
-        class="green-text"
-      >
-        Sale ends in 2 hours
-      </p>
-    </div>
-    <div *ngIf="onSale" class="spacer"></div>
-    <div class="free-shipping-row" style="display: flex; flex-grow: 1;">
-      <span
-        *ngIf="freeShipping"
-        style="
-          margin: 0;
-          padding: 0;
-          height: min-content;
-          display: flex;
-          flex-direction: row;
-          align-content: center;
-          flex-wrap: nowrap;
+          justify-content: space-between;
           text-wrap: nowrap;
         "
-        class="dull-text"
       >
-        <span
+        <p
+          *ngIf="onSale"
           style="
-            margin: 0 5px 0 0;
+            margin: 0;
             padding: 0;
             display: flex;
             align-content: center;
             flex-direction: row;
+            flex-grow: 0;
             align-self: center;
-          "
-          class="material-symbols-sharp"
-        >
-          local_shipping
-        </span>
-        <p
-          style="
-            margin: 0;
-            padding: 2px 0 0 0;
-            display: flex;
-            align-content: center;
-            flex-direction: row;
-            align-self: center;
+            flex-wrap: nowrap;
             text-wrap: nowrap;
             font-weight: 300;
-          font-size: small;
           "
+          class="green-text"
         >
-          Free Shipping
+          Sale ends in 2 hours
         </p>
-      </span>
-    </div></div>
+      </div>
+      <div *ngIf="onSale" class="spacer"></div>
+      <div class="free-shipping-row" style="display: flex; flex-grow: 1">
+        <span
+          *ngIf="freeShipping"
+          style="
+            margin: 0;
+            padding: 0;
+            height: min-content;
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+            flex-wrap: nowrap;
+            text-wrap: nowrap;
+          "
+          class="dull-text"
+        >
+          <span
+            style="
+              margin: 0 5px 0 0;
+              padding: 0;
+              display: flex;
+              align-content: center;
+              flex-direction: row;
+              align-self: center;
+            "
+            class="material-symbols-sharp"
+          >
+            local_shipping
+          </span>
+          <p
+            style="
+              margin: 0;
+              padding: 2px 0 0 0;
+              display: flex;
+              align-content: center;
+              flex-direction: row;
+              align-self: center;
+              text-wrap: nowrap;
+              font-weight: 300;
+              font-size: small;
+            "
+          >
+            Free Shipping
+          </p>
+        </span>
+      </div>
+    </div>
   </mat-card-content>
-
+  <!-- 
   <mat-card-actions
     class="listing-card__actions"
     style="margin: 0; padding: 0; height: min-content"
@@ -197,5 +274,5 @@
       More
       <mat-icon>trending_flat</mat-icon>
     </button>
-  </mat-card-actions>
+  </mat-card-actions> -->
 </mat-card>

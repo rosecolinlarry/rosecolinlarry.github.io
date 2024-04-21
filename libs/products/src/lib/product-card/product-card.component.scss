@@ -92,6 +92,9 @@ mat-card-content {
   .dull-text {
     color: white;
   }
+  .mat-mdc-menu-panel.mat-mdc-menu-panel {
+    background-color: rgba(79, 79, 79, 0.75);
+  }
 }
 
 .light-mode {
@@ -101,4 +104,16 @@ mat-card-content {
   .dull-text {
     color: black;
   }
+  .mat-mdc-menu-panel.mat-mdc-menu-panel {
+    background-color: rgba(255, 255, 255, 0.75);
+  }
+}
+
+.mat-mdc-menu-panel.mat-mdc-menu-panel {
+  min-width: unset !important;
+  width: 36px;
+  margin-right: 7px;
+  padding-top: 0;
+  height: min-content;
+  overflow: hidden;
 }
