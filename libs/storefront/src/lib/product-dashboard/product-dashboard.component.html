@@ -2,35 +2,11 @@
 <div>
   <h1>Dashboard</h1>
   <div class="product-grid flexrow">
-    <lib-product-card class="flexcolgrow"></lib-product-card>
-    <lib-product-card class="flexcolgrow"></lib-product-card>
-    <lib-product-card class="flexcolgrow"></lib-product-card>
-    <lib-product-card class="flexcolgrow"></lib-product-card>
-    <lib-product-card class="flexcolgrow"></lib-product-card>
-    <lib-product-card class="flexcolgrow"></lib-product-card>
-    <lib-product-card class="flexcolgrow"></lib-product-card>
-    <lib-product-card class="flexcolgrow"></lib-product-card>
-  </div>
-  <div class="product-grid flexrow">
-    <lib-dashboard-card class="flexcolgrow" title="Card 1">
-    </lib-dashboard-card>
-    <lib-dashboard-card class="flexcolgrow" title="Card 2">
-    </lib-dashboard-card>
-    <lib-dashboard-card class="flexcolgrow" title="Card 3">
-    </lib-dashboard-card>
-    <lib-dashboard-card class="flexcolgrow" title="Card 4">
-    </lib-dashboard-card>
-    <lib-dashboard-card class="flexcolgrow" title="Card 5">
-    </lib-dashboard-card>
-    <lib-dashboard-card class="flexcolgrow" title="Card 6">
-    </lib-dashboard-card>
-    <lib-dashboard-card class="flexcolgrow" title="Card 7">
-    </lib-dashboard-card>
-    <lib-dashboard-card class="flexcolgrow" title="Card 8">
-    </lib-dashboard-card>
-    <lib-dashboard-card class="flexcolgrow" title="Card 9">
-    </lib-dashboard-card>
-    <lib-dashboard-card class="flexcolgrow" title="Card 10">
-    </lib-dashboard-card>
+    <ng-container *ngFor="let productInfo of fakeProductList">
+      <lib-product-card
+        [productInfo]="productInfo"
+        class="flexcolgrow"
+      ></lib-product-card>
+    </ng-container>
   </div>
 </div>

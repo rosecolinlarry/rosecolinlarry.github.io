@@ -23,31 +23,32 @@ import { CondensedStarRatingComponent } from './star-rating/condensed-star-ratin
   ]
 })
 export class ProductCardComponent {
+  @Input()
+  productInfo!: ProductCardInfo;
+  percentOff: number | undefined;
+  // TODO Show different number or add validation in service for saving product
+  // info to have sellingPrice less than or equal to listingPrice?
 
-  @Input()
-  title = 'A Dropshipped Product';
-  @Input()
-  totalReviews = 1697;
-  @Input()
-  averageStars = 4.83;
-  @Input()
-  sellerName = "A Real Shop";
-  @Input()
-  salePrice = 29.99;
-  @Input()
-  originalPrice = 69.99;
-  @Input()
-  verified = true;
-  @Input()
-  isFavorite = false;
-  @Input()
-  imageSrc = "https://i.imgur.com/is4kHp1.jpeg";
-  @Input()
-  get percentOff(): number {
-    return this.onSale && this.originalPrice && this.salePrice ? this.salePrice / this.originalPrice : 0;
+  constructor() {
+    if (this.productInfo?.onSale && this.productInfo?.sellingPrice) {
+      this.percentOff = (this.productInfo.listPrice - this.productInfo.sellingPrice ?? 0) / this.productInfo.listPrice
+    }
   }
-  @Input()
-  onSale = true;
-  @Input()
-  freeShipping = true;
+
+}
+
+export interface ProductCardInfo {
+  title: string;
+  totalReviews: number;
+  averageStars: number;
+  sellerName: string;
+  sellingPrice?: number; // If on sale
+  listPrice: number;
+  verified?: boolean;
+  isFavorite?: boolean;
+  imageSrc: string;
+  onSale?: boolean;
+  freeShipping?: boolean;
+  remainingSaleHours?: number;
+  // percentOff: number;
 }

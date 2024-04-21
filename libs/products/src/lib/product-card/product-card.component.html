@@ -45,7 +45,7 @@
     "
   >
     <mat-icon style="padding: 0; margin: 0; max-width: fit-content">{{
-      isFavorite ? 'favorite' : 'favorite_border'
+      productInfo.isFavorite ? 'favorite' : 'favorite_border'
     }}</mat-icon>
   </button>
   <button
@@ -73,14 +73,14 @@
   <img
     class="listing-card__product-image"
     mat-card-image
-    src="{{imageSrc}}"
+    src="{{ productInfo.imageSrc }}"
     alt="Photo of Apex"
   />
 
   <mat-card-header class="listing-card__info">
     <mat-card-title class="listing-card__title flexcolgrow"
       ><h4 style="height: min-content; margin: 0; padding: 0; font-size: large">
-        {{ title }}
+        {{ productInfo.title }}
       </h4></mat-card-title
     >
     <mat-card-subtitle
@@ -95,9 +95,9 @@
       class="shop-name-with-rating"
     >
       <lib-condensed-star-rating
-        style="height: min-content; margin: 0; padding: 0"
-        [averageStars]="averageStars"
-        [totalReviews]="totalReviews"
+        style="height: min-content; margin: 0 10px 0 0; padding: 0"
+        [averageStars]="productInfo.averageStars"
+        [totalReviews]="productInfo.totalReviews"
       >
       </lib-condensed-star-rating>
       <span
@@ -113,8 +113,21 @@
           font-size: medium;
         "
       >
+      <p
+        style="
+          height: min-content;
+          margin: 3.5px 0 0 0;
+          padding: 0 0 0 0;
+          display: flex;
+          align-content: center;
+          align-self: center;
+          font-weight: 300;
+        "
+      >
+        {{ productInfo.sellerName }}
+      </p>
         <mat-icon
-          *ngIf="verified"
+          *ngIf="productInfo.verified"
           style="
             height: min-content;
             margin: -2px 0 0 0;
@@ -127,19 +140,6 @@
           class="verified-icon"
           >verified</mat-icon
         >
-        <p
-          style="
-            height: min-content;
-            margin: 3.5px 0 0 0;
-            padding: 0 0 0 0;
-            display: flex;
-            align-content: center;
-            align-self: center;
-            font-weight: 300;
-          "
-        >
-          {{ sellerName }}
-        </p>
       </span>
     </mat-card-subtitle>
   </mat-card-header>
@@ -153,7 +153,7 @@
         style="margin: 0 5px 0 0; padding: 0; height: min-content"
         class="sale-price green-text"
       >
-        {{ salePrice | currency }}
+        {{ productInfo.sellingPrice | currency }}
       </p>
       <p
         style="
@@ -163,15 +163,16 @@
           font-weight: 300;
         "
         class="sale-price strikethrough dull-text"
-        *ngIf="onSale"
+        *ngIf="productInfo.onSale"
       >
-        {{ originalPrice | currency }}
+        {{ productInfo.listPrice | currency }}
       </p>
       <p
-        *ngIf="onSale"
+        *ngIf="productInfo.onSale"
         style="margin: 0; padding: 0; height: min-content; font-weight: 300"
         class="sale-price dull-text"
       >
+        <!-- TODO Make a pipe for this -->
         ({{ percentOff | percent }} off)
       </p>
     </div>
@@ -195,7 +196,7 @@
         "
       >
         <p
-          *ngIf="onSale"
+          *ngIf="productInfo.onSale"
           style="
             margin: 0;
             padding: 0;
@@ -213,10 +214,10 @@
           Sale ends in 2 hours
         </p>
       </div>
-      <div *ngIf="onSale" class="spacer"></div>
+      <div *ngIf="productInfo.onSale" class="spacer"></div>
       <div class="free-shipping-row" style="display: flex; flex-grow: 1">
         <span
-          *ngIf="freeShipping"
+          *ngIf="productInfo.freeShipping"
           style="
             margin: 0;
             padding: 0;

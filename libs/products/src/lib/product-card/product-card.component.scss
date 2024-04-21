@@ -35,9 +35,9 @@
     }
   }
   &__product-image {
-    height: fit-content;
-    max-width: 300px;
-    object-fit: scale-down;
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
   }
   &__price {
     display: flex;
