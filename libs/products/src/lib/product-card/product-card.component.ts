@@ -1,9 +1,9 @@
 import { Component, Input } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, CurrencyPipe, PercentPipe } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
-import { StarRatingComponent } from "./star-rating/star-rating.component";
+import { CondensedStarRatingComponent } from './star-rating/condensed-star-rating/condensed-star-rating.component';
 
 @Component({
     selector: 'lib-product-card',
@@ -15,11 +15,33 @@ import { StarRatingComponent } from "./star-rating/star-rating.component";
         MatButtonModule,
         MatCardModule,
         MatIconModule,
-        StarRatingComponent
+        CondensedStarRatingComponent,
+        CurrencyPipe,
+        PercentPipe
     ]
 })
 export class ProductCardComponent {
 
   @Input()
-  title = 'A Product Card';
+  title = 'A Dropshipped Product';
+  @Input()
+  totalReviews = 1697;
+  @Input()
+  averageStars = 4.83;
+  @Input()
+  sellerName = "A Real Shop";
+@Input()
+salePrice = 29.99;
+@Input()
+originalPrice = 69.99;
+@Input()
+verified = true;
+@Input()
+get percentOff(): number{
+return this.onSale && this.originalPrice && this.salePrice ? this.salePrice/this.originalPrice  : 0;
+}
+@Input()
+onSale = true;
+@Input()
+freeShipping = true;
 }

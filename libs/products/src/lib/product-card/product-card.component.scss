@@ -65,11 +65,12 @@
   }
 }
 
-.tiny-icon {
-  font-size: 20px;
-  line-height: 20px;
-  display: flex;
-  justify-content: center;
+.verified-icon {
+  line-height: 18px;
+  font-size: 18px;
+  align-content: center;
+  font-weight: 100;
+  color: rgb(84, 106, 255);
 }
 
 mat-card-content {
