@@ -4,4 +4,6 @@ export interface RouteData {
   iconName?: string;
   // If true, does not show in the side nav
   hideFromMenu?: boolean;
+  // If it's active
+  isActive?: boolean;
 }

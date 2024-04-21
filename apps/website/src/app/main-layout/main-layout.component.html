@@ -1,26 +1,29 @@
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav
+    opened="true"
     #drawer
     class="sidenav"
     fixedInViewport
     [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
     [mode]="(isHandset$ | async) ? 'over' : 'side'"
   >
-    <mat-toolbar>Where to?</mat-toolbar>
-    <mat-nav-list>
-      <a
+    <div mat-subheader>Where to?</div>
+    <mat-list>
+      @for (item of menuItems; track item) {
+      <mat-list-item
+        class="sidebar-list-item"
         routerLink="/{{ item.path }}"
         routerLinkActive="active"
-        *ngFor="let item of menuItems"
-        mat-list-item
       >
-        {{ item.title }}</a
-      >
-    </mat-nav-list>
+        <mat-icon matListItemIcon class="sidebar-list-item-icon padb-6">{{ getlistIcon(item) }}</mat-icon>
+        <div matListItemTitle class="sidebar-list-item-label">{{ item.title }}</div>
+      </mat-list-item>
+      }
+    </mat-list>
   </mat-sidenav>
   <mat-sidenav-content>
     <app-header class="sticky" [drawer]="drawer"></app-header>
-    <div class="content-padding">
+    <div class="content-padding flexcolgrow">
       <ng-content></ng-content>
     </div>
     <!-- <app-footer></app-footer> -->

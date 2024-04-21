@@ -1,38 +1,32 @@
-mat-card {
-height: inherit;
+.dashboard-card {
+  height: inherit;
   max-height: 450px;
   min-width: 300px;
-  mat-card-header {
-    display: flex;
-    flex-direction: column;
-    mat-card-title-group {
-      display: flex;
-      flex-direction: column;
-      mat-card-title {
-        display: flex;
-        align-items: baseline;
-        h4 {
-          margin-top: 0;
-          margin-bottom: 0;
-        }
-        button {
-          mat-icon {
-          }
-        }
-      }
-      mat-card-subtitle {
-        padding-bottom: 5px;
-      }
-    }
-  }
-  mat-card-content {
-      display: flex;
-    flex-grow: 1;
-    justify-content: center;
-    img {
-      max-height: 300px;
-      height: inherit;
-      object-fit: scale-down;
-    }
-  }
+}
+.dashboard-card-subtitle {
+  padding-bottom: 8px;
+}
+.dashboard-card-content {
+  justify-content: center;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.dashboard-card-image {
+  max-height: 300px;
+  height: inherit;
+  object-fit: scale-down;
+}
+.dashboard-card-header {
+  padding-left: 22px;
+  padding-top: 8px;
+  padding-right: 8px;
+}
+
+.dashboard-card-title {
+  display: flex;
+  align-items: baseline;
+}
+.dashboard-card-title-header {
+  margin-top: 0;
+  margin-bottom: 0;
 }

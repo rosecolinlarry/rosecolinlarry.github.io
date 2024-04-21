@@ -1,6 +1,22 @@
+.material-symbols-outlined {
+  font-variation-settings:
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 20
+}
+
+.material-symbols-sharp {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 20
+}
+
 .listing-card {
-  max-width: 300px;
-  max-height: 600px;
+  height: inherit;
+  max-height: 450px;
+  min-width: 300px;
   display: flex;
   flex-grow: 1;
   &__actions {
@@ -17,6 +33,11 @@
       display: inherit;
       align-items: inherit;
     }
+  }
+  &__product-image {
+    height: fit-content;
+    max-width: 300px;
+    object-fit: scale-down;
   }
   &__price {
     display: flex;
@@ -45,8 +66,8 @@
 }
 
 .tiny-icon {
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 20px;
+  line-height: 20px;
   display: flex;
   justify-content: center;
 }

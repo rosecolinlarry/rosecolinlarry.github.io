@@ -7,36 +7,114 @@ $heading-font-family: "'Josefin Sans', 'Raleway', sans-serif";
 $regular-font-family: "'Josefin Sans', 'Raleway', sans-serif";
 
 $website-typography: mat.define-typography-config(
-
   // .mat-headline-1
-  $headline-1: mat.define-typography-level($font-family: $display-font-family, $font-size: 60px, $font-weight: 700, $line-height: 60px, $letter-spacing: -2px),
+  $headline-1:
+    mat.define-typography-level(
+      $font-family: $display-font-family,
+      $font-size: 60px,
+      $font-weight: 700,
+      $line-height: 60px,
+      $letter-spacing: -2px,
+    ),
   // .mat-headline-2
-  $headline-2: mat.define-typography-level($font-family: $display-font-family, $font-size: 50px, $font-weight: 700, $line-height: 50px, $letter-spacing: -1.6px),
+  $headline-2:
+    mat.define-typography-level(
+      $font-family: $display-font-family,
+      $font-size: 50px,
+      $font-weight: 700,
+      $line-height: 50px,
+      $letter-spacing: -1.6px,
+    ),
   // .mat-headline-3
-  $headline-3: mat.define-typography-level($font-family: $display-font-family, $font-size: 40px, $font-weight: 700, $line-height: 40px, $letter-spacing: -1px),
+  $headline-3:
+    mat.define-typography-level(
+      $font-family: $display-font-family,
+      $font-size: 40px,
+      $font-weight: 700,
+      $line-height: 40px,
+      $letter-spacing: -1px,
+    ),
   // .mat-headline-4
-  $headline-4: mat.define-typography-level($font-family: $display-font-family, $font-size: 34px, $font-weight: 700, $line-height: 34px, $letter-spacing: -1px),
-  
+  $headline-4:
+    mat.define-typography-level(
+      $font-family: $display-font-family,
+      $font-size: 34px,
+      $font-weight: 700,
+      $line-height: 34px,
+      $letter-spacing: -1px,
+    ),
   // .mat-headline-5, .mat-h1, <h1>
-  $headline-5: mat.define-typography-level($font-family: $heading-font-family, $font-size: 34px, $font-weight: 600, $line-height: 34px, $letter-spacing: -1px),
+  $headline-5:
+    mat.define-typography-level(
+      $font-family: $heading-font-family,
+      $font-size: 34px,
+      $font-weight: 600,
+      $line-height: 34px,
+      $letter-spacing: -1px,
+    ),
   // .mat-headline-6, .mat-h2, <h2>
-  $headline-6: mat.define-typography-level($font-family: $heading-font-family, $font-size: 30px, $font-weight: 600, $line-height: 32px, $letter-spacing: -0.8px),
-  
+  $headline-6:
+    mat.define-typography-level(
+      $font-family: $heading-font-family,
+      $font-size: 30px,
+      $font-weight: 600,
+      $line-height: 32px,
+      $letter-spacing: -0.8px,
+    ),
   // .mat-subtitle-1, .mat-h3, <h3>
-  $subtitle-1: mat.define-typography-level($font-family: $heading-font-family, $font-size: 24px, $font-weight: 600, $line-height: 26px, $letter-spacing: -0.5px),
+  $subtitle-1:
+    mat.define-typography-level(
+      $font-family: $heading-font-family,
+      $font-size: 24px,
+      $font-weight: 600,
+      $line-height: 26px,
+      $letter-spacing: -0.5px,
+    ),
   // .mat-subtitle-2, .mat-body-strong, <h4>
-  $subtitle-2: mat.define-typography-level($font-family: $regular-font-family, $font-size: 20px, $font-weight: 600, $line-height: 23px, $letter-spacing: -0.2px),
-
+  $subtitle-2:
+    mat.define-typography-level(
+      $font-family: $regular-font-family,
+      $font-size: 20px,
+      $font-weight: 600,
+      $line-height: 23px,
+      $letter-spacing: -0.2px,
+    ),
   // .mat-h4, .mat-body-1, <h4>
-  $body-1: mat.define-typography-level($font-family: $regular-font-family, $font-size: 20px, $font-weight: 400, $line-height: 30px, $letter-spacing: -0.25px), 
+  $body-1:
+    mat.define-typography-level(
+      $font-family: $regular-font-family,
+      $font-size: 20px,
+      $font-weight: 400,
+      $line-height: 30px,
+      $letter-spacing: -0.25px,
+    ),
   // .mat-body, .mat-body-2
-  $body-2: mat.define-typography-level($font-family: $regular-font-family, $font-size: 16px,  $font-weight: 300, $line-height: 24px, $letter-spacing: -0.1px), 
-    
+  $body-2:
+    mat.define-typography-level(
+      $font-family: $regular-font-family,
+      $font-size: 16px,
+      $font-weight: 300,
+      $line-height: 24px,
+      $letter-spacing: -0.1px,
+    ),
   // .mat-small, .mat-caption
-  $caption: mat.define-typography-level($font-family: $regular-font-family, $font-size: 14px, $font-weight: 300, $line-height: 16px, $letter-spacing: -0.1px), 
-
+  $caption:
+    mat.define-typography-level(
+      $font-family: $regular-font-family,
+      $font-size: 14px,
+      $font-weight: 300,
+      $line-height: 16px,
+      $letter-spacing: -0.1px,
+    ),
   // Buttons and anchors, no selectors
-  $button: mat.define-typography-level($font-family: $regular-font-family, $font-size: 16px,  $font-weight: 500, $line-height: 24px, $letter-spacing: -0.1px), 
+  $button:
+    mat.define-typography-level(
+      $font-family: $regular-font-family,
+      $font-size: 16px,
+      $font-weight: 500,
+      $line-height: 24px,
+      $letter-spacing: -0.1px,
+    )
 );
 /*#endregion */
 
@@ -55,7 +133,6 @@ $dark-theme: mat.define-dark-theme(
   )
 );
 
-
 // Define a light theme
 $light-theme: mat.define-light-theme(
   (
@@ -70,7 +147,7 @@ $light-theme: mat.define-light-theme(
 // Apply the dark theme by default
 @include mat.all-component-themes($dark-theme);
 
-.light-mode { 
+.light-mode {
   @include mat.all-component-bases($light-theme);
   @include mat.all-component-colors($light-theme);
 }
@@ -96,6 +173,116 @@ body {
 .spacer {
   flex: 1 1 auto;
 }
+
+/*#region Sizing Shorthand */
+
+.flexcol {
+  display: flex;
+  flex-direction: column;
+}
+
+.flexcolgrow {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.flexrow {
+  display: flex;
+  flex-direction: row;
+}
+
+.flexrowgrow {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+}
+
+.inherit-h {
+  height: inherit;
+}
+
+.padx-0 {
+  padding-left: 0;
+  padding-right: 0;
+}
+.pady-0 {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.my-0 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.mx-0 {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.padl-8 {
+  padding-left: 8px;
+}
+
+.padr-8 {
+  padding-right: 8px;
+}
+
+.padt-8 {
+  padding-top: 8px;
+}
+
+.padb-8 {
+  padding-bottom: 8px;
+}
+
+.padb-6 {
+  padding-bottom: 6px;
+}
+
+.dark-mode {
+  .sidebar-list-item:hover {
+    .sidebar-list-item-icon {
+      color: cyan;
+    }
+    .sidebar-list-item-label {
+      color: cyan;
+    }
+  }
+  .sidebar-list-item:focus {
+    .sidebar-list-item-icon {
+      color: rgb(255, 66, 66);
+    }
+    .sidebar-list-item-label {
+      color: rgb(255, 66, 66);
+    }
+  }
+}
+
+.sidebar-list-item {
+  border-radius: 0;
+}
+
+.light-mode {
+  .sidebar-list-item:hover {
+    .sidebar-list-item-icon {
+      color: darkblue;
+    }
+    .sidebar-list-item-label {
+      color: darkblue;
+    }
+  }
+  .sidebar-list-item:focus {
+    .sidebar-list-item-icon {
+      color: orangered;
+    }
+    .sidebar-list-item-label {
+      color: orangered;
+    }
+  }
+}
+
+/*#endregion */
 
 /*#region Fonts*/
 .raleway-100 {

@@ -1,16 +1,16 @@
 import { Routes } from '@angular/router';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 import { RouteData } from './shared/interfaces/route-data';
-import { ProductsComponent } from '@rosecolinlarry/products';
 import { OrderListComponent } from '@rosecolinlarry/orders';
 import { StorefrontComponent } from '@rosecolinlarry/storefront';
 import { PageNotFoundComponent } from '@rosecolinlarry/errors';
+import { SandboxPageComponent } from '@rosecolinlarry/shared-ui';
 
 export const appRoutes: Routes = [
   {
     path: '',
     title: 'Home',
-    component: DashboardComponent,
+    component: LandingPageComponent,
     data: { iconName: 'home' } as RouteData,
   },
   {
@@ -22,7 +22,7 @@ export const appRoutes: Routes = [
       {
         path: 'products',
         title: 'Products',
-        component: ProductsComponent,
+        component: StorefrontComponent,
         data: { iconName: 'list' } as RouteData,
       },
       {
@@ -34,9 +34,15 @@ export const appRoutes: Routes = [
     ]
   },
   {
-    path: '**', 
+    path: 'sandbox',
+    title: 'Sandbox',
+    component: SandboxPageComponent,
+    data: { iconName: 'science' } as RouteData,
+  },
+  {
+    path: '**',
     title: 'Page Not Found',
     component: PageNotFoundComponent,
-    data: { hideFromMenu: true} as RouteData,
-  },
+    data: { hideFromMenu: true } as RouteData,
+  }
 ];
