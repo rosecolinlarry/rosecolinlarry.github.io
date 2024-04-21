@@ -14,5 +14,5 @@ import { MatMenuModule } from '@angular/material/menu';
 })
 export class DashboardCardComponent {
   @Input()
-  title = "";
+  title = "Some Title";
 }

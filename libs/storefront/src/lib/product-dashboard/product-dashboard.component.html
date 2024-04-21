@@ -1,52 +1,53 @@
 <!-- dashboard.component.html -->
-<div class="grid-container">
-  <h1 class="mat-h1">Dashboard</h1>
-  <mat-grid-list cols="{{ (cardLayout | async)?.columns }}" rowHeight="600px">
-    <!--Mini Cards-->
+<div>
+  <h1>Dashboard</h1>
+  <div class="product-grid">
+  <lib-dashboard-card title="Card 1"> </lib-dashboard-card>
+  <lib-dashboard-card title="Card 2"> </lib-dashboard-card>
+  <lib-dashboard-card title="Card 3"> </lib-dashboard-card>
+  <lib-dashboard-card title="Card 4"> </lib-dashboard-card>
+  <lib-dashboard-card title="Card 5"> </lib-dashboard-card>
+  <lib-dashboard-card title="Card 6"> </lib-dashboard-card>
+  <lib-dashboard-card title="Card 7"> </lib-dashboard-card>
+  <lib-dashboard-card title="Card 8"> </lib-dashboard-card>
+  <lib-dashboard-card title="Card 9"> </lib-dashboard-card>
+  <lib-dashboard-card title="Card 10"> </lib-dashboard-card>
+</div>
+</div>
+
+<!-- dashboard.component.html
+<div>
+  <h1>Dashboard</h1>
+  <mat-grid-list cols="4" rowHeight="500px">
     <mat-grid-tile>
-      <lib-product-card></lib-product-card>
+      <lib-dashboard-card title="Card 1"> </lib-dashboard-card>
     </mat-grid-tile>
-    <!--Charts-->
-    <mat-grid-tile
-      [colspan]="(cardLayout | async)?.chart?.cols"
-      [rowspan]="(cardLayout | async)?.chart?.rows"
-    >
-      <lib-dashboard-card title="Monthly Revenue">
-        <!-- <lib-dashboard-annual-sale-chart></lib-dashboard-annual-sale-chart> -->
-      </lib-dashboard-card>
+    <mat-grid-tile>
+      <lib-dashboard-card title="Card 2"> </lib-dashboard-card>
     </mat-grid-tile>
-    <mat-grid-tile
-      [colspan]="(cardLayout | async)?.chart?.cols"
-      [rowspan]="(cardLayout | async)?.chart?.rows"
-    >
-      <lib-dashboard-card title="Product Sales">
-        <!-- <lib-dashboard-product-sales-chart></lib-dashboard-product-sales-chart> -->
-      </lib-dashboard-card>
+    <mat-grid-tile>
+      <lib-dashboard-card title="Card 3"> </lib-dashboard-card>
     </mat-grid-tile>
-    <mat-grid-tile
-      [colspan]="(cardLayout | async)?.chart?.cols"
-      [rowspan]="(cardLayout | async)?.chart?.rows"
-    >
-      <lib-dashboard-card title="Sales by Traffic Source">
-        <!-- <lib-dashboard-sales-traffic-chart></lib-dashboard-sales-traffic-chart> -->
-      </lib-dashboard-card>
+    <mat-grid-tile>
+      <lib-dashboard-card title="Card 4"> </lib-dashboard-card>
     </mat-grid-tile>
-    <mat-grid-tile
-      [colspan]="(cardLayout | async)?.chart?.cols"
-      [rowspan]="(cardLayout | async)?.chart?.rows"
-    >
-      <lib-dashboard-card title="Online Store Sessions by Traffic Source">
-        <!-- <lib-dashboard-store-sessions-chart></lib-dashboard-store-sessions-chart> -->
-      </lib-dashboard-card>
+    <mat-grid-tile>
+      <lib-dashboard-card title="Card 5"> </lib-dashboard-card>
     </mat-grid-tile>
-    <!--Table-->
-    <mat-grid-tile
-      [colspan]="(cardLayout | async)?.table?.cols"
-      [rowspan]="(cardLayout | async)?.table?.rows"
-    >
-      <lib-dashboard-card title="Latest Orders">
-        <!-- <lib-dashboard-orders-table></lib-dashboard-orders-table> -->
-      </lib-dashboard-card>
+    <mat-grid-tile>
+      <lib-dashboard-card title="Card 6"> </lib-dashboard-card>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <lib-dashboard-card title="Card 7"> </lib-dashboard-card>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <lib-dashboard-card title="Card 8"> </lib-dashboard-card>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <lib-dashboard-card title="Card 9"> </lib-dashboard-card>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <lib-dashboard-card title="Card 10"> </lib-dashboard-card>
     </mat-grid-tile>
   </mat-grid-list>
-</div>
+</div> -->

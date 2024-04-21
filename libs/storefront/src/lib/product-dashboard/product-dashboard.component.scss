@@ -1,21 +1,15 @@
-.grid-container {
-  margin: 20px;
+lib-dashboard-card {
+  max-height: 468x;
+  min-width: 300px;
+  max-width: fit-content;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 16px 8px 16px 8px;
 }
 
-.dashboard-card {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  right: 15px;
-  bottom: 15px;
-}
-
-.more-button {
-  position: absolute;
-  top: 5px;
-  right: 10px;
-}
-
-.dashboard-card-content {
-  text-align: center;
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
