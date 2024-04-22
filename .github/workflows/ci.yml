@@ -30,7 +30,8 @@ jobs:
       - uses: nrwl/nx-set-shas@v4
       - run: git branch --track main origin/main
         if: github.event_name == 'pull_request'
-      - run: npx nx-cloud record -- nx format:check --verbose
+      - run: npx nx-cloud record -- nx format:write --verbose
+      - run: npx nx-cloud record -- nx run-many -t lint --fix --verbose
       - run: rm -rf docs
       - run: npx nx run-many --target=build --all --outputPath=docs --verbose
 
