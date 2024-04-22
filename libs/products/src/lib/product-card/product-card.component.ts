@@ -5,6 +5,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { CondensedStarRatingComponent } from './star-rating/condensed-star-rating/condensed-star-rating.component';
+import { ProductCardInfo } from './product-card-info.interface';
 
 @Component({
   selector: 'lib-product-card',
@@ -25,30 +26,13 @@ import { CondensedStarRatingComponent } from './star-rating/condensed-star-ratin
 export class ProductCardComponent {
   @Input()
   productInfo!: ProductCardInfo;
-  percentOff: number | undefined;
+  get percentOff(): number | undefined {
+    if (this.productInfo?.onSale && this.productInfo?.sellingPrice) {
+      return (this.productInfo?.sellingPrice - this.productInfo?.listPrice ?? 0) / this.productInfo?.sellingPrice
+    }
+    return;
+  }
   // TODO Show different number or add validation in service for saving product
   // info to have sellingPrice less than or equal to listingPrice?
-
-  constructor() {
-    if (this.productInfo?.onSale && this.productInfo?.sellingPrice) {
-      this.percentOff = (this.productInfo.listPrice - this.productInfo.sellingPrice ?? 0) / this.productInfo.listPrice
-    }
-  }
-
 }
 
-export interface ProductCardInfo {
-  title: string;
-  totalReviews: number;
-  averageStars: number;
-  sellerName: string;
-  sellingPrice?: number; // If on sale
-  listPrice: number;
-  verified?: boolean;
-  isFavorite?: boolean;
-  imageSrc: string;
-  onSale?: boolean;
-  freeShipping?: boolean;
-  remainingSaleHours?: number;
-  // percentOff: number;
-}

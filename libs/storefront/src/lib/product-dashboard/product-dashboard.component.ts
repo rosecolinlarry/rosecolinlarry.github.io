@@ -35,13 +35,26 @@ export class ProductDashboardComponent {
       totalReviews: 1697,
       averageStars: 4.83,
       sellerName: "A Real Shop",
-      sellingPrice: 29.99,
-      listPrice: 69.99,
+      sellingPrice: 69.99,
+      listPrice: 29.99,
       verified: true,
-      isFavorite: false,
+      isFavorite: true,
       imageSrc: "https://i.imgur.com/is4kHp1.jpeg",
       onSale: true,
       freeShipping: true
+    }, {
+      title: 'What do you mean my only purpose here is to test word wrapping? I have hopes and dreams too!',
+      imageSrc: 'https://i.imgur.com/zaMQJrz.jpeg',
+      averageStars: 4.56,
+      totalReviews: 553252356,
+      sellerName: 'If I am being completely honest, I do not have any actual hopes and dreams. I am just a fraud and I always have known this to be true. ',
+      listPrice: 8.75,
+      onSale: true,
+      sellingPrice: 92.25,
+      freeShipping: true,
+      isTopPick: true,
+      isFavorite: true,
+      verified: true
     }, {
       title: 'Doggo',
       totalReviews: 24,
@@ -54,14 +67,40 @@ export class ProductDashboardComponent {
       freeShipping: true
     }, {
       title: 'The Dream',
-      totalReviews: 2,
-      averageStars: 3.6,
+      totalReviews: 1,
+      averageStars: 5.0,
       sellerName: "A Scammer",
-      sellingPrice: 569.99,
-      listPrice: 1489.95,
+      sellingPrice: 1569.99,
+      listPrice: 0.99,
       imageSrc: "https://i.imgur.com/hV4pCqa.jpeg",
       onSale: true,
       freeShipping: true
-    }]
+    }, {
+      title: 'A Custom Poem - Guaranteed to Bring Good Fortune',
+      imageSrc: 'https://i.imgur.com/9MZx2FQ.jpeg',
+      averageStars: 4.56,
+      totalReviews: 156,
+      sellerName: 'The Fortune Teller',
+      listPrice: 99.99,
+      freeShipping: true,
+      isTopPick: true,
+      isFavorite: true,
+      verified: true
+
+    }, {
+      title: 'Totally Not a Placeholder',
+      imageSrc: 'https://i.imgur.com/IDyEDCU.jpeg',
+      averageStars: 2.56,
+      totalReviews: 56,
+      sellerName: 'I Will Seal You ',
+      listPrice: 1.99,
+      onSale: true,
+      sellingPrice: 19.99,
+      freeShipping: true,
+      isTopPick: true,
+      isFavorite: true,
+      verified: true
+    }
+    ]
   }
 }
