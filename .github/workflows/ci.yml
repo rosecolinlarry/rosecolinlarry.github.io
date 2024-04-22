@@ -30,28 +30,22 @@ jobs:
       - uses: nrwl/nx-set-shas@v4
       - run: git branch --track main origin/main
         if: github.event_name == 'pull_request'
-      - run: npx nx-cloud record -- nx format:write --verbose
-      - run: npx nx-cloud record -- nx run-many -t lint --fix --verbose
-      - run: rm -rf docs
-      - run: npx nx run-many --target=build --all --outputPath=docs --verbose
-
-  commit-and-push:
-    needs: build-nx
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '20.12.2'
       - run: |
+          npx nx-cloud record -- nx format:write --verbose
+          npx nx-cloud record -- nx run-many -t lint --fix --verbose
+          rm -rf docs
+          npx nx run-many --target=build --all --outputPath=docs --verbose
+      - name: Commit the built directory
+        run: |
+          git add .
           git config --global user.email "keaackerman@gmail.com"
           git config --global user.name "Kaisa Ackerman"
-          git add docs/
-          git commit --allow-empty -m "Automatic build" -a || echo "No changes to commit"
-      - run: git push origin main
+          git commit -m "Automatic build" -a || echo "No changes to commit"
+          echo "Pushing branch ${{ github.ref_name }}"
+          git push origin ${{ github.ref_name }}
 
   quality-checks:
-    needs: commit-and-push
+    needs: build-nx
     runs-on: ubuntu-latest
     continue-on-error: true
     steps:
@@ -67,12 +61,14 @@ jobs:
       - run: npx nx affected --target=e2e-ci --parallel
 
   build-jekyll:
-    needs: commit-and-push
+    needs: build-nx
     environment:
       name: github-pages
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v3
         with:
           node-version: '20.12.2'
@@ -80,11 +76,12 @@ jobs:
         uses: actions/jekyll-build-pages@v1
         with:
           source: docs
+          destination: docs/_site
           build_revision: ${{ github.sha }}
           verbose: true
 
   deploy:
-    needs: build-jekyll
+    needs: [build-jekyll, build-nx]
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -92,6 +89,7 @@ jobs:
     steps:
       - uses: actions/upload-pages-artifact@v3
         with:
+          path: docs/_site
           name: github-pages
           retention-days: 1
       - name: Deploy to GitHub Pages
