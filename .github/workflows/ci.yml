@@ -33,7 +33,7 @@ jobs:
           npx nx run-many --target=build --all --outputPath=docs --verbose
       - name: Commit the built directory
         run: |
-          git add .
+          git add docs
           git config --global user.email "keaackerman@gmail.com"
           git config --global user.name "Kaisa Ackerman"
           git commit -m "Automatic build" -a || echo "No changes to commit"
