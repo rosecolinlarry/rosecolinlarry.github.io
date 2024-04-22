@@ -30,9 +30,14 @@ jobs:
       - uses: nrwl/nx-set-shas@v4
       - run: git branch --track main origin/main
         if: github.event_name == 'pull_request'
-      - run: npx nx-cloud record -- nx format:check --verbose
-      - run: rm -rf docs
-      - run: npx nx run-many --target=build --all --outputPath=docs --verbose
+      - name: Perform Linting
+        run: npx nx-cloud record -- nx run-many -t lint --fix --verbose
+      - name: Format With Prettier
+        run: npx nx-cloud record -- nx format:write --verbose
+      - name: Remove Existing Build
+        run: rm -rf docs
+      - name: Rebuild All to /docs Folder
+        run: npx nx run-many --target=build --all --outputPath=docs --verbose
 
   commit-and-push:
     needs: build-nx
@@ -42,7 +47,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '20.12.2'
-      - run: |
+      - name: Commit Built Docs Folder to Main
+        run: |
           git config --global user.email "keaackerman@gmail.com"
           git config --global user.name "Kaisa Ackerman"
           git add docs/
@@ -90,7 +96,8 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/upload-pages-artifact@v3
+      - name: Upload Page Artifact
+        uses: actions/upload-pages-artifact@v3
         with:
           path: ./docs/_site
           name: github-pages
