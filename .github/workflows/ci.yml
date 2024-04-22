@@ -47,7 +47,7 @@ jobs:
           git config --global user.email "keaackerman@gmail.com"
           git config --global user.name "Kaisa Ackerman"
           git add docs/
-          git commit -m "Update docs folder with new build output" -a || echo "No changes to commit"
+          git commit --allow-empty -m "Automatic build" -a || echo "No changes to commit"
       - run: git push origin main
 
   quality-checks:
