@@ -11,27 +11,57 @@ permissions:
   contents: read
 
 jobs:
-  main:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      # Connect your workspace on nx.app and uncomment this to enable task distribution.
-      # The "--stop-agents-after" is optional, but allows idle agents to shut down once the "e2e-ci" targets have been requested
-      - run: npx nx-cloud start-ci-run --distribute-on="5 linux-medium-js" --stop-agents-after="e2e-ci"
-
-      # Cache node_modules
+      # Sets up the specified Node.js version and configures caching for npm
       - uses: actions/setup-node@v3
         with:
-          node-version: 20
+          node-version: '20.12.2' # Ensure to use the exact Node version
           cache: 'npm'
+
+      # Install dependencies using npm ci, which is ideal for CI/CD environments
       - run: npm ci --include=optional
+
+      # Optional: Start CI run for Nx Cloud distributed tasks (uncomment if used)
+      # - run: npx nx-cloud start-ci-run --distribute-on="5 linux-medium-js" --stop-agents-after="e2e-ci"
+
+      # Setup SHAs for Nx to handle monorepo affected commands correctly
       - uses: nrwl/nx-set-shas@v4
 
+      # Ensure the 'main' branch is tracked, necessary for PRs when using Nx
       - run: git branch --track main origin/main
-        if: ${{ github.event_name == 'pull_request' }}
+        if: github.event_name == 'pull_request'
 
-      - run: npx nx-cloud record -- nx format:check
-      - run: npx nx affected -t lint test build e2e-ci
+      # Run format check with verbose output for detailed logs (if needed)
+      - run: npx nx-cloud record -- nx format:check --verbose
+
+      # Deleting the existing 'docs' folder
+      - run: rm -rf docs
+
+      # Running the Nx build command
+      - run: nx run-many --target=build --all --outputPath=docs
+
+      # Commit and push changes if necessary
+      - name: Commit changes
+        run: |
+          git config --global user.email "keaackerman@gmail.com"
+          git config --global user.name "Kaisa Ackerman"
+          git add docs/
+          git commit -m "Update docs folder with new build output" -a || echo "No changes to commit"
+        id: commit
+
+      - name: Push changes
+        if: steps.commit.outcome == 'success'
+        run: git push origin main
+
+      # Additional Nx commands as necessary
+      - run: npx nx-cloud record -- nx format:check --verbose
+      - run: npx nx affected --target=lint --parallel
+      - run: npx nx affected --target=test --parallel
+      - run: npx nx affected --target=build --parallel
+      - run: npx nx affected --target=e2e-ci --parallel
