@@ -79,8 +79,8 @@ jobs:
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
-          source: ./docs
-          destination: ./docs/_site
+          source: docs
+          destination: docs/_site
           build_revision: ${{ github.sha }}
           verbose: true
 
@@ -93,7 +93,7 @@ jobs:
     steps:
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: ./docs/_site
+          path: docs/_site
           name: github-pages
           retention-days: 1
       - name: Deploy to GitHub Pages
