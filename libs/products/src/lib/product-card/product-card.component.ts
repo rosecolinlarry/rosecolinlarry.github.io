@@ -38,7 +38,7 @@ export class ProductCardComponent {
   // TODO Show different number or add validation in service for saving product
   // info to have sellingPrice less than or equal to listingPrice?
   toggleFavorite() {
-    if(this.productInfo) {
+    if (this.productInfo) {
       this.productInfo.isFavorite = !this.productInfo.isFavorite;
     }
   }
