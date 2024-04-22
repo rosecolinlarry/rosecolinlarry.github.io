@@ -36,6 +36,7 @@ jobs:
           git add docs
           git config --global user.email "keaackerman@gmail.com"
           git config --global user.name "Kaisa Ackerman"
+          git remote set-url origin https://x-access-token:${{ secrets.WORKFLOW_TOKEN }}@github.com/${{github.repository}}
           git commit -m "Automatic build" -a || echo "No changes to commit"
           echo "Pushing branch ${{ github.ref_name }}"
           git push origin ${{ github.ref_name }}
