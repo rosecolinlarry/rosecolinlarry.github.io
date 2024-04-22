@@ -3,14 +3,17 @@ import { AppComponent } from './app.component';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { MainLayoutComponent } from './main-layout/main-layout.component';
 import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
+import {
+  BrowserAnimationsModule,
+  NoopAnimationsModule,
+} from '@angular/platform-browser/animations';
 
 describe('AppComponent', () => {
   let component: AppComponent;
   let fixture: ComponentFixture<AppComponent>;
 
   const fakeActivatedRoute = {
-    snapshot: { data: { } }
+    snapshot: { data: {} },
   } as ActivatedRoute;
 
   beforeEach(async () => {
@@ -20,9 +23,9 @@ describe('AppComponent', () => {
         NoopAnimationsModule,
         RouterModule,
         BrowserModule,
-        MainLayoutComponent
+        MainLayoutComponent,
       ],
-      providers: [{provide: ActivatedRoute, useValue: fakeActivatedRoute}]
+      providers: [{ provide: ActivatedRoute, useValue: fakeActivatedRoute }],
     }).compileComponents();
 
     fixture = TestBed.createComponent(AppComponent);

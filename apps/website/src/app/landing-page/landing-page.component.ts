@@ -7,10 +7,6 @@ import { MatCardModule } from '@angular/material/card';
   standalone: true,
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss',
-  imports: [
-    CommonModule,
-    MatButtonModule,
-    MatCardModule,
-  ],
+  imports: [CommonModule, MatButtonModule, MatCardModule],
 })
 export class LandingPageComponent {}

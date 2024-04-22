@@ -8,11 +8,17 @@ import { MatMenuModule } from '@angular/material/menu';
 @Component({
   selector: 'lib-dashboard-card',
   standalone: true,
-  imports: [CommonModule, MatCardModule, MatIconModule, MatButtonModule, MatMenuModule],
+  imports: [
+    CommonModule,
+    MatCardModule,
+    MatIconModule,
+    MatButtonModule,
+    MatMenuModule,
+  ],
   templateUrl: './dashboard-card.component.html',
   styleUrl: './dashboard-card.component.scss',
 })
 export class DashboardCardComponent {
   @Input()
-  title = "Some Title";
+  title = 'Some Title';
 }

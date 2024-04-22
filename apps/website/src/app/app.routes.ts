@@ -30,8 +30,8 @@ export const appRoutes: Routes = [
         title: 'Orders',
         component: OrderListComponent,
         data: { iconName: 'list' } as RouteData,
-      }
-    ]
+      },
+    ],
   },
   {
     path: 'sandbox',
@@ -44,5 +44,5 @@ export const appRoutes: Routes = [
     title: 'Page Not Found',
     component: PageNotFoundComponent,
     data: { hideFromMenu: true } as RouteData,
-  }
+  },
 ];

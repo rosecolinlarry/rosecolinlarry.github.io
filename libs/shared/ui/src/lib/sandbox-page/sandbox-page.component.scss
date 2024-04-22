@@ -1,20 +1,19 @@
 lib-dashboard-card {
-    max-height: 468x;
-    min-height: fit-content;
-    min-width: 300px;
-    max-width: fit-content;
-    padding: 16px 8px 16px 8px;
-  }
-  
-  lib-product-card {
-    max-height: 536px;
-    min-height: fit-content;
-    min-width: 300px;
-    max-width: fit-content;
-    padding: 16px 8px 16px 8px;
-  }
-  
-  .product-grid {
-    flex-wrap: wrap;
-  }
-  
+  max-height: 468x;
+  min-height: fit-content;
+  min-width: 300px;
+  max-width: fit-content;
+  padding: 16px 8px 16px 8px;
+}
+
+lib-product-card {
+  max-height: 536px;
+  min-height: fit-content;
+  min-width: 300px;
+  max-width: fit-content;
+  padding: 16px 8px 16px 8px;
+}
+
+.product-grid {
+  flex-wrap: wrap;
+}

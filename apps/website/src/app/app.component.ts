@@ -10,5 +10,4 @@ import { MainLayoutComponent } from './main-layout/main-layout.component';
   styleUrl: './app.component.scss',
   imports: [RouterModule, CommonModule, MainLayoutComponent],
 })
-export class AppComponent {
-}
+export class AppComponent {}

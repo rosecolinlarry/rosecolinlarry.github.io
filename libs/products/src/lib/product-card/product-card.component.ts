@@ -20,19 +20,21 @@ import { ProductCardInfo } from './product-card-info.interface';
     CondensedStarRatingComponent,
     CurrencyPipe,
     PercentPipe,
-    MatMenuModule
-  ]
+    MatMenuModule,
+  ],
 })
 export class ProductCardComponent {
   @Input()
   productInfo!: ProductCardInfo;
   get percentOff(): number | undefined {
     if (this.productInfo?.onSale && this.productInfo?.sellingPrice) {
-      return (this.productInfo?.sellingPrice - this.productInfo?.listPrice ?? 0) / this.productInfo?.sellingPrice
+      return (
+        (this.productInfo?.sellingPrice - this.productInfo?.listPrice ?? 0) /
+        this.productInfo?.sellingPrice
+      );
     }
     return;
   }
   // TODO Show different number or add validation in service for saving product
   // info to have sellingPrice less than or equal to listingPrice?
 }
-

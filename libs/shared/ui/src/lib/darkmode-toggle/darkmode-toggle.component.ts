@@ -12,7 +12,7 @@ import { ThemePickerService } from '@rosecolinlarry/shared-util';
   styleUrl: './darkmode-toggle.component.css',
 })
 export class DarkmodeToggleComponent {
-    isDarkMode: boolean;
+  isDarkMode: boolean;
   constructor(private themePickerService: ThemePickerService) {
     this.isDarkMode = this.themePickerService.isDarkMode;
   }
