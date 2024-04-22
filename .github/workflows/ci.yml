@@ -44,7 +44,7 @@ jobs:
       - run: rm -rf docs
 
       # Running the Nx build command
-      - run: nx run-many --target=build --all --outputPath=docs
+      - run: nx run-many -t build
 
       # Commit and push changes if necessary
       - name: Commit changes
