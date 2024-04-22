@@ -8,7 +8,12 @@ import { MatIconModule } from '@angular/material/icon';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 import { LandingPageComponent } from '../landing-page/landing-page.component';
-import { Route, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import {
+  Route,
+  RouterLink,
+  RouterLinkActive,
+  RouterOutlet,
+} from '@angular/router';
 import { appRoutes } from '../app.routes';
 import { HeaderComponent } from './header/header.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -48,10 +53,10 @@ export class MainLayoutComponent {
 
   // Get menu items to display
   get menuItems(): Route[] {
-    const items = appRoutes.filter(x => {
+    const items = appRoutes.filter((x) => {
       const data = x.data as RouteData;
       return !data.hideFromMenu;
-    })
+    });
     return items;
   }
 

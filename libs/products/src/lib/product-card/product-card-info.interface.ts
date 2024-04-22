@@ -1,4 +1,3 @@
-
 export interface ProductCardInfo {
   title: string; // Title of the product
   imageSrc: string; // Product image (required) // TODO Make placeholder and/or spinner

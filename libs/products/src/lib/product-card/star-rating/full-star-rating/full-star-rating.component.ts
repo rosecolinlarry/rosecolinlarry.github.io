@@ -21,8 +21,8 @@ export class FullStarRatingComponent implements OnInit {
   emptyStarsArray = [];
 
   ngOnInit(): void {
-    this.filledStarsArray.length = this.filledStars
-    this.halfStarsArray.length = this.halfStars
-    this.emptyStarsArray.length = this.emptyStars
+    this.filledStarsArray.length = this.filledStars;
+    this.halfStarsArray.length = this.halfStars;
+    this.emptyStarsArray.length = this.emptyStars;
   }
 }

@@ -17,13 +17,11 @@ export class ThemePickerService {
   }
 
   setTheme() {
-    
     if (this.isDarkMode) {
       document.body.classList.remove(this.darkModeClassName); // Remove darkmode
       document.body.classList.add(this.lightModeClassName); // Add lightmode
       localStorage.setItem(this.LOCAL_STORAGE_KEY, this.lightModeClassName); // Store darkmode as current theme
-    }
-    else {
+    } else {
       document.body.classList.add(this.darkModeClassName); // Add darmmode
       document.body.classList.remove(this.lightModeClassName); // Remove lightmode
       localStorage.setItem(this.LOCAL_STORAGE_KEY, this.darkModeClassName); // Store darkmode as current theme

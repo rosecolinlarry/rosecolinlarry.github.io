@@ -15,8 +15,12 @@
         routerLink="/{{ item.path }}"
         routerLinkActive="active"
       >
-        <mat-icon matListItemIcon class="sidebar-list-item-icon padb-6">{{ getlistIcon(item) }}</mat-icon>
-        <div matListItemTitle class="sidebar-list-item-label">{{ item.title }}</div>
+        <mat-icon matListItemIcon class="sidebar-list-item-icon padb-6">{{
+          getlistIcon(item)
+        }}</mat-icon>
+        <div matListItemTitle class="sidebar-list-item-label">
+          {{ item.title }}
+        </div>
       </mat-list-item>
       }
     </mat-list>
