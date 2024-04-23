@@ -5,12 +5,7 @@ on:
     branches: ['main']
   workflow_dispatch:
 
-permissions:
-  actions: write
-  contents: write
-  deployments: write
-  id-token: write
-  pages: write
+permissions: write-all
 
 concurrency:
   group: 'pages'
