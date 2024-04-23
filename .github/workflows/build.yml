@@ -29,18 +29,18 @@ jobs:
         if: github.event_name == 'pull_request'
       - run: npx nx-cloud record -- nx format:write
       - run: npx nx-cloud record -- nx run-many -t lint --fix
-      - run: rm -rf docs
-      - run: npx nx run-many --target=build --all --outputPath=docs
-      - run: git add docs
       - run: git config --global user.email "keaackerman@gmail.com"
       - run: git config --global user.name "Kaisa Ackerman"
       - run: git remote set-url origin https://x-access-token:${{ secrets.WORKFLOW_TOKEN }}@github.com/${{github.repository}}
-      - run: git fetch --all
       - name: Checkout or create release branch
         run: |
           git checkout release || git checkout -b release
+          git config pull.rebase false
           git branch --set-upstream-to=origin/release release
-          git reset --soft main
+          git reset --force main
+      - run: rm -rf docs
+      - run: npx nx run-many --target=build --all --outputPath=docs
+      - run: git add docs
       - run: git commit -m "Automatic build" -a || echo "No changes to commit"
       - run: git pull
       - run: echo "Pushing to release branch"
