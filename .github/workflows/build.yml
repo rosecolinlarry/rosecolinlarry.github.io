@@ -42,6 +42,7 @@ jobs:
           git branch --set-upstream-to=origin/release release
           git reset --soft main
       - run: git commit -m "Automatic build" -a || echo "No changes to commit"
+      - run: git pull
       - run: echo "Pushing to release branch"
       - run: git push origin release
 
