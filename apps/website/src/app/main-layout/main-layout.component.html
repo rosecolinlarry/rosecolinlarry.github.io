@@ -1,5 +1,6 @@
-<mat-sidenav-container class="sidenav-container">
+<mat-sidenav-container id="container" class="sidenav-container flexcolgrow">
   <mat-sidenav
+    id = sidenav
     opened="true"
     #drawer
     class="sidenav"
@@ -25,11 +26,11 @@
       }
     </mat-list>
   </mat-sidenav>
-  <mat-sidenav-content>
-    <app-header class="sticky" [drawer]="drawer"></app-header>
-    <div class="content-padding flexcolgrow">
-      <ng-content></ng-content>
+  <mat-sidenav-content id="content" class="flexcolgrow">
+    <app-header id="header" class="sticky flexcolgrow" [drawer]="drawer"></app-header>
+    <div id="body" class="content-padding flexcolgrow">
+      <ng-content class="flexcolgrow"></ng-content>
     </div>
-    <app-footer></app-footer>
+    <app-footer id="footer"></app-footer>
   </mat-sidenav-content>
 </mat-sidenav-container>

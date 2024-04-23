@@ -155,8 +155,17 @@ $light-theme: mat.define-light-theme(
 
 html,
 body {
+  margin:0;
+  padding:0;
   height: 100%;
 }
+
+.cdk-visually-hidden.cdk-focus-trap-anchor {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
 body {
   margin: 0;
   font-family: 'Josefin Sans', 'Raleway', sans-serif;
