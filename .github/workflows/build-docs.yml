@@ -1,0 +1,66 @@
+name: Build Docs and Push to Main
+
+on:
+  push:
+    branches: ['main']
+  workflow_dispatch:
+
+permissions: write-all
+
+concurrency:
+  group: 'pages'
+  cancel-in-progress: false
+
+jobs:
+  build-nx:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{secrets.WORKFLOW_TOKEN}}
+          
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '20.12.2'
+          cache: 'npm'
+
+      - run: npm ci --include=optional
+
+      - uses: nrwl/nx-set-shas@v4
+      
+      - run: git branch --track main origin/main
+        if: github.event_name == 'pull_request'
+
+      - run: npx nx-cloud record -- nx format:write
+      - run: npx nx-cloud record -- nx run-many -t lint --fix
+
+      - run: rm -rf docs
+
+      - run: npx nx run-many --target=build --all --outputPath=docs
+
+      - run: git add docs
+
+      - run: git config --global user.email "keaackerman@gmail.com"
+      - run: git config --global user.name "Kaisa Ackerman"
+      - run: git remote set-url origin https://x-access-token:${{ secrets.WORKFLOW_TOKEN }}@github.com/${{github.repository}}
+
+      - run: git commit -m "Automatic build" -a || echo "No changes to commit"
+      - run: echo "Pushing branch ${{ github.ref_name }}"
+      - run: git push origin ${{ github.ref_name }}
+
+  quality-checks:
+    needs: build-nx
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '20.12.2'
+      - run: npm ci --include=optional
+      - run: npx nx-cloud record -- nx format:check --verbose
+      - run: npx nx affected --target=lint --parallel
+      - run: npx nx affected --target=test --parallel
+      - run: npx nx affected --target=build --parallel
+      - run: npx nx affected --target=e2e-ci --parallel
