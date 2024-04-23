@@ -37,6 +37,10 @@ jobs:
           #npx nx-cloud record -- nx format:write
           #npx nx-cloud record -- nx run-many -t lint --fix
           npx nx run-many --target=build --all --outputPath=docs
+          
+      - name: Copy index.html to 404.html
+        run: |
+          cp docs\index.html docs\404.html
       - run: |
           git config user.email "keaackerman@gmail.com"
           git config user.name "Kaisa Ackerman"
