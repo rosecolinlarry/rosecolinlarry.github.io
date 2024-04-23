@@ -40,7 +40,7 @@ jobs:
           
       - name: Copy index.html to 404.html
         run: |
-          cp docs\index.html docs\404.html
+          cp docs/index.html docs/404.html
       - run: |
           git config user.email "keaackerman@gmail.com"
           git config user.name "Kaisa Ackerman"
