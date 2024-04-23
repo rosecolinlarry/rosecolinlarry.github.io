@@ -9,4 +9,6 @@ import { MatCardModule } from '@angular/material/card';
   styleUrl: './landing-page.component.scss',
   imports: [CommonModule, MatButtonModule, MatCardModule],
 })
-export class LandingPageComponent {}
+export class LandingPageComponent {
+  currentDate = new Date();
+}
