@@ -42,9 +42,9 @@ jobs:
       - run: npx nx run-many --target=build --all --outputPath=docs
       - run: git add docs
       - run: git commit -m "Automatic build" -a || echo "No changes to commit"
-      - run: git pull
       - run: echo "Pushing to release branch"
-      - run: git push origin release
+      - run: git push -u origin release
+      - run: git pull
 
   build-jekyll:
     runs-on: ubuntu-latest
