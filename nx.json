@@ -16,7 +16,11 @@
       "!{projectRoot}/**/*.cy.[jt]s?(x)",
       "!{projectRoot}/cypress.config.[jt]s"
     ],
-    "sharedGlobals": []
+    "sharedGlobals": [
+      "{workspaceRoot}/.github/workflows/build.yml",
+      "{workspaceRoot}/.github/workflows/deploy.yml",
+      "{workspaceRoot}/.github/workflows/validation.yml"
+    ]
   },
   "targetDefaults": {
     "@angular-devkit/build-angular:application": {

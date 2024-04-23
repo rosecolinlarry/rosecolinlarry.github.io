@@ -3,6 +3,8 @@ name: Build
 on:
   push:
     branches: ['main']
+    paths-ignore:
+      - 'docs/**'  # Ignore changes only within the docs directory
   workflow_dispatch:
 
 permissions: write-all
@@ -25,74 +27,22 @@ jobs:
           cache: 'npm'
       - run: npm ci --include=optional
       - uses: nrwl/nx-set-shas@v4
-      - run: git branch --track main origin/main
-        if: github.event_name == 'pull_request'
-      - run: npx nx-cloud record -- nx format:write
-      - run: npx nx-cloud record -- nx run-many -t lint --fix
-      - run: git config --global user.email "keaackerman@gmail.com"
-      - run: git config --global user.name "Kaisa Ackerman"
-      - run: git remote set-url origin https://x-access-token:${{ secrets.WORKFLOW_TOKEN }}@github.com/${{github.repository}}
-      - name: Checkout or create release branch
+      - name: Checkout release branch or create it
         run: |
-          git checkout release || git checkout -b release
-          git config pull.rebase false
-          git branch --set-upstream-to=origin/release release
-          git reset --force main
-      - run: rm -rf docs
-      - run: npx nx run-many --target=build --all --outputPath=docs
-      - run: git add docs
-      - run: git commit -m "Automatic build" -a || echo "No changes to commit"
-      - run: echo "Pushing to release branch"
-      - run: git push -u origin release
-      - run: git pull
-
-  build-jekyll:
-    runs-on: ubuntu-latest
-    needs: build-and-update
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          ref: 'release' 
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Build
-        uses: actions/jekyll-build-pages@v1
-        with:
-          source: ./docs
-          destination: ./docs/_site
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./docs/_site
-          name: github-pages
-
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build-jekyll
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
-    
-  quality-checks:
-    needs: build-and-update
-    runs-on: ubuntu-latest
-    continue-on-error: true
-    steps:      
-      - uses: actions/checkout@v4
-        with:
-          ref: 'release' 
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '20.12.2'
-          cache: 'npm'
-      - run: npm ci --include=optional
-      - run: npx nx-cloud record -- nx format:check
-      - run: npx nx affected --target=lint --parallel
-      - run: npx nx affected --target=test --parallel
-      - run: npx nx affected --target=build --parallel
-      - run: npx nx affected --target=e2e-ci --parallel
+          git fetch origin
+          git checkout release || git checkout -b release origin/main
+          git reset --hard origin/main
+      - run: | 
+          rm -rf docs
+          #npx nx-cloud record -- nx format:write
+          #npx nx-cloud record -- nx run-many -t lint --fix
+          npx nx run-many --target=build --all --outputPath=docs
+      - run: |
+          git config user.email "keaackerman@gmail.com"
+          git config user.name "Kaisa Ackerman"
+          git add .
+          git commit -m "Automatic build" -a || echo "No changes to commit"
+          git push --force origin release
+          git checkout main
+          git merge release --no-edit
+          git push origin main

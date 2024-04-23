@@ -1,0 +1,32 @@
+
+name: Validation
+
+on:
+  push:
+    branches: ['main']
+    paths-ignore:
+      - 'docs/**'  # Ignore changes only within the docs directory
+  workflow_dispatch:
+
+permissions: read-all
+
+concurrency:
+  group: 'pages'
+  cancel-in-progress: false
+
+jobs:
+  quality-checks:
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:      
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '20.12.2'
+          cache: 'npm'
+      - run: npm ci --include=optional
+      - run: npx nx-cloud record -- nx format:check
+      - run: npx nx affected --target=lint --parallel
+      - run: npx nx affected --target=test --parallel
+      - run: npx nx affected --target=build --parallel
+      - run: npx nx affected --target=e2e-ci
