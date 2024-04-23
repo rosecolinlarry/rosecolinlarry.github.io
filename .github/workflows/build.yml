@@ -39,7 +39,7 @@ jobs:
       - name: Checkout or create release branch
         run: |
           git checkout release || git checkout -b release
-          git reset --soft main
+          git reset --hard main
       - run: git commit -m "Automatic build" -a || echo "No changes to commit"
       - run: echo "Pushing to release branch"
       - run: git push origin release
