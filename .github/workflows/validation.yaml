@@ -10,10 +10,6 @@ on:
 
 permissions: read-all
 
-concurrency:
-  group: 'pages'
-  cancel-in-progress: false
-
 jobs:
   quality-checks:
     runs-on: ubuntu-latest
