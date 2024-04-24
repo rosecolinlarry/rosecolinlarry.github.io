@@ -1,3 +1,5 @@
+@use './../../../../../apps/website/src/assets/styles/themes';
+
 .material-symbols-outlined {
   font-variation-settings: 'wght' 400, 'GRAD' 0, 'opsz' 20;
 }
@@ -80,10 +82,10 @@ mat-card-content {
 
 .dark-mode {
   .green-text {
-    color: greenyellow;
+    color: themes.$green-text-darkmode;
   }
   .dull-text {
-    color: white;
+    color: themes.$dull-text-darkmode;
   }
   .mat-mdc-menu-panel.mat-mdc-menu-panel {
     background-color: rgba(79, 79, 79, 0.75);
@@ -92,10 +94,10 @@ mat-card-content {
 
 .light-mode {
   .green-text {
-    color: darkgreen;
+    color: themes.$green-text-lightmode;
   }
   .dull-text {
-    color: black;
+    color: themes.$dull-text-lightmode;
   }
   .mat-mdc-menu-panel.mat-mdc-menu-panel {
     background-color: rgba(255, 255, 255, 0.75);
@@ -113,13 +115,14 @@ mat-card-content {
 .mat-mdc-menu-item:not([disabled]):hover {
   background-color: unset;
 }
+
 .dark-mode {
   .product-card-menu-button-icon:hover {
-    color: cyan;
+    color: themes.$hover-color-darkmode;
   }
 }
 .light-mode {
   .product-card-menu-button-icon:hover {
-    color: darkblue;
+    color: themes.$hover-color-lightmode;
   }
 }

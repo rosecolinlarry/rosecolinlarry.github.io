@@ -1,0 +1,116 @@
+@use '@angular/material' as mat;
+
+$display-font-family: 'Josefin Slab', Raleway, serif;
+$heading-font-family: 'Josefin Sans', Raleway, sans-serif;
+$regular-font-family: 'Josefin Sans', Raleway, sans-serif;
+
+$website-typography: mat.define-typography-config(
+  // .mat-headline-1
+  $headline-1:
+    mat.define-typography-level(
+      $font-family: $display-font-family,
+      $font-size: 60px,
+      $font-weight: 700,
+      $line-height: 60px,
+      $letter-spacing: -2px,
+    ),
+  // .mat-headline-2
+  $headline-2:
+    mat.define-typography-level(
+      $font-family: $display-font-family,
+      $font-size: 50px,
+      $font-weight: 700,
+      $line-height: 50px,
+      $letter-spacing: -1.6px,
+    ),
+  // .mat-headline-3
+  $headline-3:
+    mat.define-typography-level(
+      $font-family: $display-font-family,
+      $font-size: 40px,
+      $font-weight: 700,
+      $line-height: 40px,
+      $letter-spacing: -1px,
+    ),
+  // .mat-headline-4
+  $headline-4:
+    mat.define-typography-level(
+      $font-family: $display-font-family,
+      $font-size: 34px,
+      $font-weight: 700,
+      $line-height: 34px,
+      $letter-spacing: -1px,
+    ),
+  // .mat-headline-5, .mat-h1, <h1>
+  $headline-5:
+    mat.define-typography-level(
+      $font-family: $heading-font-family,
+      $font-size: 34px,
+      $font-weight: 600,
+      $line-height: 34px,
+      $letter-spacing: -1px,
+    ),
+  // .mat-headline-6, .mat-h2, <h2>
+  $headline-6:
+    mat.define-typography-level(
+      $font-family: $heading-font-family,
+      $font-size: 30px,
+      $font-weight: 600,
+      $line-height: 32px,
+      $letter-spacing: -0.8px,
+    ),
+  // .mat-subtitle-1, .mat-h3, <h3>
+  $subtitle-1:
+    mat.define-typography-level(
+      $font-family: $heading-font-family,
+      $font-size: 24px,
+      $font-weight: 600,
+      $line-height: 26px,
+      $letter-spacing: -0.5px,
+    ),
+  // .mat-subtitle-2, .mat-body-strong, <h4>
+  $subtitle-2:
+    mat.define-typography-level(
+      $font-family: $regular-font-family,
+      $font-size: 20px,
+      $font-weight: 600,
+      $line-height: 23px,
+      $letter-spacing: -0.2px,
+    ),
+  // .mat-h4, .mat-body-1, <h4>
+  $body-1:
+    mat.define-typography-level(
+      $font-family: $regular-font-family,
+      $font-size: 20px,
+      $font-weight: 400,
+      $line-height: 30px,
+      $letter-spacing: -0.25px,
+    ),
+  // .mat-body, .mat-body-2
+  $body-2:
+    mat.define-typography-level(
+      $font-family: $regular-font-family,
+      $font-size: 16px,
+      $font-weight: 300,
+      $line-height: 24px,
+      $letter-spacing: -0.1px,
+    ),
+  // .mat-small, .mat-caption
+  $caption:
+    mat.define-typography-level(
+      $font-family: $regular-font-family,
+      $font-size: 14px,
+      $font-weight: 300,
+      $line-height: 16px,
+      $letter-spacing: -0.1px,
+    ),
+  // Buttons and anchors, no selectors
+  $button:
+    mat.define-typography-level(
+      $font-family: $regular-font-family,
+      $font-size: 16px,
+      $font-weight: 500,
+      $line-height: 24px,
+      $letter-spacing: -0.1px,
+    )
+);
