@@ -1,5 +1,3 @@
-@import '../main-layout.component.scss';
-
 div.banner-header {
   text-transform: uppercase;
   h3 {
@@ -7,7 +5,7 @@ div.banner-header {
   }
 }
 
-app-header.sticky {
+#app-header.sticky {
   position: sticky;
   top: 0;
   z-index: 1;

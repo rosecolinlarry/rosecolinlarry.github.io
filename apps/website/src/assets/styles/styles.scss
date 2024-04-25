@@ -1,0 +1,129 @@
+@use '@angular/material' as mat;
+@use 'typography';
+@use 'palettes';
+@use 'themes';
+@use 'sizing';
+@import '../../app/main-layout/footer/footer.component.scss';
+@import '../../app/main-layout/header/header.component.scss';
+@import '../../app/main-layout/main-layout.component.scss';
+
+@include mat.core();
+
+// Apply the dark theme by default
+@include mat.all-component-themes(themes.$dark-theme);
+
+.light-mode {
+  @include mat.all-component-bases(themes.$light-theme);
+  @include mat.all-component-colors(themes.$light-theme);
+}
+/*#endregion */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: typography.$regular-font-family;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+}
+
+.all-caps {
+  text-transform: uppercase;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+/*#region Sizing Shorthand */
+
+.flexcol {
+  display: flex;
+  flex-direction: column;
+}
+
+.flexcolgrow {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.flexrow {
+  display: flex;
+  flex-direction: row;
+}
+
+.flexrowgrow {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+}
+
+.inherit-h {
+  height: inherit;
+}
+
+.p0 {
+  padding: 0;
+}
+
+.m0 {
+  margin: 0;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.px-0 {
+  padding-left: 0;
+  padding-right: 0;
+}
+.py-0 {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.my-0 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.mx-0 {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.mr-5 {
+  margin-right: 5px;
+}
+
+.pl-8 {
+  padding-left: 8px;
+}
+
+.pr-8 {
+  padding-right: 8px;
+}
+
+.pt-8 {
+  padding-top: 8px;
+}
+
+.pb-8 {
+  padding-bottom: 8px;
+}
+
+.pb-6 {
+  padding-bottom: 6px;
+}
+
+.min-content-height {
+  height: min-content;
+}

@@ -1,137 +1,50 @@
 <ng-container *ngIf="productInfo">
   <ng-container *ngIf="productInfo.isFavorite ?? false; else elseTemplate">
-    <mat-icon
-      style="
-        position: absolute;
-        z-index: 8;
-        align-self: flex-start;
-        margin-left: 8px;
-        margin-top: 8px;
-        color: rgb(255, 39, 39, 0.75);
-      "
+    <mat-icon class="heart-icon liked"
       (click)="toggleFavorite()"
       >favorite</mat-icon
     >
   </ng-container>
   <ng-template #elseTemplate>
     <mat-icon
-      style="
-        position: absolute;
-        z-index: 8;
-        align-self: flex-start;
-        margin-left: 8px;
-        margin-top: 8px;
-        color: rgba(255, 255, 255, 0.75);
-      "
+    class="heart-icon"
       (click)="toggleFavorite()"
       >favorite</mat-icon
     >
   </ng-template>
-  <mat-icon
-    style="
-      position: absolute;
-      z-index: 8;
-      align-self: flex-start;
-      margin-left: 8px;
-      margin-top: 40px;
-      color: rgba(255, 255, 255, 0.75);
-    "
+  <mat-icon class="shopping-cart-icon"
     >shopping_cart</mat-icon
   >
   <button
     mat-icon-button
     [matMenuTriggerFor]="menu"
     class="product-menu-dropdown-button"
-    style="position: absolute; z-index: 20; align-self: flex-end"
   >
     <mat-icon>more_vert</mat-icon>
   </button>
   <mat-menu
-    class="product-card-menu"
+    class="product-card-menu flexcol p0 m0"
     #menu="matMenu"
     xPosition="before"
     yPosition="below"
-    [hasBackdrop]="false"
-    style="
-      padding: 0;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    "
-  >
+    [hasBackdrop]="false">
     <button
-      class="product-card-menu-button"
+      class="product-card-menu-button shopping-cart flexcol p0 justify-center"
       disableRipple="true"
       mat-menu-item
-      style="
-        padding: 0;
-        margin: 6px -10px 0 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height: 24px;
-      "
     >
       <mat-icon
         class="product-card-menu-button-icon"
-        style="padding: 0; margin: 0"
         >shopping_cart</mat-icon
       >
     </button>
-    <!-- <button
-      class="product-card-menu-button"
-      disableRipple="true"
-      mat-menu-item
-      style="
-        padding: 0;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height: 24px;
-        margin-bottom: -10px;
-      "
-    >
-      <ng-container *ngIf="productInfo.isFavorite ?? false; else elseTemplate">
-        <mat-icon
-          class="product-card-menu-button-icon"
-          style="
-            padding: 0;
-            margin: 0;
-            max-width: fit-content;
-            color: rgb(255, 39, 39);
-          "
-          (click)="toggleFavorite()"
-          >favorite</mat-icon
-        >
-      </ng-container>
-      <ng-template #elseTemplate>
-        <mat-icon
-          style="padding: 0; margin: 0; max-width: fit-content"
-          class="product-card-menu-button-icon"
-          (click)="toggleFavorite()"
-          >favorite_border</mat-icon
-        >
-      </ng-template>
-    </button> -->
     <button
-      class="product-card-menu-button"
+      class="product-card-menu-button share-button flexcol justify-center"
       disableRipple="true"
       mat-menu-item
-      style="
-        padding: 0;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height: 24px;
-        margin-bottom: -20px;
-      "
     >
       <mat-icon
-        class="product-card-menu-button-icon"
-        style="padding: 0; margin: 0; max-width: fit-content"
+        class="product-card-menu-button-icon share-icon p0 m0"
       >
         share
       </mat-icon>
@@ -139,7 +52,6 @@
   </mat-menu>
   <mat-card
     class="listing-card flexgrow"
-    style="width: 300px; min-height: fit-content; max-height: 536px"
   >
     <img
       class="listing-card__product-image"
@@ -152,85 +64,32 @@
       <mat-card-title class="listing-card__title flexcolgrow"
         ><h4
           [title]="productInfo.title"
-          style="
-            height: fit-content;
-            margin: 0;
-            padding: 0;
-            font-size: large;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            overflow: hidden;
-          "
-        >
+          class="product-info-title m0 p0">
           {{ productInfo.title }}
         </h4></mat-card-title
       >
-      <mat-card-subtitle
-        style="
-          height: min-content;
-          margin: 0;
-          padding: 0 0 8px 0;
-          display: flex;
-          flex-direction: row;
-          align-content: center;
-          width: inherit;
-        "
-        class="shop-name-with-rating"
+      <mat-card-subtitle class="shop-name-with-rating flexrow m0"
       >
         <lib-condensed-star-rating
-          style="
-            height: min-content;
-            margin: 0 10px 0 0;
-            padding: 0;
-            flex-shrink: 1;
-          "
+          class="p0 condensed-star-rating"
           [averageStars]="productInfo.averageStars"
           [totalReviews]="productInfo.totalReviews"
         >
         </lib-condensed-star-rating>
         <div class="spacer"></div>
         <div
-          class="sellerInfo"
-          style="
-            display: flex;
-            flex-grow: 0;
-            flex-direction: row;
-            overflow: hidden;
-          "
+          class="sellerInfoRow flexrow"
         >
           <span
-            style="
-              height: min-content;
-              margin: 0;
-              padding: 0;
-              display: flex;
-              flex-grow: 0;
-              align-content: center;
-              font-weight: 300;
-              font-size: medium;
-            "
-          >
+          class="sellerInfoContainer m0 p0 flexrow">
             <mat-icon
               *ngIf="productInfo.verified"
-              style="
-                height: min-content;
-                margin: -2px 0 0 0;
-                padding: 0;
-                align-self: center;
-                align-content: center;
-                display: flex;
-              "
-              class="verified-icon"
+              class="sellerInfoVerifiedIcon verified-icon p0 flexrow"
               >verified</mat-icon
             >
             <p
               title="{{ productInfo.sellerName }}"
-              style="
-                height: min-content;
-                margin: 3.5px 0 0 0;
-                font-weight: 300;
-                white-space: nowrap;
-              "
+              class="sellerInfoSellerName"
             >
               {{ productInfo.sellerName }}
             </p>
@@ -241,22 +100,14 @@
 
     <mat-card-content class="listing-card__product-text">
       <div
-        class="listing-card__price pricing-text-row"
-        style="margin: 0; padding: 0 0 8px 0; height: min-content"
+        class="listing-card__price pricing-text-row m0 pb-8"
       >
         <p
-          style="margin: 0 5px 0 0; padding: 0; height: min-content"
           class="list-price green-text"
         >
           {{ productInfo.listPrice | currency }}
         </p>
         <p
-          style="
-            margin: 0 5px 0 0;
-            padding: 0;
-            height: min-content;
-            font-weight: 300;
-          "
           class="sale-price strikethrough dull-text"
           *ngIf="productInfo.onSale"
         >
@@ -264,92 +115,37 @@
         </p>
         <p
           *ngIf="percentOff"
-          style="margin: 0; padding: 0; height: min-content; font-weight: 300"
-          class="sale-price dull-text"
+          class="sale-price dull-text percent-off"
         >
           <!-- TODO Make a pipe for this -->
           ({{ percentOff | percent }} off)
         </p>
       </div>
       <div
-        class="below-price-row"
-        style="
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          height: 24px;
-        "
+        class="below-price-row flexrow"
       >
         <div
-          class="on-sale-row"
-          style="
-            display: flex;
-            flex-direction: row;
-            flex-grow: 0;
-            justify-content: space-between;
-            text-wrap: nowrap;
-          "
-        >
+          class="on-sale-row flexrow">
           <p
             *ngIf="productInfo.onSale"
-            style="
-              margin: 0;
-              padding: 0;
-              display: flex;
-              align-content: center;
-              flex-direction: row;
-              flex-grow: 0;
-              align-self: center;
-              flex-wrap: nowrap;
-              text-wrap: nowrap;
-              font-weight: 300;
-            "
-            class="green-text"
+            class="sale-ends-text green-text m0 p0 flexrow"
           >
             Sale ends in 2 hours
           </p>
         </div>
         <div *ngIf="productInfo.onSale" class="spacer"></div>
-        <div class="free-shipping-row" style="display: flex; flex-grow: 1">
+        <div class="free-shipping-row flexrowgrow">
           <span
             *ngIf="productInfo.freeShipping"
-            style="
-              margin: 0;
-              padding: 0;
-              height: min-content;
-              display: flex;
-              flex-direction: row;
-              align-content: center;
-              flex-wrap: nowrap;
-              text-wrap: nowrap;
-            "
-            class="dull-text"
+            class="free-shipping-text-container dull-text p0 m0 flexrow"
           >
             <span
-              style="
-                margin: 0 5px 0 0;
-                padding: 0;
-                display: flex;
-                align-content: center;
-                flex-direction: row;
-                align-self: center;
-              "
-              class="material-symbols-sharp"
+              class="material-symbols-sharp local-shipping-icon flexrow p0 mr-5"
             >
               local_shipping
             </span>
             <p
-              style="
-                margin: 0;
-                padding: 2px 0 0 0;
-                display: flex;
-                align-content: center;
-                flex-direction: row;
-                align-self: center;
-                text-wrap: nowrap;
-                font-weight: 300;
-                font-size: small;
-              "
+            class="free-shipping-text m0 flexrow"
             >
               Free Shipping
             </p>
@@ -357,19 +153,5 @@
         </div>
       </div>
     </mat-card-content>
-    <!-- 
-  <mat-card-actions
-    class="listing-card__actions"
-    style="margin: 0; padding: 0; height: min-content"
-  >
-    <button mat-stroked-button color="accent" style="margin-left: 13px">
-      <mat-icon>add_shopping_cart</mat-icon>
-      Add to Cart
-    </button>
-    <button mat-button color="accent" class="text-then-icon-button">
-      More
-      <mat-icon>trending_flat</mat-icon>
-    </button>
-  </mat-card-actions> -->
   </mat-card>
 </ng-container>

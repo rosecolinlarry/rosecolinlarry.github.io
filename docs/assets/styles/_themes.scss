@@ -1,0 +1,29 @@
+@use '@angular/material' as mat;
+@use './typography';
+@use './palettes'; 
+
+// Define a dark theme
+$dark-theme: mat.define-dark-theme(
+  (
+    color: (
+      primary:  palettes.$prussianblue-palette,
+      accent: palettes.$orangewheel-palette,
+      warn: palettes.$fireenginered-palette,
+    ),
+    // Only include `typography` and `density` in the default dark theme.
+    typography: typography.$website-typography,
+    density: 0,
+  )
+);
+
+
+// Define a light theme
+$light-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: palettes.$vanilla-palette,
+      accent: palettes.$xanthous-palette,
+      warn: palettes.$fireenginered-palette,
+    ),
+  )
+);

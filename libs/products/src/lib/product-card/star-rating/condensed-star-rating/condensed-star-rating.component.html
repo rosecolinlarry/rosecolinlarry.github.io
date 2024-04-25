@@ -1,54 +1,11 @@
-<div
-  class="condensed-star-rating-row"
-  style="
-    height: min-content;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-  "
->
-  <p
-    style="
-      height: min-content;
-      margin: 3.5px 0 0 0;
-      padding: 0 0 0 0;
-      display: flex;
-      align-content: center;
-      align-self: center;
-      font-size: medium;
-    "
-  >
+<div class="condensed-star-rating-row flexrow m0 p0 justify-center">
+  <p class="average-stars-text flexrow p0">
     {{ averageStars }}
   </p>
-  <p style="margin: 0">
-    <span
-      class="material-symbols-sharp star-icon"
-      style="
-        height: min-content;
-        margin: 0;
-        padding: 0 0 0 2.5px;
-        align-content: center;
-        justify-content: center;
-      "
-    >
+  <p class="m0">
+    <span class="material-symbols-sharp star-icon m0 justify-center">
       star
     </span>
   </p>
-  <p
-    style="
-      height: min-content;
-      margin: 3.5px 0 0 0;
-      padding: 0 0 0 0;
-      display: flex;
-      align-content: center;
-      align-self: center;
-      font-size: medium;
-      font-weight: 300;
-    "
-    class="total-reviews"
-  >
-    ({{ totalReviews }})
-  </p>
+  <p class="total-reviews m0 flexrow">({{ totalReviews }})</p>
 </div>
