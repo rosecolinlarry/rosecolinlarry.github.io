@@ -2,6 +2,10 @@
 @use 'typography';
 @use 'palettes';
 @use 'themes';
+@use 'sizing';
+@import '../../app/main-layout/footer/footer.component.scss';
+@import '../../app/main-layout/header/header.component.scss';
+@import '../../app/main-layout/main-layout.component.scss';
 
 @include mat.core();
 
@@ -66,11 +70,23 @@ body {
   height: inherit;
 }
 
-.padx-0 {
+.p0 {
+  padding: 0;
+}
+
+.m0 {
+  margin: 0;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.px-0 {
   padding-left: 0;
   padding-right: 0;
 }
-.pady-0 {
+.py-0 {
   padding-top: 0;
   padding-bottom: 0;
 }
@@ -84,82 +100,30 @@ body {
   margin-right: 0;
 }
 
-.padl-8 {
+.mr-5 {
+  margin-right: 5px;
+}
+
+.pl-8 {
   padding-left: 8px;
 }
 
-.padr-8 {
+.pr-8 {
   padding-right: 8px;
 }
 
-.padt-8 {
+.pt-8 {
   padding-top: 8px;
 }
 
-.padb-8 {
+.pb-8 {
   padding-bottom: 8px;
 }
 
-.padb-6 {
+.pb-6 {
   padding-bottom: 6px;
 }
 
-.sidebar-list-item-icon {
-  padding-bottom: 6px;
+.min-content-height {
+  height: min-content;
 }
-
-.dark-mode {
-  .sidebar-list-item:hover {
-    .sidebar-list-item-icon {
-      color: themes.$hover-color-darkmode;
-    }
-    .sidebar-list-item-label {
-      color: themes.$hover-color-darkmode;
-    }
-  }
-  .sidebar-list-item:focus {
-    .sidebar-list-item-icon {
-      color: themes.$focus-color-darkmode;
-    }
-    .sidebar-list-item-label {
-      color: themes.$focus-color-darkmode;
-    }
-  }
-  #github-link:link {
-    color: white;
-  }
-  #github-link:visited {
-    color: white;
-  }
-}
-
-.sidebar-list-item {
-  border-radius: 0;
-}
-
-.light-mode {
-  .sidebar-list-item:hover {
-    .sidebar-list-item-icon {
-      color: themes.$hover-color-lightmode;
-    }
-    .sidebar-list-item-label {
-      color: themes.$hover-color-lightmode;
-    }
-  }
-  .sidebar-list-item:focus {
-    .sidebar-list-item-icon {
-      color: themes.$focus-color-lightmode;
-    }
-    .sidebar-list-item-label {
-      color: themes.$focus-color-lightmode;
-    }
-  }
-  #github-link:link {
-    color: black;
-  }
-  #github-link:visited {
-    color: black;
-  }
-}
-
-/*#endregion */
