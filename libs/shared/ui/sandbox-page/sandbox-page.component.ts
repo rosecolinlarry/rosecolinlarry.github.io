@@ -5,6 +5,7 @@ import {
   FullStarRatingComponent,
 } from '@rosecolinlarry/products';
 import { DashboardCardComponent } from '../dashboard-card/dashboard-card.component';
+import { RainbowSidebarComponent } from '../rainbow-sidebar/rainbow-sidebar.component';
 
 @Component({
   selector: 'lib-sandbox-page',
@@ -16,6 +17,7 @@ import { DashboardCardComponent } from '../dashboard-card/dashboard-card.compone
     FullStarRatingComponent,
     CondensedStarRatingComponent,
     DashboardCardComponent,
+    RainbowSidebarComponent
   ],
 })
 export class SandboxPageComponent {}

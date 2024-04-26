@@ -25,7 +25,7 @@ import {
     MatCardModule,
     DashboardCardComponent,
     ProductCardComponent,
-    CommonModule,
+    CommonModule
   ],
 })
 export class ProductDashboardComponent {
