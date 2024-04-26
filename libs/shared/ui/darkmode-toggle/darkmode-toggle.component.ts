@@ -9,7 +9,7 @@ import { ThemePickerService } from '@rosecolinlarry/theming';
   standalone: true,
   imports: [CommonModule, MatButtonModule, MatIconModule],
   templateUrl: './darkmode-toggle.component.html',
-  styleUrl: './darkmode-toggle.component.css',
+  styleUrl: './darkmode-toggle.component.scss',
 })
 export class DarkmodeToggleComponent {
   isDarkMode: boolean;

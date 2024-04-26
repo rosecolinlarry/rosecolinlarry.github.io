@@ -1,3 +1,11 @@
-<app-main-layout class="flexcolgrow">
+<!-- <app-main-layout class="flexcolgrow">
   <router-outlet class="flexcolgrow"></router-outlet>
-</app-main-layout>
+</app-main-layout> -->
+<!-- <app-header></app-header>
+<lib-rainbow-sidebar class="flexcolgrow">
+  <router-outlet></router-outlet>
+</lib-rainbow-sidebar>
+<app-footer></app-footer> -->
+<lib-header-footer-page-layout [links]="routes">
+  <router-outlet class="flexcolgrow"></router-outlet>
+</lib-header-footer-page-layout>

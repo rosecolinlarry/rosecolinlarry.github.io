@@ -1,0 +1,46 @@
+<lib-animated-sidebar-toggle-button
+  id="sidenav-toggle-button"
+  type="button"
+  aria-label="Toggle sidenav"
+  (toggleEvent)="openSidebar()"
+></lib-animated-sidebar-toggle-button>
+<lib-header
+  id="header"
+  class="sticky flexcolgrow"
+  [drawer]="drawer"
+></lib-header>
+<mat-sidenav-container id="container" class="sidenav-container flexcolgrow">
+  <mat-sidenav
+    id="sidenav"
+    opened="false"
+    #drawer
+    class="sidenav"
+    fixedInViewport
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+  >
+    <div mat-subheader>Where to?</div>
+    <mat-list>
+      @for (item of menuItems; track item) {
+      <mat-list-item
+        class="sidebar-list-item"
+        routerLink="/{{ item.path }}"
+        routerLinkActive="active"
+      >
+        <mat-icon matListItemIcon class="sidebar-list-item-icon p6">{{
+          getlistIcon(item)
+        }}</mat-icon>
+        <div matListItemTitle class="sidebar-list-item-label">
+          {{ item.title }}
+        </div>
+      </mat-list-item>
+      }
+    </mat-list>
+  </mat-sidenav>
+  <mat-sidenav-content id="content" class="flexcolgrow">
+    <div id="body" class="content-padding flexcolgrow">
+      <ng-content class="flexcolgrow"></ng-content>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+<lib-footer id="footer"></lib-footer>

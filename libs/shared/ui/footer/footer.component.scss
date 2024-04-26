@@ -1,0 +1,30 @@
+@use '../../../../apps/website/src/assets/styles/themes';
+
+.toolbar-footer div {
+  font-size: small;
+}
+
+#footer {
+  z-index: 12;
+  width: 100%;
+}
+
+/*#region Footer */
+.dark-mode {
+  #github-link:link {
+    color: themes.$footer-text-darkmode;
+  }
+  #github-link:visited {
+    color: themes.$footer-text-darkmode;
+  }
+}
+
+.light-mode {
+  #github-link:link {
+    color: themes.$footer-text-lightmode;
+  }
+  #github-link:visited {
+    color: themes.$footer-text-lightmode;
+  }
+}
+/*#endregion */
