@@ -10,19 +10,39 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "lib": ["es2020", "dom"],
+    "lib": [
+      "es2020",
+      "dom"
+    ],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@rosecolinlarry/errors": ["libs/errors/src/index.ts"],
-      "@rosecolinlarry/orders": ["libs/orders/src/index.ts"],
-      "@rosecolinlarry/products": ["libs/products/src/index.ts"],
-      "@rosecolinlarry/shared-ui": ["libs/shared/ui/src/index.ts"],
-      "@rosecolinlarry/shared-util": ["libs/shared/util/src/index.ts"],
-      "@rosecolinlarry/storefront": ["libs/storefront/src/index.ts"],
-      "@rosecolinlarry/theming": ["libs/shared/theming/src/index.ts"]
+      "@rosecolinlarry/errors": [
+        "libs/errors/src/index.ts"
+      ],
+      "@rosecolinlarry/orders": [
+        "libs/orders/src/index.ts"
+      ],
+      "@rosecolinlarry/products": [
+        "libs/products/src/index.ts"
+      ],
+      "@rosecolinlarry/shared-ui": [
+        "libs/shared/ui/src/index.ts"
+      ],
+      "@rosecolinlarry/shared-util": [
+        "libs/shared/util/src/index.ts"
+      ],
+      "@rosecolinlarry/storefront": [
+        "libs/storefront/src/index.ts"
+      ],
+      "@rosecolinlarry/theming": [
+        "libs/shared/theming/src/index.ts"
+      ]
     }
   },
-  "exclude": ["node_modules", "tmp"]
+  "exclude": [
+    "node_modules",
+    "tmp"
+  ]
 }
