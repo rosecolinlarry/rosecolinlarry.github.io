@@ -1,7 +1,0 @@
-/docs
-/dist
-/coverage
-/node_modules
-/tmp
-/.nx/cache
-.angular
