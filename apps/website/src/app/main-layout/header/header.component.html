@@ -1,18 +1,53 @@
 <mat-toolbar id="header" class="toolbar-header" color="accent">
-  <button
-    id="sidenav-toggle-button"
-    type="button"
-    aria-label="Toggle sidenav"
-    mat-icon-button
-    (click)="drawer.toggle()"
-  >
-    <mat-icon class="menu-button" aria-label="Side nav toggle icon"
-      >menu</mat-icon
-    >
-  </button>
   <div class="banner-header">
     <h3>Yet Another Angular Site</h3>
   </div>
   <div class="spacer"></div>
+  <button mat-button>Home</button>
+  <button mat-button>Spotlight</button>
+  <button mat-button [matMenuTriggerFor]="pixelMenu" >Pixel</button>
+  <mat-menu #pixelMenu="matMenu">
+    <button mat-menu-item [matMenuTriggerFor]="threeDMenu">3D</button>
+    <button mat-menu-item>Graphic Design</button>
+    <button mat-menu-item>Photo</button>
+  </mat-menu>
+
+  <mat-menu #threeDMenu="matMenu">
+    <button mat-menu-item [matMenuTriggerFor]="staticMenu">Static</button>
+    <button mat-menu-item [matMenuTriggerFor]="animationMenu">Animations</button>
+  </mat-menu>
+
+  <mat-menu #staticMenu="matMenu">
+    <button mat-menu-item>Abstract</button>
+    <button mat-menu-item>Characters</button>
+    <button mat-menu-item>General</button>
+    <button mat-menu-item>Lowpoly</button>
+    <button mat-menu-item>Realistic</button>
+    <button mat-menu-item>Weird</button>
+  </mat-menu>
+
+  <mat-menu #animationMenu="matMenu">
+    <button mat-menu-item>Not Weird</button>
+    <button mat-menu-item>Weird</button>
+  </mat-menu>
+
+  <button mat-button [matMenuTriggerFor]="fineArtMenu">Fine Art</button>
+  <mat-menu #fineArtMenu="matMenu">
+    <button mat-menu-item>Acrylic</button>
+    <button mat-menu-item>Drawing</button>
+    <button mat-menu-item>Fluid Art</button>
+    <button mat-menu-item>Watercolor</button>
+  </mat-menu>
+  <button mat-button [matMenuTriggerFor]="craftsMenu">Crafts</button>
+  <mat-menu #craftsMenu="matMenu">
+    <button mat-menu-item>Model Painting</button>
+    <button mat-menu-item>Clay</button>
+    <button mat-menu-item>Other</button>
+    <button mat-menu-item>Paper</button>
+    <button mat-menu-item>Yarn/Fabric</button>
+    <button mat-menu-item>Crystals</button>
+  </mat-menu>
+  <button mat-button>About Me</button>
+  <button mat-button>Apex</button>
   <lib-darkmode-toggle></lib-darkmode-toggle>
 </mat-toolbar>
