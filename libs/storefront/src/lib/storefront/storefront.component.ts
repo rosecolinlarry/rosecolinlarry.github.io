@@ -19,7 +19,6 @@ import { ProductDashboardComponent } from '../product-dashboard/product-dashboar
     ProductCardComponent,
     MatCardModule,
     MatIconModule,
-    ProductDashboardComponent,
-  ],
-})
+    ProductDashboardComponent
+  ]})
 export class StorefrontComponent {}

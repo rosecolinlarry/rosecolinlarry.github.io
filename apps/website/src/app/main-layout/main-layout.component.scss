@@ -10,10 +10,17 @@
   padding-bottom: sizing.$footer-height;
 }
 
-#footer {
+app-footer {
   position: absolute;
   bottom: 0;
   height: sizing.$footer-height;
+  width: 100%;
+  overflow: hidden;
+}
+
+app-header {
+  width: 100%;
+  overflow: hidden;
 }
 
 /*#region Sidebar */

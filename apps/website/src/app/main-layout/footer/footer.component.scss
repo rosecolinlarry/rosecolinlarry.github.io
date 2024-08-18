@@ -1,3 +1,4 @@
+@use '../../../assets/styles/sizing';
 @use '../../../assets/styles/themes';
 
 .toolbar-footer div {
@@ -6,6 +7,8 @@
 
 #footer {
   width: 100%;
+  overflow: scroll;
+  scrollbar-width: none;
 }
 
 /*#region Footer */

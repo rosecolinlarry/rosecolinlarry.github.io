@@ -5,7 +5,12 @@ div.banner-header {
   }
 }
 
-#app-header.sticky {
+#header {
+  overflow: scroll;
+  scrollbar-width: none;
+}
+
+app-header.sticky {
   position: sticky;
   top: 0;
   z-index: 1;
