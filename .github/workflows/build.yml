@@ -4,7 +4,8 @@ on:
   push:
     branches: ['main']
     paths-ignore:
-      - 'docs/**'  # Ignore changes only within the docs directory
+      - 'dist/**'  # Ignore changes only within the output directory
+      - 'docs/**'
   workflow_dispatch:
 
 permissions: write-all
@@ -33,14 +34,14 @@ jobs:
           git checkout release || git checkout -b release origin/main
           git reset --hard origin/main
       - run: | 
-          rm -rf docs
-          #npx nx-cloud record -- nx format:write
-          #npx nx-cloud record -- nx run-many -t lint --fix
-          npx nx run-many --target=build --all --outputPath=docs
+          rm -rf dist
+          #npx nx format:write
+          #npx nx run-many -t lint --fix
+          npx nx run-many --target=build --all --outputPath=dist
           
       - name: Copy index.html to 404.html
         run: |
-          cp docs/index.html docs/404.html
+          cp dist/browser/index.html dist/browser/404.html
       - run: |
           git config user.email "keaackerman@gmail.com"
           git config user.name "Kaisa Ackerman"
