@@ -31,8 +31,8 @@
               }
             ],
             "outputs": [
-              "{workspaceRoot}/dist/cypress/apps/portfolio-e2e/videos",
-              "{workspaceRoot}/dist/cypress/apps/portfolio-e2e/screenshots"
+              "{workspaceRoot}/docs/cypress/apps/portfolio-e2e/videos",
+              "{workspaceRoot}/docs/cypress/apps/portfolio-e2e/screenshots"
             ],
             "parallelism": false,
             "metadata": {
@@ -59,8 +59,8 @@
           },
           "e2e-ci--src/e2e/app.cy.ts": {
             "outputs": [
-              "{workspaceRoot}/dist/cypress/apps/portfolio-e2e/videos",
-              "{workspaceRoot}/dist/cypress/apps/portfolio-e2e/screenshots"
+              "{workspaceRoot}/docs/cypress/apps/portfolio-e2e/videos",
+              "{workspaceRoot}/docs/cypress/apps/portfolio-e2e/screenshots"
             ],
             "inputs": [
               "default",
@@ -108,8 +108,8 @@
               }
             ],
             "outputs": [
-              "{workspaceRoot}/dist/cypress/apps/portfolio-e2e/videos",
-              "{workspaceRoot}/dist/cypress/apps/portfolio-e2e/screenshots"
+              "{workspaceRoot}/docs/cypress/apps/portfolio-e2e/videos",
+              "{workspaceRoot}/docs/cypress/apps/portfolio-e2e/screenshots"
             ],
             "dependsOn": [
               {
