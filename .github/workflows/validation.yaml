@@ -5,6 +5,7 @@ on:
     branches: ['main']
     paths-ignore:
       - 'dist/**' # Ignore changes only within the docs directory
+      - 'docs/**' # Ignore changes only within the docs directory
   workflow_dispatch:
 
 permissions: read-all

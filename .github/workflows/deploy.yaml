@@ -5,7 +5,7 @@ on:
   push:
     branches: ['main']
     paths:
-      - 'dist/**'  # Ignore changes outside the docs
+      - 'docs/**'  # Ignore changes outside the docs
   workflow_dispatch:
 
 permissions:

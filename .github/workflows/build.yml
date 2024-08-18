@@ -5,6 +5,7 @@ on:
     branches: ['main']
     paths-ignore:
       - 'dist/**'  # Ignore changes only within the output directory
+      - 'docs/**'
   workflow_dispatch:
 
 permissions: write-all
