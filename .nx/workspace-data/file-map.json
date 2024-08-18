@@ -76,48 +76,6 @@
   ],
   "fileMap": {
     "projectFileMap": {
-      "portfolio-e2e": [
-        {
-          "file": "apps/portfolio-e2e/.eslintrc.json",
-          "hash": "14060216369337943343"
-        },
-        {
-          "file": "apps/portfolio-e2e/cypress.config.ts",
-          "hash": "2998449282370047976",
-          "deps": [
-            "npm:@nx/cypress",
-            "npm:cypress"
-          ]
-        },
-        {
-          "file": "apps/portfolio-e2e/project.json",
-          "hash": "13530007734709367088"
-        },
-        {
-          "file": "apps/portfolio-e2e/src/e2e/app.cy.ts",
-          "hash": "524541736866868771"
-        },
-        {
-          "file": "apps/portfolio-e2e/src/fixtures/example.json",
-          "hash": "11785586596216172004"
-        },
-        {
-          "file": "apps/portfolio-e2e/src/support/app.po.ts",
-          "hash": "11157016311132186162"
-        },
-        {
-          "file": "apps/portfolio-e2e/src/support/commands.ts",
-          "hash": "5397443931564808659"
-        },
-        {
-          "file": "apps/portfolio-e2e/src/support/e2e.ts",
-          "hash": "1054106023200826784"
-        },
-        {
-          "file": "apps/portfolio-e2e/tsconfig.json",
-          "hash": "14434558862681819353"
-        }
-      ],
       "portfolio": [
         {
           "file": "apps/portfolio/.eslintrc.json",
@@ -244,6 +202,48 @@
         {
           "file": "apps/portfolio/tsconfig.spec.json",
           "hash": "9663866004043171653"
+        }
+      ],
+      "portfolio-e2e": [
+        {
+          "file": "apps/portfolio-e2e/.eslintrc.json",
+          "hash": "14060216369337943343"
+        },
+        {
+          "file": "apps/portfolio-e2e/cypress.config.ts",
+          "hash": "2998449282370047976",
+          "deps": [
+            "npm:@nx/cypress",
+            "npm:cypress"
+          ]
+        },
+        {
+          "file": "apps/portfolio-e2e/project.json",
+          "hash": "13530007734709367088"
+        },
+        {
+          "file": "apps/portfolio-e2e/src/e2e/app.cy.ts",
+          "hash": "524541736866868771"
+        },
+        {
+          "file": "apps/portfolio-e2e/src/fixtures/example.json",
+          "hash": "11785586596216172004"
+        },
+        {
+          "file": "apps/portfolio-e2e/src/support/app.po.ts",
+          "hash": "11157016311132186162"
+        },
+        {
+          "file": "apps/portfolio-e2e/src/support/commands.ts",
+          "hash": "5397443931564808659"
+        },
+        {
+          "file": "apps/portfolio-e2e/src/support/e2e.ts",
+          "hash": "1054106023200826784"
+        },
+        {
+          "file": "apps/portfolio-e2e/tsconfig.json",
+          "hash": "14434558862681819353"
         }
       ]
     },
