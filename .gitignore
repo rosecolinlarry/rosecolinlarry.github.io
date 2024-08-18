@@ -38,7 +38,10 @@ testem.log
 Thumbs.db
 
 .nx/cache
+.nx/cache/*
 .angular
 /.vscode
 
 .nx/workspace-data/d/
+.nx/workspace-data/*
+.nx/
