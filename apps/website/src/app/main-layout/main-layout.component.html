@@ -1,7 +1,7 @@
 <mat-sidenav-container id="container" class="sidenav-container flexcolgrow">
   <mat-sidenav
     id = sidenav
-    opened="isSidenavOpen()"
+    [opened]="(isHandset$ | async) ? false : true"
     #drawer
     class="sidenav"
     fixedInViewport
@@ -26,11 +26,12 @@
       }
     </mat-list>
   </mat-sidenav>
-  <mat-sidenav-content id="content" class="flexcolgrow">
-    <app-header id="header" class="sticky flexcolgrow" [drawer]="drawer"></app-header>
+  <mat-sidenav-content id="content" class="flexwrapper">
+    <app-header id="header" class="sticky" [drawer]="drawer"></app-header>
     <div id="body" class="content-padding flexcolgrow">
-      <ng-content class="flexcolgrow"></ng-content>
+      <ng-content class=""></ng-content>
     </div>
+    <div class="vertical-spacer flexcolgrow"></div>
     <app-footer id="footer"></app-footer>
   </mat-sidenav-content>
 </mat-sidenav-container>
