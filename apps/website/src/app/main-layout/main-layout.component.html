@@ -12,14 +12,15 @@
     <mat-list>
       @for (item of menuItems; track item) {
       <mat-list-item
-        class="sidebar-list-item"
+        [ngClass]="{'sidebar-list-item': true, 'active-list-item': getIsActive(item)}"
         routerLink="/{{ item.path }}"
         routerLinkActive="active"
+        (click)="setIsActive(item)"
       >
         <mat-icon matListItemIcon class="sidebar-list-item-icon p6">{{
           getlistIcon(item)
         }}</mat-icon>
-        <div matListItemTitle class="sidebar-list-item-label">
+        <div matListItemTitle class="sidebar-list-item-label" >
           {{ item.title }}
         </div>
       </mat-list-item>

@@ -49,7 +49,7 @@ mat-sidenav-content.flexwrapper {
       color: themes.$hover-color-darkmode;
     }
   }
-  .sidebar-list-item:focus {
+  .sidebar-list-item:focus, .sidebar-list-item.active-list-item {
     .sidebar-list-item-icon {
       color: themes.$focus-color-darkmode;
     }
@@ -68,7 +68,7 @@ mat-sidenav-content.flexwrapper {
       color: themes.$hover-color-lightmode;
     }
   }
-  .sidebar-list-item:focus {
+  .sidebar-list-item:focus, .sidebar-list-item.active-list-item {
     .sidebar-list-item-icon {
       color: themes.$focus-color-lightmode;
     }

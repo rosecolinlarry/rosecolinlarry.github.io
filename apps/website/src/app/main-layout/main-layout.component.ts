@@ -6,10 +6,12 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { Observable } from 'rxjs';
-import { map, shareReplay } from 'rxjs/operators';
+import { map, shareReplay, tap } from 'rxjs/operators';
 import { LandingPageComponent } from '../landing-page/landing-page.component';
 import {
+  ActivatedRoute,
   Route,
+  Router,
   RouterLink,
   RouterLinkActive,
   RouterOutlet,
@@ -44,17 +46,23 @@ import { RouteData } from '../shared/interfaces/route-data';
 export class MainLayoutComponent {
   links: Route[] = appRoutes;
   private breakpointObserver = inject(BreakpointObserver);
+  private router = inject(Router)
   getlistIcon(link: Route): string | undefined {
     return (link.data as RouteData).iconName;
   }
   getIsActive(link: Route): boolean {
     return (link.data as RouteData).isActive ?? false;
   }
+  setIsActive(link: Route): void {
+    (this.router.config as Route[]).forEach(route => {
+        (route.data as RouteData).isActive = (route.data as RouteData).iconName == (link.data as RouteData).iconName
+    })
+  }
 
   // Get menu items to display
   get menuItems(): Route[] {
-    const items = appRoutes.filter((x) => {
-      const data = x.data as RouteData;
+    const items = appRoutes.filter((item) => {
+      const data = item.data as RouteData;
       return !data.hideFromMenu;
     });
     return items;
