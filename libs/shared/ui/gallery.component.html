@@ -1,0 +1,13 @@
+<div class="grid flexrowgrow">
+  <div
+    class="grid-item"
+    *ngFor="let image of images; let i = index"
+    [lightbox]="i"
+    [gallery]="galleryId"
+  >
+    <img
+      class="gallery-image"
+      [src]="image.data?.src"
+    />
+  </div>
+</div>

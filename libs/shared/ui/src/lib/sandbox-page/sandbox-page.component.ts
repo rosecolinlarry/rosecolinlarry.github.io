@@ -1,10 +1,8 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {
-  CondensedStarRatingComponent,
-  FullStarRatingComponent,
-} from '@rosecolinlarry/products';
+import * as products from '@rosecolinlarry/products';
 import { DashboardCardComponent } from '../dashboard-card/dashboard-card.component';
+import { GalleryComponent } from "../../../gallery.component";
 
 @Component({
   selector: 'lib-sandbox-page',
@@ -13,9 +11,10 @@ import { DashboardCardComponent } from '../dashboard-card/dashboard-card.compone
   styleUrl: './sandbox-page.component.scss',
   imports: [
     CommonModule,
-    FullStarRatingComponent,
-    CondensedStarRatingComponent,
+    products.FullStarRatingComponent,
+    products.CondensedStarRatingComponent,
     DashboardCardComponent,
-  ],
+    GalleryComponent
+],
 })
 export class SandboxPageComponent {}

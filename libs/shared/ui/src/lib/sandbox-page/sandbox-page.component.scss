@@ -17,3 +17,9 @@ lib-product-card {
 .product-grid {
   flex-wrap: wrap;
 }
+
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
